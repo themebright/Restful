@@ -1,0 +1,74 @@
+//
+// ENTRY
+//
+
+
+// MIXINS
+
+.entry-content( @margin ) {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  address,
+  ul,
+  ol,
+  dl,
+  table,
+  hr {
+    margin-top: @margin;
+  }
+
+  blockquote {
+    padding-left: @margin * 2;
+  }
+
+  ul,
+  ol {
+    padding-left: @margin * 2;
+
+    ul,
+    ol {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd + dt {
+    margin-top: @margin;
+  }
+}
+
+
+// ENTRY THUMBNAIL
+
+.entry-thumbnail {
+  margin-bottom: 1em;
+}
+
+
+// ENTRY CONTENT
+
+.entry-content {
+  .entry-content( 1em );
+}

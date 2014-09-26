@@ -1,0 +1,44 @@
+//
+// HEADER
+//
+
+
+.section-header {
+  @media @mq-sm-max {
+    .menu {
+      display: none;
+    }
+  }
+
+  @media @mq-md-min {
+    label.toggle-menu {
+      display: none;
+    }
+
+    .primary-menu {
+      > .menu-item {
+        position: relative;
+        display: inline-block;
+
+        &:hover .sub-menu {
+          opacity: 1;
+          transform: translateY( 0 );
+        }
+      }
+
+      .sub-menu {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        margin-left: -90px;
+        transform: translateY( -30px );
+        transition: @tr-medium;
+
+        > .menu-item > a {
+          width: 180px;
+          position: relative;
+        }
+      }
+    }
+  }
+}

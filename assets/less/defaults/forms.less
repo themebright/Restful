@@ -1,0 +1,84 @@
+//
+// FORMS
+//
+
+
+// MIXINS
+
+.input-block {
+  display: block;
+  width: 100%;
+}
+
+
+// BUTTONS
+
+.btn,
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+  .inline-top;
+  .appearance( none );
+  transition: @tr-short;
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none !important;
+  background: @co-accent;
+
+  &:hover {
+    background: shade( @co-accent, 25% );
+  }
+}
+
+
+// FIELDSETS
+
+fieldset {
+  border: solid 1px @co-border;
+  padding: 1em;
+}
+
+legend {
+  font-weight: bold;
+}
+
+
+// TEXT INPUTS
+
+.input-text,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+textarea {
+  .input-block;
+  .appearance( none );
+  .inline-top;
+  transition: @tr-short;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+
+  &::placholder {
+    color: fade( @co-text, 50% );
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+// SELECTS
+
+select {
+  .input-block;
+  .inline-top;
+}

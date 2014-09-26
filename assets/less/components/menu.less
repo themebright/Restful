@@ -1,0 +1,33 @@
+//
+// NAV
+//
+
+
+// MENU TOGGLE CHECKBOX
+
+input.toggle-menu {
+  display: none;
+
+  &:checked + {
+    & ~ label.toggle-menu > span:before {
+      content: 'Close ';
+    }
+
+    & ~ .menu {
+      display: block;
+    }
+  }
+}
+
+
+// MENU TOGGLE LABEL
+
+label.toggle-menu {
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+
+  > span:before {
+    content: 'Open ';
+  }
+}

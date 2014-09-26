@@ -1,0 +1,102 @@
+//
+// TYPOGRAPHY
+//
+
+
+// BASE
+
+body {
+  color: @co-text;
+  font: 16px/1.5 @ff-sans;
+  -webkit-text-size-adjust: none;
+}
+
+
+// INLINE ELEMENTS
+
+a {
+  transition: @tr-short;
+  color: @co-accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+code {
+  font-family: @ff-monospace;
+}
+
+
+// BLOCK-LEVEL ELEMENTS
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  line-height: 1.25;
+  font-weight: 300;
+
+  a {
+    color: inherit;
+  }
+}
+
+h1, .h1 {
+}
+
+h2, .h2 {
+}
+
+h3, .h3 {
+}
+
+h4, .h4 {
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+blockquote {
+  font-family: @ff-serif;
+  font-style: italic;
+
+  cite {
+    margin-top: 1em;
+    display: block;
+  }
+}
+
+pre {
+  font-family: @ff-monospace;
+}
+
+address {
+  font-style: italic;
+}
+
+
+// MISC
+
+hr {
+  border: solid @co-border;
+  border-width: 1px 0 0;
+}
+
+br.rwd {
+  display: none;
+}
