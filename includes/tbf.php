@@ -17,7 +17,7 @@ function restful_tbf_support() {
       'date'      => true,
       'time'      => true,
       'venue'     => false,
-      'address'   => true,
+      'address'   => false,
       'map'       => false
     )
   ) );

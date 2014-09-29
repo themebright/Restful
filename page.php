@@ -4,17 +4,7 @@
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title">
-      <?php if ( is_single() ) : ?>
-        <a href="<?php the_permalink(); ?>">
-      <?php endif; ?>
-
-      <?php the_title(); ?>
-
-      <?php if ( is_single() ) : ?>
-        </a>
-      <?php endif; ?>
-    </h1>
+    <h1 class="masthead-title"><?php the_title(); ?></a>
   </div>
 </section>
 

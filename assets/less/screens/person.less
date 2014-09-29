@@ -1,0 +1,35 @@
+.person-urls {
+  li {
+    .inline-top;
+
+    + li {
+      margin-left: .5em;
+    }
+  }
+
+  a {
+    .social-icon;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: @co-text-light;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    &:before {
+      position: relative;
+      top: 8px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background: @co-text;
+      color: #fff;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

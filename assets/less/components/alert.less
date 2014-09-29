@@ -1,0 +1,22 @@
+//
+// ALERT
+//
+
+
+.alert {
+  font-size: 12px;
+  padding: 1.5em;
+  list-style: none;
+}
+
+.alert-error {
+  color: spin( @co-accent, 180 );
+  background: fade( spin( @co-accent, 180 ), 5% );
+  box-shadow: inset 0 0 0 1px spin( @co-accent, 180 );
+}
+
+.alert-success {
+  color: shade( @co-accent, 10% );
+  background: fade( @co-accent, 5% );
+  box-shadow: inset 0 0 0 1px shade( @co-accent, 10% );
+}

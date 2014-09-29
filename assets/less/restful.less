@@ -22,15 +22,24 @@
 
 @import 'wrapper/page';
 @import 'wrapper/header';
+@import 'wrapper/masthead';
 @import 'wrapper/sidebar-main';
 @import 'wrapper/footer';
 
 
 // COMPONENTS
 
-@import 'components/menu';
-@import 'components/entry';
+@import 'components/alert';
 @import 'components/breadcrumb';
+@import 'components/entry';
+@import 'components/font-awesome/font-awesome';
+@import 'components/menu';
+@import 'components/social-icons';
+@import 'components/tbf-widget';
+@import 'components/grunion';
 
 
 // SCREENS
+
+body.restful-person { @import 'screens/person'; }
+body.restful-location { @import 'screens/location'; }

@@ -63,12 +63,64 @@
 // ENTRY THUMBNAIL
 
 .entry-thumbnail {
-  margin-bottom: 1em;
+  margin-bottom: 30px;
+}
+
+
+// ENTRY TITLE
+
+.entry-title {
+  margin-bottom: 30px;
+}
+
+
+// ENTRY META
+
+.entry-meta {
+  margin-bottom: 30px;
+
+  a {
+    color: @co-text;
+
+    &:hover {
+      color: @co-text-dark;
+    }
+  }
+
+  @media @mq-sm-max {
+    text-align: center;
+  }
+}
+
+.entry-meta-item {
+  > *  {
+    .inline-top;
+  }
+
+  .fa {
+    line-height: 1.714285714; // = 16px * 1.5
+    font-size: 14px;
+    margin-right: .5em;
+    color: @co-text-light;
+  }
+
+  + .entry-meta-item {
+    margin-top: 1em;
+    padding-top: 1em;
+    box-shadow: inset 0 1px @co-border;
+  }
+}
+
+
+// ENTRY MAP
+
+.entry-map {
+  margin-top: 30px;
 }
 
 
 // ENTRY CONTENT
 
 .entry-content {
-  .entry-content( 1em );
+  .entry-content( 1.5em );
 }

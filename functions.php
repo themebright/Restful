@@ -18,5 +18,4 @@ require_once get_template_directory() . '/includes/scripts.php';
 require_once get_template_directory() . '/includes/sidebars.php';
 require_once get_template_directory() . '/includes/styles.php';
 require_once get_template_directory() . '/includes/tbf.php';
-require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/theme-support.php';
