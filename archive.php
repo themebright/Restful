@@ -2,8 +2,7 @@
 
 get_header();
 
-$queried_object = get_queried_object();
-$has_sidebar = is_active_sidebar( 'locations' );
+$has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
@@ -11,7 +10,25 @@ $has_sidebar = is_active_sidebar( 'locations' );
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title"><?php echo $queried_object->labels->name; ?></h1>
+    <h1 class="masthead-title">
+      <?php
+
+      if ( is_category() ) {
+        single_cat_title();
+      } elseif ( is_tag() ) {
+        single_tag_title();
+      } elseif ( is_author() ) {
+        the_author();
+      } elseif ( is_day() ) {
+        echo get_the_date();
+      } elseif ( is_month() ) {
+        echo get_the_date( 'F Y' );
+      } elseif ( is_year() ) {
+        echo get_the_date( 'Y' );
+      }
+
+      ?>
+    </h1>
   </div>
 </section>
 
@@ -33,28 +50,16 @@ $has_sidebar = is_active_sidebar( 'locations' );
               </h2>
             </header>
 
-            <?php if ( tbf_location_address() ) : ?>
-              <div class="entry-meta location-meta">
-                <div class="entry-meta-item location-position"><i class="fa fa-map-marker fa-fw"></i><?php echo tbf_location_address(); ?></div>
-              </div>
-            <?php endif; ?>
-
             <div class="entry-content">
               <?php the_excerpt(); ?>
             </div>
           </article>
-        <?php endwhile; ?>
-          <?php if ( show_posts_nav() ) : ?>
-            <nav class="pagination">
-              <?php echo paginate_links(); ?>
-            </nav>
-          <?php endif; ?>
-        <?php else: ?>
+        <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'locations' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar( 'search' ); ?>
     </div>
   </div>
 </section>

@@ -43,11 +43,11 @@ $has_sidebar = is_active_sidebar( 'locations' );
             <?php endif; ?>
 
             <div class="entry-content">
-              <?php the_content() ?>
+              <?php the_content(); ?>
             </div>
 
             <?php if ( tbf_location_map() ) : ?>
-              <div class="location-map">
+              <div class="entry-map">
                 <?php echo tbf_location_map(); ?>
               </div>
             <?php endif; ?>

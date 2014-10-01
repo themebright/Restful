@@ -12,7 +12,7 @@
   </header>
 
   <div class="entry-meta">
-    <?php _e( 'Published', 'restful' ); ?>: <?php the_time( 'F j, Y' ); ?>
+    <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>
   </div>
 
   <div class="entry-content">

@@ -47,7 +47,7 @@ $has_sidebar = is_active_sidebar( 'people' );
             <?php endif; ?>
 
             <div class="entry-content">
-              <?php the_content() ?>
+              <?php the_content(); ?>
             </div>
           </article>
         <?php endwhile; else: ?>

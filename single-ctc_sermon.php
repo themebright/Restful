@@ -20,7 +20,7 @@ $has_sidebar = is_active_sidebar( 'sermons' );
       <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <article <?php post_class( 'entry' ); ?>>
-            <?php if ( has_post_thumbnail() ) : ?>
+            <?php if ( has_post_thumbnail() && ! tbf_sermon_video() ) : ?>
               <div class="entry-thumbnail">
                 <?php the_post_thumbnail( 'large' ); ?>
               </div>
@@ -38,29 +38,29 @@ $has_sidebar = is_active_sidebar( 'sermons' );
               </div>
             <?php endif; ?>
 
-            <?php if ( tbf_sermon_topics() || tbf_sermon_books() || tbf_sermon_series() || tbf_sermon_speakers() || tbf_sermon_tags() ) : ?>
-              <div class="entry-meta sermon-meta">
-                <?php if ( tbf_sermon_topics() ) : ?>
-                  <div class="entry-meta-item sermon-topics"><i class="fa fa-list fa-fw"></i><?php echo tbf_sermon_topics(); ?></div>
-                <?php endif; ?>
+            <div class="entry-meta sermon-meta">
+              <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
-                <?php if ( tbf_sermon_books() ) : ?>
-                  <div class="entry-meta-item sermon-books"><i class="fa fa-book fa-fw"></i><?php echo tbf_sermon_books(); ?></div>
-                <?php endif; ?>
+              <?php if ( tbf_sermon_topics() ) : ?>
+                <div class="entry-meta-item sermon-topics"><i class="fa fa-list fa-fw"></i><?php echo tbf_sermon_topics(); ?></div>
+              <?php endif; ?>
 
-                <?php if ( tbf_sermon_series() ) : ?>
-                  <div class="entry-meta-item sermon-series"><i class="fa fa-th fa-fw"></i><?php echo tbf_sermon_series(); ?></div>
-                <?php endif; ?>
+              <?php if ( tbf_sermon_books() ) : ?>
+                <div class="entry-meta-item sermon-books"><i class="fa fa-book fa-fw"></i><?php echo tbf_sermon_books(); ?></div>
+              <?php endif; ?>
 
-                <?php if ( tbf_sermon_speakers() ) : ?>
-                  <div class="entry-meta-item sermon-speakers"><i class="fa fa-user fa-fw"></i><?php echo tbf_sermon_speakers(); ?></div>
-                <?php endif; ?>
+              <?php if ( tbf_sermon_series() ) : ?>
+                <div class="entry-meta-item sermon-series"><i class="fa fa-th fa-fw"></i><?php echo tbf_sermon_series(); ?></div>
+              <?php endif; ?>
 
-                <?php if ( tbf_sermon_tags() ) : ?>
-                  <div class="entry-meta-item sermon-tags"><i class="fa fa-tags fa-fw"></i><?php echo tbf_sermon_tags(); ?></div>
-                <?php endif; ?>
-              </div>
-            <?php endif; ?>
+              <?php if ( tbf_sermon_speakers() ) : ?>
+                <div class="entry-meta-item sermon-speakers"><i class="fa fa-user fa-fw"></i><?php echo tbf_sermon_speakers(); ?></div>
+              <?php endif; ?>
+
+              <?php if ( tbf_sermon_tags() ) : ?>
+                <div class="entry-meta-item sermon-tags"><i class="fa fa-tags fa-fw"></i><?php echo tbf_sermon_tags(); ?></div>
+              <?php endif; ?>
+            </div>
 
             <div class="entry-content">
               <?php the_content(); ?>

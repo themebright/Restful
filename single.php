@@ -12,7 +12,7 @@ $has_sidebar = is_active_sidebar( 'main' );
 
     <h1 class="masthead-title"><?php the_title(); ?></h1>
     <div class="masthead-subtitle">
-      <?php _e( 'Published', 'restful' ); ?>: <?php the_time( 'F j, Y' ); ?>
+      <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>
     </div>
   </div>
 </section>

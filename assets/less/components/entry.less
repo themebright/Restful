@@ -3,91 +3,27 @@
 //
 
 
-// MIXINS
-
-.entry-content( @margin ) {
-  > *:first-child {
-    margin-top: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  address,
-  ul,
-  ol,
-  dl,
-  table,
-  hr {
-    margin-top: @margin;
-  }
-
-  blockquote {
-    padding-left: @margin * 2;
-  }
-
-  ul,
-  ol {
-    padding-left: @margin * 2;
-
-    ul,
-    ol {
-      margin-top: 0;
-    }
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  ol {
-    list-style: decimal;
-  }
-
-  dt {
-    font-weight: bold;
-  }
-
-  dd + dt {
-    margin-top: @margin;
-  }
-
-  pre {
-    box-shadow: inset 0 0 0 1px @co-border;
-    padding: 1.5em;
-    font-size: 14px;
-  }
-}
-
-
-// ENTRY
-
 .entry + .entry {
   margin-top: 90px;
 }
-
-
-// ENTRY THUMBNAIL
 
 .entry-thumbnail {
   margin-bottom: 30px;
 }
 
+.entry-excerpt .entry-thumbnail {
+  width: 90px;
+  .alignright;
+}
 
-// ENTRY TITLE
+.entry-type {
+  .h5;
+  color: @co-text-light;
+}
 
 .entry-title {
   margin-bottom: 30px;
 }
-
-
-// ENTRY META
 
 .entry-meta {
   margin-bottom: 30px;
@@ -120,16 +56,10 @@
   }
 }
 
-
-// ENTRY MAP
+.entry-content {
+  .styled-text( 1.5em );
+}
 
 .entry-map {
   margin-top: 30px;
-}
-
-
-// ENTRY CONTENT
-
-.entry-content {
-  .entry-content( 1.5em );
 }

@@ -678,7 +678,7 @@ img {
 }
 body {
   color: #6d737d;
-  font: 16px/1.5 'Karla', sans-serif;
+  font: 16px/1.5 Karla, sans-serif;
   -webkit-text-size-adjust: none;
 }
 a {
@@ -722,7 +722,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, sans-serif;
   line-height: 1.25;
   font-weight: normal;
   color: #272428;
@@ -1009,9 +1009,6 @@ table {
   background: #eef1f5;
   padding: 30px 0;
 }
-.section-masthead .masthead-subtitle {
-  color: #a2a6ae;
-}
 @media ( min-width: 780px ) {
   .section-masthead {
     padding: 60px 0;
@@ -1019,6 +1016,10 @@ table {
 }
 .masthead-centered {
   text-align: center;
+}
+.masthead-subtitle {
+  color: #a2a6ae;
+  margin-top: 30px;
 }
 .sidebar-main {
   font-size: 14px;
@@ -1091,7 +1092,8 @@ table a {
 }
 .tbf-breadcrumb {
   color: #a2a6ae;
-  font-size: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 .tbf-breadcrumb a {
@@ -1105,7 +1107,7 @@ table a {
 }
 .pagination {
   margin-top: 90px;
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, sans-serif;
   line-height: 1.25;
   font-weight: normal;
   color: #272428;
@@ -1134,6 +1136,24 @@ table a {
 .entry-thumbnail {
   margin-bottom: 30px;
 }
+.entry-excerpt .entry-thumbnail {
+  width: 90px;
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+.entry-type {
+  font-family: Oswald, sans-serif;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #272428;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 14px;
+  color: #a2a6ae;
+}
+.entry-type a {
+  color: inherit;
+}
 .entry-title {
   margin-bottom: 30px;
 }
@@ -1160,9 +1180,6 @@ table a {
   margin-top: 1em;
   padding-top: 1em;
   box-shadow: inset 0 1px #eef1f5;
-}
-.entry-map {
-  margin-top: 30px;
 }
 .entry-content > *:first-child {
   margin-top: 0;
@@ -1213,6 +1230,9 @@ table a {
   box-shadow: inset 0 0 0 1px #eef1f5;
   padding: 1.5em;
   font-size: 14px;
+}
+.entry-map {
+  margin-top: 30px;
 }
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2901,7 +2921,7 @@ div[id^="contact-form-"] blockquote {
   background: rgba(80, 227, 194, 0.05);
   box-shadow: inset 0 0 0 1px #48ccaf;
   font-style: normal;
-  font-family: 'Karla', sans-serif;
+  font-family: Karla, sans-serif;
 }
 .form-error h3 {
   display: none;
@@ -2994,7 +3014,7 @@ label.toggle-menu > span:before {
 .tbf-widget-entry-title {
   text-transform: none;
   letter-spacing: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: Karla, sans-serif;
   font-weight: bold;
   margin-bottom: .5em;
 }
@@ -3091,9 +3111,6 @@ label.toggle-menu > span:before {
 }
 .tbf-widget-sermon-date {
   color: #a2a6ae;
-}
-.tbf-widget-sermon-date:before {
-  content: 'Delivered: ';
 }
 .comment-respond {
   margin-top: 90px;

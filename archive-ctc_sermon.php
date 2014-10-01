@@ -20,7 +20,31 @@ $has_sidebar = is_active_sidebar( 'sermons' );
     <div class="row">
       <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <?php get_template_part( 'content', 'full' ); ?>
+          <article <?php post_class( 'entry entry-excerpt' ); ?>>
+            <?php if ( has_post_thumbnail() ) : ?>
+              <div class="entry-thumbnail">
+                <?php the_post_thumbnail( 'thumbnail' ); ?>
+              </div>
+            <?php endif; ?>
+
+            <header class="entry-header">
+              <h2 class="entry-title">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h2>
+            </header>
+
+            <div class="entry-meta sermon-meta">
+              <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+
+              <?php if ( tbf_sermon_speakers() ) : ?>
+                <div class="entry-meta-item sermon-speakers"><i class="fa fa-user fa-fw"></i><?php echo tbf_sermon_speakers(); ?></div>
+              <?php endif; ?>
+            </div>
+
+            <div class="entry-content">
+              <?php the_excerpt(); ?>
+            </div>
+          </article>
         <?php endwhile; ?>
           <?php if ( show_posts_nav() ) : ?>
             <nav class="pagination">
