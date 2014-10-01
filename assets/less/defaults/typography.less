@@ -33,8 +33,19 @@ em {
   font-style: italic;
 }
 
-code {
-  font-family: @ff-monospace;
+code,
+var,
+kbd,
+tt {
+  font: 14px @ff-monospace;
+  background: @co-border;
+  padding: 1px 3px 2px;
+  border-radius: 2px;
+}
+
+abbr,
+acronym {
+  border-bottom: dotted 1px @co-text-light;
 }
 
 
@@ -88,7 +99,8 @@ h6, .h6 {
 
 blockquote {
   font-family: @ff-serif;
-  font-style: italic;
+  font-size: 18px;
+  color: @co-text-light;
 
   cite {
     margin-top: 1em;
@@ -98,10 +110,17 @@ blockquote {
 
 pre {
   font-family: @ff-monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  tab-size: 4;
 }
 
 address {
   font-style: italic;
+}
+
+dt {
+  color: @co-text-dark;
 }
 
 

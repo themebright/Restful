@@ -4,7 +4,7 @@
   text-transform: none;
   letter-spacing: 0;
   font-family: @ff-sans;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: .5em;
 }
 
@@ -67,4 +67,19 @@
 
 .tbf-widget-event-date + .tbf-widget-event-time {
   margin-top: 0;
+}
+
+
+// SERMONS WIDGET
+
+.tbf-widget-sermons-entry-thumbnail {
+  margin-bottom: 1em;
+}
+
+.tbf-widget-sermon-date {
+  color: @co-text-light;
+
+  &:before {
+    content: 'Delivered: ';
+  }
 }

@@ -4,17 +4,7 @@
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title">
-      <?php if ( is_single() ) : ?>
-        <a href="<?php the_permalink(); ?>">
-      <?php endif; ?>
-
-      <?php the_title(); ?>
-
-      <?php if ( is_single() ) : ?>
-        </a>
-      <?php endif; ?>
-    </h1>
+    <h1 class="masthead-title"><?php the_title(); ?></h1>
   </div>
 </section>
 
@@ -23,8 +13,14 @@
     <div class="row">
       <div class="col col-xs-12 col-md-7">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <?php get_template_part( 'content', get_post_type() ); ?>
-        <?php endwhile; else: ?>
+          <?php get_template_part( 'content', 'full' ); ?>
+        <?php endwhile; ?>
+          <?php if ( show_posts_nav() ) : ?>
+            <nav class="pagination">
+              <?php echo paginate_links(); ?>
+            </nav>
+          <?php endif; ?>
+        <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
       </div>

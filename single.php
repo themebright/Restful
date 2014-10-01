@@ -5,6 +5,9 @@
     <?php tbf_breadcrumb(); ?>
 
     <h1 class="masthead-title"><?php the_title(); ?></h1>
+    <div class="masthead-subtitle">
+      <?php _e( 'Published', 'restful' ); ?>: <?php the_time( 'F j, Y' ); ?>
+    </div>
   </div>
 </section>
 
@@ -24,6 +27,8 @@
               <?php the_content(); ?>
             </div>
           </article>
+
+          <?php comments_template(); ?>
         <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>

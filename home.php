@@ -4,7 +4,7 @@
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title"><?php the_title(); ?></h1>
+    <h1 class="masthead-title"><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></h1>
   </div>
 </section>
 
@@ -13,18 +13,14 @@
     <div class="row">
       <div class="col col-xs-12 col-md-7">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <article <?php post_class( 'entry' ); ?>>
-            <?php if ( has_post_thumbnail() ) : ?>
-              <div class="entry-thumbnail">
-                <?php the_post_thumbnail( 'large' ); ?>
-              </div>
-            <?php endif; ?>
-
-            <div class="entry-content">
-              <?php the_content(); ?>
-            </div>
-          </article>
-        <?php endwhile; else: ?>
+          <?php get_template_part( 'content', 'full' ); ?>
+        <?php endwhile; ?>
+          <?php if ( show_posts_nav() ) : ?>
+            <nav class="pagination">
+              <?php echo paginate_links(); ?>
+            </nav>
+          <?php endif; ?>
+        <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
       </div>

@@ -52,8 +52,8 @@ function restful_tbf_support() {
       'number'    => true,
       'thumbnail' => true,
       'excerpt'   => true,
-      'date'      => false,
-      'media'     => true
+      'date'      => true,
+      'media'     => false
     )
   ) );
 

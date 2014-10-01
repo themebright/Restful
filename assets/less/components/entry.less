@@ -57,6 +57,19 @@
   dd + dt {
     margin-top: @margin;
   }
+
+  pre {
+    box-shadow: inset 0 0 0 1px @co-border;
+    padding: 1.5em;
+    font-size: 14px;
+  }
+}
+
+
+// ENTRY
+
+.entry + .entry {
+  margin-top: 90px;
 }
 
 
@@ -85,10 +98,6 @@
     &:hover {
       color: @co-text-dark;
     }
-  }
-
-  @media @mq-sm-max {
-    text-align: center;
   }
 }
 
