@@ -3,7 +3,7 @@
 get_header();
 
 $queried_object = get_queried_object();
-$has_sidebar = is_active_sidebar( 'main' );
+$has_sidebar = is_active_sidebar( 'people' );
 
 ?>
 
@@ -11,7 +11,7 @@ $has_sidebar = is_active_sidebar( 'main' );
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title"><?php echo $queried_object->post_title; ?></h1>
+    <h1 class="masthead-title"><?php echo $queried_object->labels->name; ?></h1>
   </div>
 </section>
 
@@ -32,7 +32,7 @@ $has_sidebar = is_active_sidebar( 'main' );
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'main' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar( 'people' ); ?>
     </div>
   </div>
 </section>

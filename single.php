@@ -1,6 +1,12 @@
-<?php get_header(); ?>
+<?php
 
-<section class="section-masthead">
+get_header();
+
+$has_sidebar = is_active_sidebar( 'main' );
+
+?>
+
+<section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
@@ -14,7 +20,7 @@
 <section class="section section-main">
   <div class="container">
     <div class="row">
-      <div class="col col-xs-12 col-md-7">
+      <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <article <?php post_class( 'entry' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>

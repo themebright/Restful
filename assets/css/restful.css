@@ -971,6 +971,9 @@ table {
     padding: 60px 0;
   }
 }
+.masthead-centered {
+  text-align: center;
+}
 .sidebar-main {
   font-size: 14px;
 }
@@ -2896,7 +2899,7 @@ form.contact-form > * + * {
 .grunion-radio-label input {
   margin-right: .25em;
 }
-div[id^="attachment_"] {
+figure[id^="attachment_"] {
   width: auto !important;
 }
 .aligncenter {

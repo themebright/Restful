@@ -18,8 +18,68 @@ function restful_register_sidebars() {
 
   // Main blog sidebar
   register_sidebar( array(
-    'name'          => __( 'Sidebar', 'restful' ),
-    'id'            => 'sidebar-main',
+    'name'          => __( 'Main', 'restful' ),
+    'id'            => 'main',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // Page sidebar
+  register_sidebar( array(
+    'name'          => __( 'Pages', 'restful' ),
+    'id'            => 'pages',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // Search results sidebar
+  register_sidebar( array(
+    'name'          => __( 'Search', 'restful' ),
+    'id'            => 'search',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // Events sidebar
+  register_sidebar( array(
+    'name'          => __( 'Events', 'restful' ),
+    'id'            => 'events',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // Locations sidebar
+  register_sidebar( array(
+    'name'          => __( 'Locations', 'restful' ),
+    'id'            => 'locations',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // People sidebar
+  register_sidebar( array(
+    'name'          => __( 'People', 'restful' ),
+    'id'            => 'people',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
+  // Sermons sidebar
+  register_sidebar( array(
+    'name'          => __( 'Sermons', 'restful' ),
+    'id'            => 'sermons',
     'before_widget' => $default_widget_markup['before_widget'],
     'after_widget'  => $default_widget_markup['after_widget'],
     'before_title'  => $default_widget_markup['before_title'],

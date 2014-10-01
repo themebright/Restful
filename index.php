@@ -1,17 +1,24 @@
-<?php get_header(); ?>
+<?php
 
-<section class="section-masthead">
+get_header();
+
+$queried_object = get_queried_object();
+$has_sidebar = is_active_sidebar( 'main' );
+
+?>
+
+<section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
     <?php tbf_breadcrumb(); ?>
 
-    <h1 class="masthead-title"><?php the_title(); ?></h1>
+    <h1 class="masthead-title"><?php echo $queried_object->labels->name; ?></h1>
   </div>
 </section>
 
 <section class="section section-main">
   <div class="container">
     <div class="row">
-      <div class="col col-xs-12 col-md-7">
+      <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php get_template_part( 'content', 'full' ); ?>
         <?php endwhile; ?>
@@ -25,7 +32,7 @@
         <?php endif; ?>
       </div>
 
-      <?php get_sidebar( 'main' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar( 'main' ); ?>
     </div>
   </div>
 </section>
