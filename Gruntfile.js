@@ -32,15 +32,18 @@ module.exports = function( grunt ) {
         //   'compress': true
         // },
         files: {
-          'assets/css/restful.css': 'assets/less/restful.less',
+          'assets/css/restful-light.css': 'assets/less/restful-light.less',
+          'assets/css/restful-dark.css': 'assets/less/restful-dark.less',
         }
       }
     },
 
     autoprefixer: {
       build: {
-        src: 'assets/css/restful.css',
-        dest: 'assets/css/restful-prefixed.css'
+        expand: true,
+        flatten: true,
+        src: 'assets/css/*.css',
+        dest: 'assets/css/'
       }
     }
 
