@@ -825,7 +825,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-  background: #4cd8b8;
+  opacity: .9;
 }
 fieldset {
   border: none;
