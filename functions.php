@@ -72,3 +72,21 @@ function restful_comment_form() {
   comment_form( $args );
 
 }
+
+
+
+
+
+
+
+function restful_copyright_text() {
+
+  if ( get_theme_mod( 'copyright_text' ) ) {
+    $str = get_theme_mod( 'copyright_text' );
+  } else {
+    $str = '&copy; ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' );
+  }
+
+  echo $str;
+
+}
