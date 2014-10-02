@@ -44,7 +44,7 @@ $has_sidebar = is_active_sidebar( 'locations' );
             </div>
           </article>
         <?php endwhile; ?>
-          <?php if ( show_posts_nav() ) : ?>
+          <?php if ( restful_show_posts_nav() ) : ?>
             <nav class="pagination">
               <?php echo paginate_links(); ?>
             </nav>

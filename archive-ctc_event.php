@@ -22,7 +22,7 @@ $has_sidebar = is_active_sidebar( 'events' );
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php get_template_part( 'content', 'full' ); ?>
         <?php endwhile; ?>
-          <?php if ( show_posts_nav() ) : ?>
+          <?php if ( restful_show_posts_nav() ) : ?>
             <nav class="pagination">
               <?php echo paginate_links(); ?>
             </nav>

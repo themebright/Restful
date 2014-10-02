@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="copyright-text col col-xs-12 col-md-6">
-            <?php restful_copyright_text(); ?>
+            &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>
           </div>
 
           <div class="theme-credit col col-xs-12 col-md-6"><a href="http://themebright.co/" class="themebright-logo"><?php locate_template( 'assets/img/themebright-logo.svg', 'true' ); ?></a></div>
