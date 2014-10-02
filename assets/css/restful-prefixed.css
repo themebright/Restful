@@ -3207,6 +3207,14 @@ body.restful-sermon .sermon-meta .entry-meta-item li {
 body.restful-sermon .sermon-meta .entry-meta-item li + li:before {
   content: ', ';
 }
+body.restful-sermon .sermon-download-pdf {
+  display: block;
+}
+body.restful-sermon .sermon-download-pdf .fa {
+  position: relative;
+  top: 1px;
+  margin-right: .5em;
+}
 body.restful-blog .entry.type-post .entry-meta {
   color: #a2a6ae;
 }

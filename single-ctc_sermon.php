@@ -38,6 +38,12 @@ $has_sidebar = is_active_sidebar( 'sermons' );
               </div>
             <?php endif; ?>
 
+            <?php if ( tbf_sermon_pdf() ) : ?>
+              <div class="sermon-media sermon-media-pdf">
+                <a href="<?php echo tbf_sermon_pdf(); ?>" class="button sermon-download-pdf"><i class="fa fa-download"></i><?php _e( 'PDF Transcript', 'restful' ) ?></a>
+              </div>
+            <?php endif; ?>
+
             <div class="entry-meta sermon-meta">
               <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
