@@ -17,21 +17,13 @@ function restful_customizer_options() {
   // Adds the sections to the $options array
   $options['sections'] = $sections;
 
-  // Colors
-  $section = 'colors';
+  // Appearance
+  $section = 'appearance';
 
   $sections[] = array(
     'id'       => $section,
-    'title'    => __( 'Colors', 'restful' ),
+    'title'    => __( 'Appearance', 'restful' ),
     'priority' => '30'
-  );
-
-  $options['co-accent'] = array(
-    'id'      => 'co-accent',
-    'label'   => __( 'Primary Color', 'restful' ),
-    'section' => $section,
-    'type'    => 'color',
-    'default' => $co_accent,
   );
 
   $options['skin'] = array(
@@ -44,6 +36,14 @@ function restful_customizer_options() {
       'dark'  => __( 'Dark', 'restful')
     ),
     'default' => 'light'
+  );
+
+  $options['co-accent'] = array(
+    'id'      => 'co-accent',
+    'label'   => __( 'Primary Color', 'restful' ),
+    'section' => $section,
+    'type'    => 'color',
+    'default' => $co_accent,
   );
 
   // Adds the sections to the $options array

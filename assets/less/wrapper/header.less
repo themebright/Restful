@@ -4,9 +4,61 @@
 
 
 .section-header {
+  label.toggle-menu {
+    user-select: none;
+  }
+
   @media @mq-sm-max {
+    .branding {
+      line-height: 60px;
+
+      img {
+        position: relative;
+        top: 20px;
+      }
+    }
+
+    label.toggle-menu {
+      position: absolute;
+      top: -42px;
+      right: @gr-gutter;
+    }
+
     .menu {
       display: none;
+    }
+
+    .primary-menu {
+      font-size: 14px;
+
+      a {
+        color: @co-text;
+
+        &:hover {
+          color: @co-text-strong;
+        }
+      }
+    }
+
+    .menu-item {
+      padding: .75em 0;
+      box-shadow: inset 0 1px @co-border;
+    }
+
+    .sub-menu {
+      margin-top: .75em;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      .menu-item {
+        &:before {
+          content: '» ';
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 

@@ -18,7 +18,7 @@ module.exports = function( grunt ) {
         tasks: [ 'less' ]
       },
       css: {
-        files: [ 'assets/css/restful.css' ],
+        files: [ 'assets/css/restful-light.css', 'assets/css/restful-dark.css' ],
         tasks: [ 'autoprefixer' ],
         options: {
           livereload: true
