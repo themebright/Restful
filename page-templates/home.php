@@ -40,15 +40,15 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
         $slide_url   = $slide_url[0];
 
       ?>
-        <div class="bs-slide" style="background-image: url(<?php echo $slide_image; ?>)">
-          <?php if ( $slide_url ) echo "<a href='$slide_url' class='bs-slide-link'>"; ?>
+        <div class="bx-slide" style="background-image: url(<?php echo $slide_image; ?>)">
+          <?php if ( $slide_url ) echo "<a href='$slide_url' class='bx-slide-link'>"; ?>
             <div class="container">
               <?php if ( $show_title && get_the_title() ) : ?>
-                <h2 class="bs-slide-title"><?php the_title(); ?></h2>
+                <h2 class="bx-slide-title"><?php the_title(); ?></h2>
               <?php endif; ?>
 
               <?php if ( $slide_text ) : ?>
-                <div class="bs-slide-text"><?php echo $slide_text; ?></div>
+                <div class="bx-slide-text"><?php echo $slide_text; ?></div>
               <?php endif; ?>
             </div>
           <?php if ( $slide_url ) echo '</a>'; ?>
@@ -63,8 +63,20 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
   </section>
 <?php endif; endif; ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php the_content(); ?>
-<?php endwhile; endif; ?>
+<?php if ( have_posts() ) : ?>
+  <section class="section section-intro">
+    <div class="container">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <header class="entry-header">
+          <h1 class="entry-title"><?php the_title(); ?></h1>
+        </header>
+
+        <div class="entry-content">
+          <?php the_content(); ?>
+        </div>
+      <?php endwhile; ?>
+    </div>
+  </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -1,5 +1,11 @@
-jQuery(function($) {
+jQuery( function( $ ) {
 
-  $('.entry').fitVids();
+  $( '#bright-slider' ).bxSlider({
+    'mode': 'fade',
+    'controls': false,
+    'adaptiveHeight': true
+  });
 
-});
+  $( '.entry' ).fitVids();
+
+} );

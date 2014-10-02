@@ -67,8 +67,11 @@ function restful_body_classes( $classes ) {
   // Sermon
   if ( is_singular( 'ctc_sermon' ) ) $classes[] = 'restful-sermon';
 
-  // No sidebar
+  // No sidebar page template
   if ( is_page_template( 'page-templates/no-sidebar.php' ) ) $classes[] = 'restful-no-sidebar';
+
+  // Home page template
+  if ( is_page_template( 'page-templates/home.php' ) ) $classes[] = 'restful-home';
 
   // Return the custom classes
   return $classes;
