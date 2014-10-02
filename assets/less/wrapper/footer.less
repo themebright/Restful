@@ -31,13 +31,15 @@
 .themebright-logo svg {
   .inline-top;
   height: 24px;
-  transition: @tr-short;
 
   path {
     fill: @co-text;
+    transition: @tr-short;
   }
 
   &:hover {
-    opacity: .5;
+    path {
+      fill: @co-text-strong;
+    }
   }
 }

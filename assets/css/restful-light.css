@@ -1115,14 +1115,14 @@ body {
   display: inline-block;
   vertical-align: top;
   height: 24px;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
 }
 .themebright-logo svg path {
   fill: #6d737d;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
-.themebright-logo svg:hover {
-  opacity: .5;
+.themebright-logo svg:hover path {
+  fill: #272428;
 }
 .alert {
   font-size: 12px;
