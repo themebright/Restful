@@ -8,8 +8,6 @@ $has_sidebar = is_active_sidebar( 'main' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <?php tbf_breadcrumb(); ?>
-
     <h1 class="masthead-title"><?php the_title(); ?></h1>
     <div class="masthead-subtitle">
       <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>

@@ -9,8 +9,6 @@ $has_sidebar = is_active_sidebar( 'people' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <?php tbf_breadcrumb(); ?>
-
     <h1 class="masthead-title"><?php echo $queried_object->labels->name; ?></h1>
   </div>
 </section>

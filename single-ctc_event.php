@@ -8,8 +8,6 @@ $has_sidebar = is_active_sidebar( 'events' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <?php tbf_breadcrumb(); ?>
-
     <h1 class="masthead-title"><?php the_title(); ?></h1>
   </div>
 </section>
