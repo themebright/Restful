@@ -1,8 +1,8 @@
-<?php // Template Name: Home ?>
-
-<?php get_header(); ?>
-
 <?php
+
+// Template Name: Home
+
+get_header();
 
 // Check to see if the BrightSlider plugin is active
 if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
@@ -77,6 +77,8 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
       <?php endwhile; ?>
     </div>
   </section>
-<?php endif; ?>
+<?php endif;
 
-<?php get_footer(); ?>
+get_sidebar( 'home' );
+
+get_footer();

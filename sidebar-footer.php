@@ -1,6 +1,6 @@
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
 
-<section class="section sections-sidebar-footer sidebar sidebar-footer">
+<section class="section section-sidebar-footer sidebar sidebar-footer">
   <div class="container">
     <div class="row">
       <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>

@@ -3598,13 +3598,42 @@ body.restful-home .section-slider.one-slide .bx-controls {
 }
 body.restful-home .section-intro {
   text-align: center;
-  padding: 90px 0;
+  padding: 30px 0;
 }
 @media ( min-width: 780px ) {
   body.restful-home .section-intro {
     font-size: 20px;
+    padding: 90px 0;
   }
 }
 body.restful-home .section-header + .section-intro {
   box-shadow: inset 0 1px #eef1f5;
+}
+body.restful-home .section-sidebar-home {
+  padding: 30px 0;
+  box-shadow: inset 0 1px #eef1f5;
+  text-align: center;
+}
+body.restful-home .section-sidebar-home .widget {
+  padding: 0;
+}
+body.restful-home .section-sidebar-home .widget-title {
+  font-family: Oswald, sans-serif;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #272428;
+  font-size: 24px;
+}
+body.restful-home .section-sidebar-home .widget-title a {
+  color: inherit;
+}
+@media ( max-width: 779px ) {
+  body.restful-home .section-sidebar-home .widget-area + .widget-area {
+    margin-top: 30px;
+  }
+}
+@media ( min-width: 780px ) {
+  body.restful-home .section-sidebar-home {
+    padding: 60px 0;
+  }
 }
