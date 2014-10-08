@@ -942,19 +942,51 @@ body {
     padding: 60px 0;
   }
 }
+.section-header .site-title {
+  font-family: Oswald, sans-serif;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 16px;
+  line-height: inherit;
+}
+.section-header .site-title a {
+  color: inherit;
+}
+.section-header .site-title a {
+  color: #a2a6ae;
+}
+.section-header .site-logo-link {
+  display: block;
+}
+.section-header .site-logo {
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  display: block;
+  width: auto;
+}
 .section-header label.toggle-menu {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: #ffffff;
 }
 @media ( max-width: 779px ) {
   .section-header .branding {
     line-height: 60px;
   }
-  .section-header .branding img {
-    position: relative;
-    top: 20px;
+  .section-header .branding,
+  .section-header .site-logo-link {
+    height: 60px;
+  }
+  .section-header .site-logo {
+    max-height: 30px !important;
   }
   .section-header label.toggle-menu {
     position: absolute;
@@ -993,9 +1025,12 @@ body {
   .section-header .branding {
     line-height: 90px;
   }
-  .section-header .branding img {
-    position: relative;
-    top: 35px;
+  .section-header .branding,
+  .section-header .site-logo-link {
+    height: 90px;
+  }
+  .section-header .site-logo {
+    max-height: 42px !important;
   }
   .section-header label.toggle-menu {
     display: none;
@@ -3753,5 +3788,8 @@ body.restful-home .section-sidebar-home .widget-title a {
 @media ( min-width: 780px ) {
   body.restful-home .section-sidebar-home {
     padding: 60px 0;
+  }
+  body.restful-home .section-sidebar-home .textwidget {
+    font-size: 18px;
   }
 }

@@ -11,21 +11,17 @@
     <header class="section section-header">
       <div class="container">
         <div class="row">
-          <div class="branding col col-xs-12 col-md-4">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="">
-
-            <?php /*
-
-            <h1 class="site-title">
-              <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a>
-            </h1>
-
-            <h6 class="site-description"><?php bloginfo( 'description' ); ?></h6>
-
-            */ ?>
+          <div class="branding col col-xs-12 col-md-3">
+            <?php if ( has_site_logo() ) : ?>
+              <?php the_site_logo(); ?>
+            <?php else : ?>
+              <h1 class="site-title">
+                <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a>
+              </h1>
+            <?php endif; ?>
           </div>
 
-          <div class="access col col-xs-12 col-md-8">
+          <div class="access col col-xs-12 col-md-9">
             <input type="checkbox" id="toggle-primary-menu" class="toggle-menu">
             <label for="toggle-primary-menu" class="toggle-menu"><span>Menu</span></label>
 

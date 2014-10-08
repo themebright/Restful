@@ -4,18 +4,41 @@
 
 
 .section-header {
+  .site-title {
+    .h4;
+    line-height: inherit;
+
+    a {
+      color: @co-text;
+    }
+  }
+
+  .site-logo-link {
+    display: block;
+  }
+
+  .site-logo {
+    .vertically-centered;
+    width: auto;
+  }
+
   label.toggle-menu {
     user-select: none;
+    color: @co-text-strong;
   }
 
   @media @mq-sm-max {
     .branding {
       line-height: 60px;
+    }
 
-      img {
-        position: relative;
-        top: 20px;
-      }
+    .branding,
+    .site-logo-link {
+      height: 60px;
+    }
+
+    .site-logo {
+      max-height: 30px !important;
     }
 
     label.toggle-menu {
@@ -65,11 +88,15 @@
   @media @mq-md-min {
     .branding {
       line-height: 90px;
+    }
 
-      img {
-        position: relative;
-        top: 35px;
-      }
+    .branding,
+    .site-logo-link {
+      height: 90px;
+    }
+
+    .site-logo {
+      max-height: 42px !important;
     }
 
     label.toggle-menu {
