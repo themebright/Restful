@@ -1102,7 +1102,12 @@ body {
 }
 .masthead-subtitle {
   color: #555a62;
-  margin-top: 30px;
+}
+.masthead-subtitle.above {
+  margin-bottom: 1em;
+}
+.masthead-subtitle.below {
+  margin-top: 1em;
 }
 .sidebar-main .widget {
   box-shadow: inset 0 0 0 1px #38343a;
