@@ -1186,6 +1186,9 @@ body {
 .themebright-logo svg:hover path {
   fill: #ffffff;
 }
+.section-main + .section-footer {
+  box-shadow: inset 0 1px #38343a;
+}
 .alert {
   font-size: 12px;
   padding: 1.5em;
@@ -3783,4 +3786,8 @@ body.restful-home .section-sidebar-home .widget-title a {
   body.restful-home .section-sidebar-home .textwidget {
     font-size: 18px;
   }
+}
+body.restful-home .section-sidebar-home + .section-footer,
+body.restful-home .section-intro + .section-footer {
+  box-shadow: inset 0 1px #38343a;
 }
