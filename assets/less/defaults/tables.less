@@ -1,8 +1,35 @@
 //
-// TABLE
+// TABLES
 //
 
 
 table {
   width: 100%;
+  text-align: left;
+
+  thead {
+    background: @co-border;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: @co-text-subtle;
+  }
+
+  tr:nth-child(even) {
+    background: @co-border;
+  }
+
+  th,
+  td {
+    padding: .75em;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: normal;
+  }
+
+  a {
+    color: @co-text-strong;
+  }
 }
