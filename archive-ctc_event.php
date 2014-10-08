@@ -17,7 +17,29 @@ $has_sidebar = is_active_sidebar( 'events' );
   <div class="container">
     <div class="row">
       <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php
+
+        global $wp_query;
+
+        $args = array_merge( $wp_query->query_vars, array(
+          'order'      => 'ASC',
+          'orderby'    => 'meta_value',
+          'meta_key'   => '_ctc_event_start_date',
+          'meta_query' => array(
+            array(
+              'key'     => '_ctc_event_end_date',
+              'value'   => date_i18n( 'Y-m-d' ),
+              'compare' => '>=',
+              'type'    => 'DATE'
+            )
+          )
+        ) );
+
+        query_posts( $args );
+
+        if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+        ?>
           <?php get_template_part( 'content', 'full' ); ?>
         <?php endwhile; ?>
           <?php if ( restful_show_posts_nav() ) : ?>
@@ -27,7 +49,7 @@ $has_sidebar = is_active_sidebar( 'events' );
           <?php endif; ?>
         <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
-        <?php endif; ?>
+        <?php endif; wp_reset_query(); ?>
       </div>
 
       <?php if ( $has_sidebar ) get_sidebar( 'events' ); ?>

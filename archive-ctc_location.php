@@ -17,7 +17,21 @@ $has_sidebar = is_active_sidebar( 'locations' );
   <div class="container">
     <div class="row">
       <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php
+
+        global $wp_query;
+
+        $args = array_merge( $wp_query->query_vars, array(
+          'posts_per_page' => -1,
+          'order'          => 'ASC',
+          'orderby'        => 'menu_order'
+        ) );
+
+        query_posts( $args );
+
+        if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+        ?>
           <article <?php post_class( 'entry entry-excerpt' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
               <div class="entry-thumbnail">
@@ -41,15 +55,9 @@ $has_sidebar = is_active_sidebar( 'locations' );
               <?php the_excerpt(); ?>
             </div>
           </article>
-        <?php endwhile; ?>
-          <?php if ( restful_show_posts_nav() ) : ?>
-            <nav class="pagination">
-              <?php echo paginate_links(); ?>
-            </nav>
-          <?php endif; ?>
-        <?php else: ?>
+        <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
-        <?php endif; ?>
+        <?php endif; wp_reset_query(); ?>
       </div>
 
       <?php if ( $has_sidebar ) get_sidebar( 'locations' ); ?>
