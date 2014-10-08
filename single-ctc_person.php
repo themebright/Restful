@@ -24,10 +24,14 @@ $has_sidebar = is_active_sidebar( 'people' );
               </div>
             <?php endif; ?>
 
-            <?php if ( tbf_person_position() || tbf_person_phone() || tbf_person_email() || tbf_person_urls() ) : ?>
+            <?php if ( tbf_person_position() || tbf_person_groups() || tbf_person_phone() || tbf_person_email() || tbf_person_urls() ) : ?>
               <div class="entry-meta person-meta">
                 <?php if ( tbf_person_position() ) : ?>
                   <div class="entry-meta-item person-position"><i class="fa fa-user fa-fw"></i><?php echo tbf_person_position(); ?></div>
+                <?php endif; ?>
+
+                <?php if ( tbf_person_groups() ) : ?>
+                  <div class="entry-meta-item person-groups"><i class="fa fa-users fa-fw"></i><?php echo tbf_person_groups(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_phone() ) : ?>

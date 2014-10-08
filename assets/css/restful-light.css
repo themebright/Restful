@@ -3549,6 +3549,12 @@ label.toggle-menu > span:before {
     margin-top: 30px;
   }
 }
+body.restful-person .entry-meta-item.person-groups li {
+  display: inline-block;
+}
+body.restful-person .entry-meta-item.person-groups li + li:before {
+  content: ', ';
+}
 body.restful-person .person-urls li {
   display: inline-block;
   vertical-align: top;
@@ -3642,9 +3648,6 @@ body.restful-sermon .sermon-download-pdf .fa {
   position: relative;
   top: 1px;
   margin-right: .5em;
-}
-body.restful-blog .entry.type-post .entry-meta {
-  color: #a2a6ae;
 }
 body.restful-home .bx-wrapper {
   position: relative;
