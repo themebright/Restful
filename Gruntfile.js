@@ -15,22 +15,12 @@ module.exports = function( grunt ) {
       },
       less: {
         files: [ 'assets/less/**/*.less' ],
-        tasks: [ 'less' ]
-      },
-      css: {
-        files: [ 'assets/css/restful-light.css', 'assets/css/restful-dark.css' ],
-        tasks: [ 'autoprefixer' ],
-        options: {
-          livereload: true
-        }
+        tasks: [ 'less', 'autoprefixer', 'cssmin' ]
       }
     },
 
     less: {
       build: {
-        options: {
-          'compress': true
-        },
         files: {
           'assets/css/restful-light.css': 'assets/less/restful-light.less',
           'assets/css/restful-dark.css': 'assets/less/restful-dark.less',
@@ -41,8 +31,17 @@ module.exports = function( grunt ) {
     autoprefixer: {
       build: {
         expand: true,
-        flatten: true,
-        src: 'assets/css/*.css',
+        cwd: 'assets/css/',
+        src: '*.css',
+        dest: 'assets/css'
+      }
+    },
+
+    cssmin: {
+      build: {
+        expand: true,
+        cwd: 'assets/css/',
+        src: '*.css',
         dest: 'assets/css/'
       }
     },
