@@ -4,7 +4,7 @@
  */
 
 /**
- * Add custom classes to the to body_class()
+ * Add custom classes to the body_class()
  */
 function restful_body_classes( $classes ) {
 
