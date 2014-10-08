@@ -6,6 +6,4 @@ jQuery( function( $ ) {
     'adaptiveHeight': true
   });
 
-  $( '.entry' ).fitVids();
-
 } );
