@@ -12,13 +12,11 @@
       <div class="container">
         <div class="row">
           <div class="branding col col-xs-12 col-md-3">
-            <?php if ( has_site_logo() ) : ?>
-              <?php the_site_logo(); ?>
-            <?php else : ?>
-              <h1 class="site-title">
-                <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a>
-              </h1>
-            <?php endif; ?>
+            <?php if ( function_exists( the_site_logo() ) ) the_site_logo(); ?>
+
+            <h1 class="site-title">
+              <a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a>
+            </h1>
           </div>
 
           <div class="access col col-xs-12 col-md-9">
