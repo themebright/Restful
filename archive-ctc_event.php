@@ -40,7 +40,35 @@ $has_sidebar = is_active_sidebar( 'events' );
         if ( have_posts() ) : while ( have_posts() ) : the_post();
 
         ?>
-          <?php get_template_part( 'content', 'full' ); ?>
+          <article <?php post_class( 'entry entry-excerpt' ); ?>>
+            <?php if ( has_post_thumbnail() ) : ?>
+              <div class="entry-thumbnail">
+                <?php the_post_thumbnail( 'thumbnail' ); ?>
+              </div>
+            <?php endif; ?>
+
+            <header class="entry-header">
+              <h2 class="entry-title">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h2>
+            </header>
+
+            <?php if ( tbf_event_date() || tbf_event_time() || tbf_event_venue() || tbf_event_address() ) : ?>
+              <div class="entry-meta event-meta">
+                <?php if ( tbf_event_date() ) : ?>
+                  <div class="entry-meta-item event-date"><i class="fa fa-calendar fa-fw"></i><?php echo tbf_event_date(); ?></div>
+                <?php endif; ?>
+
+                <?php if ( tbf_event_time() ) : ?>
+                  <div class="entry-meta-item event-time"><i class="fa fa-clock-o fa-fw"></i><?php echo tbf_event_time(); ?></div>
+                <?php endif; ?>
+
+                <?php if ( tbf_event_venue() ) : ?>
+                  <div class="entry-meta-item event-venue"><i class="fa fa-university fa-fw"></i><?php echo tbf_event_venue(); ?></div>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
+          </article>
         <?php endwhile; ?>
           <?php if ( restful_show_posts_nav() ) : ?>
             <nav class="pagination">
