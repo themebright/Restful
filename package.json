@@ -6,6 +6,7 @@
     "grunt-autoprefixer": "^1.0.0",
     "grunt-contrib-less": "^0.11.4",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-deploy": "^0.1.7",
     "jit-grunt": "^0.8.0"
   }
 }
