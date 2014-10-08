@@ -1203,21 +1203,6 @@ table th {
 table a {
   color: #272428;
 }
-.tbf-breadcrumb {
-  color: #a2a6ae;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-.tbf-breadcrumb a {
-  color: #a2a6ae;
-}
-.tbf-breadcrumb a:hover {
-  color: #6d737d;
-}
-.tbf-breadcrumb .sep {
-  margin: 0 .5em;
-}
 .pagination {
   margin-top: 90px;
   font-family: Oswald, sans-serif;
