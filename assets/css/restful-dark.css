@@ -1154,7 +1154,7 @@ table tr:nth-child(even) {
 }
 table th,
 table td {
-  padding: 1em;
+  padding: .75em;
   vertical-align: top;
 }
 table th {
@@ -3084,6 +3084,13 @@ label.toggle-menu {
 label.toggle-menu > span:before {
   content: '☰ ';
 }
+.tbf-widget .tbf-widget-locations-list,
+.tbf-widget .tbf-widget-people-list,
+.tbf-widget .tbf-widget-events-list,
+.tbf-widget .tbf-widget-sermons-list {
+  list-style: none;
+  margin-left: 0;
+}
 .tbf-widget-entry-title {
   text-transform: none;
   letter-spacing: 0;
@@ -3156,6 +3163,7 @@ label.toggle-menu > span:before {
 }
 .tbf-widget-locations .location-times {
   padding-left: 0;
+  margin-left: 0;
 }
 .tbf-widget-locations .location-times li {
   display: inline;
@@ -3191,6 +3199,10 @@ label.toggle-menu > span:before {
 .widget a {
   color: #ffffff;
 }
+.widget ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
 .widget + .widget {
   margin-top: 30px;
 }
@@ -3205,6 +3217,112 @@ label.toggle-menu > span:before {
 .widget_search .screen-reader-text,
 .widget_search .search-submit {
   display: none;
+}
+.widget_text .textwidget > *:first-child {
+  margin-top: 0;
+}
+.widget_text .textwidget h1,
+.widget_text .textwidget h2,
+.widget_text .textwidget h3,
+.widget_text .textwidget h4,
+.widget_text .textwidget h5,
+.widget_text .textwidget h6,
+.widget_text .textwidget p,
+.widget_text .textwidget blockquote,
+.widget_text .textwidget pre,
+.widget_text .textwidget address,
+.widget_text .textwidget ul,
+.widget_text .textwidget ol,
+.widget_text .textwidget dl,
+.widget_text .textwidget table,
+.widget_text .textwidget hr {
+  margin-top: 0.75em;
+}
+.widget_text .textwidget blockquote {
+  padding-left: 1.5em;
+}
+.widget_text .textwidget ul,
+.widget_text .textwidget ol {
+  padding-left: 1.5em;
+}
+.widget_text .textwidget ul ul,
+.widget_text .textwidget ol ul,
+.widget_text .textwidget ul ol,
+.widget_text .textwidget ol ol {
+  margin-top: 0;
+}
+.widget_text .textwidget ul {
+  list-style: disc;
+}
+.widget_text .textwidget ol {
+  list-style: decimal;
+}
+.widget_text .textwidget dt {
+  font-weight: bold;
+}
+.widget_text .textwidget dd + dt {
+  margin-top: 0.75em;
+}
+.widget_text .textwidget pre {
+  box-shadow: inset 0 0 0 1px #38343a;
+  padding: 1.5em;
+  font-size: 14px;
+}
+.widget_rss ul {
+  list-style: none;
+  margin-left: 0;
+}
+.widget_rss li > a.rsswidget {
+  font-family: Oswald, sans-serif;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: Karla, sans-serif;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+.widget_rss li > a.rsswidget a {
+  color: inherit;
+}
+.widget_rss li + li {
+  margin-top: 30px;
+  padding-top: 30px;
+  box-shadow: inset 0 1px #38343a;
+}
+.widget_rss .rsswidget img {
+  display: none;
+}
+.widget_rss .rss-date,
+.widget_rss .rssSummary,
+.widget_rss cite {
+  margin-top: .75em;
+}
+.widget_rss .rss-date,
+.widget_rss cite {
+  display: block;
+  color: #555a62;
+}
+.widget_calendar table {
+  text-align: center;
+}
+.widget_calendar caption {
+  font-family: Oswald, sans-serif;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #a2a6ae;
+}
+.widget_calendar caption a {
+  color: inherit;
 }
 .sidebar {
   font-size: 14px;
@@ -3627,7 +3745,7 @@ body.restful-home .section-sidebar-home .widget-title {
 body.restful-home .section-sidebar-home .widget-title a {
   color: inherit;
 }
-@media ( max-width: 779px ) {
+@media ( max-width: 479px ) {
   body.restful-home .section-sidebar-home .widget-area + .widget-area {
     margin-top: 30px;
   }

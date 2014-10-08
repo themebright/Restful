@@ -57,7 +57,7 @@ $has_sidebar = is_active_sidebar( 'main' );
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'search' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar( 'main' ); ?>
     </div>
   </div>
 </section>

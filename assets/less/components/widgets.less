@@ -3,11 +3,18 @@
 //
 
 
+// BASE WIDGET
+
 .widget {
   padding: 30px;
 
   a {
     color: @co-text-strong;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 1.5em;
   }
 
   + .widget {
@@ -20,6 +27,9 @@
   color: @co-text;
 }
 
+
+// WIDGET - SEARCH
+
 .widget_search {
   padding: 0;
   box-shadow: none;
@@ -27,5 +37,65 @@
   .screen-reader-text,
   .search-submit {
     display: none;
+  }
+}
+
+
+// WIDGET - TEXT
+
+.widget_text .textwidget {
+  .styled-text( .75em );
+}
+
+
+// WIDGET - RSS
+
+.widget_rss {
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li {
+    > a.rsswidget {
+      .h4;
+      .tbf-widget-entry-title;
+    }
+
+    + li {
+      margin-top: 30px;
+      padding-top: 30px;
+      box-shadow: inset 0 1px @co-border;
+    }
+  }
+
+  .rsswidget img {
+    display: none;
+  }
+
+  .rss-date,
+  .rssSummary,
+  cite {
+    margin-top: .75em;
+  }
+
+  .rss-date,
+  cite {
+    display: block;
+    color: @co-text-subtle;
+  }
+}
+
+
+// WIDGET - CALENDAR
+
+.widget_calendar {
+  table {
+    text-align: center;
+  }
+
+  caption {
+    .h4;
+    .widget-title;
   }
 }
