@@ -31,3 +31,5 @@ require_once get_template_directory() . '/includes/theme-support.php';
 add_theme_support( 'site-logo', array(
   'size' => 'large'
 ) );
+
+add_theme_support( 'jetpack-responsive-videos' );

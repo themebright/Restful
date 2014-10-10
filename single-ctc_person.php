@@ -52,6 +52,8 @@ $has_sidebar = is_active_sidebar( 'people' );
               <?php the_content(); ?>
             </div>
           </article>
+
+          <?php comments_template(); ?>
         <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
