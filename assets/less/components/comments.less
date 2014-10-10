@@ -30,8 +30,17 @@
     }
   }
 
-  .comment-body {
+  li.comment .comment-body {
     .row;
+  }
+
+  li.pingback {
+    font-size: 12px;
+    color: @co-text-subtle;
+
+    a {
+      color: @co-text-subtle;
+    }
   }
 
   .comment-meta {
@@ -47,6 +56,8 @@
   }
 
   .avatar {
+    width: 30px !important;
+    border-radius: 50%;
     display: block;
     margin-bottom: .75em;
   }
