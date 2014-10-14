@@ -18,7 +18,27 @@ $has_sidebar = is_active_sidebar( 'main' );
     <div class="row">
       <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <?php get_template_part( 'content', 'full' ); ?>
+          <article <?php post_class( 'entry' ); ?>>
+            <?php if ( has_post_thumbnail() ) : ?>
+              <div class="entry-thumbnail">
+                <?php the_post_thumbnail( 'large' ); ?>
+              </div>
+            <?php endif; ?>
+
+            <header class="entry-header">
+              <h1 class="entry-title">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h1>
+            </header>
+
+            <div class="entry-meta">
+              <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>
+            </div>
+
+            <div class="entry-content">
+              <?php the_content(); ?>
+            </div>
+          </article>
         <?php endwhile; ?>
           <?php if ( restful_show_posts_nav() ) : ?>
             <nav class="pagination">
