@@ -35,3 +35,19 @@ function restful_comment_form() {
   comment_form( $args );
 
 }
+
+/**
+ * Configures and displays wp_link_pages() to fit in with theme styling.
+ */
+function restful_link_pages() {
+
+  $args = array(
+    'before'      => '<nav class="pagination">',
+    'after'       => '</nav>',
+    'link_before' => '<span class="page-numbers">',
+    'link_after'  => '</span>'
+  );
+
+  wp_link_pages( $args );
+
+}

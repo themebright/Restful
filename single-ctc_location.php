@@ -42,6 +42,8 @@ $has_sidebar = is_active_sidebar( 'locations' );
 
             <div class="entry-content">
               <?php the_content(); ?>
+
+              <?php restful_link_pages(); ?>
             </div>
 
             <?php if ( tbf_location_map() ) : ?>

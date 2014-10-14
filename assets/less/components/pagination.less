@@ -4,7 +4,7 @@
 
 
 .pagination {
-  margin-top: 90px;
+  margin-top: 30px;
   .h5;
 
   .page-numbers {
@@ -18,7 +18,11 @@
     }
   }
 
-  .current {
+  > span.page-numbers {
     background: @co-border;
   }
+}
+
+.entry + .pagination {
+  margin-top: 90px;
 }
