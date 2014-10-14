@@ -20,5 +20,11 @@ function restful_add_theme_support() {
     'caption'
   ) );
 
+  add_theme_support( 'site-logo', array(
+    'size' => 'large'
+  ) );
+
+  add_theme_support( 'jetpack-responsive-videos' );
+
 }
-add_action( 'init', 'restful_add_theme_support' );
+add_action( 'after_setup_theme', 'restful_add_theme_support' );
