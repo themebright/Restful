@@ -4,7 +4,7 @@
  */
 
 /**
- *
+ * Clean way to display post meta in all the post templates.
  */
 function restful_post_meta() {
 
