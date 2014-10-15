@@ -25,7 +25,7 @@ $has_sidebar = is_active_sidebar( 'people' );
             <?php endif; ?>
 
             <?php if ( tbf_person_position() || tbf_person_groups() || tbf_person_phone() || tbf_person_email() || tbf_person_urls() ) : ?>
-              <div class="entry-meta person-meta">
+              <div class="entry-meta entry-meta-stacked person-meta">
                 <?php if ( tbf_person_position() ) : ?>
                   <div class="entry-meta-item person-position"><i class="fa fa-user fa-fw"></i><?php echo tbf_person_position(); ?></div>
                 <?php endif; ?>

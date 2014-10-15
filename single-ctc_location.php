@@ -25,7 +25,7 @@ $has_sidebar = is_active_sidebar( 'locations' );
             <?php endif; ?>
 
             <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
-              <div class="entry-meta location-meta">
+              <div class="entry-meta entry-meta-stacked location-meta">
                 <?php if ( tbf_location_address() ) : ?>
                   <div class="entry-meta-item location-position"><i class="fa fa-map-marker fa-fw"></i><?php echo tbf_location_address(); ?></div>
                 <?php endif; ?>

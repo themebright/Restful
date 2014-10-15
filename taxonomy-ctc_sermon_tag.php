@@ -10,7 +10,7 @@ $has_sidebar = is_active_sidebar( 'sermons' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <div class="masthead-subtitle above"><?php echo $taxonomy->labels->singular_name; ?></div>
+    <div class="masthead-subtitle"><?php echo $taxonomy->labels->singular_name; ?></div>
     <h1 class="masthead-title"><?php echo $queried_object->name; ?></h1>
   </div>
 </section>
@@ -33,7 +33,7 @@ $has_sidebar = is_active_sidebar( 'sermons' );
               </h2>
             </header>
 
-            <div class="entry-meta sermon-meta">
+            <div class="entry-meta entry-meta-stacked sermon-meta">
               <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_speakers() ) : ?>

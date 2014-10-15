@@ -10,7 +10,7 @@ $has_sidebar = is_active_sidebar( 'people' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <div class="masthead-subtitle above"><?php echo $taxonomy->labels->singular_name; ?></div>
+    <div class="masthead-subtitle"><?php echo $taxonomy->labels->singular_name; ?></div>
     <h1 class="masthead-title"><?php echo $queried_object->name; ?></h1>
   </div>
 </section>
@@ -34,7 +34,7 @@ $has_sidebar = is_active_sidebar( 'people' );
             </header>
 
             <?php if ( tbf_person_position() ) : ?>
-              <div class="entry-meta person-meta">
+              <div class="entry-meta entry-meta-stacked person-meta">
                 <div class="entry-meta-item person-position"><i class="fa fa-user fa-fw"></i><?php echo tbf_person_position(); ?></div>
               </div>
             <?php endif; ?>

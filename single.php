@@ -9,8 +9,8 @@ $has_sidebar = is_active_sidebar( 'main' );
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
     <h1 class="masthead-title"><?php the_title(); ?></h1>
-    <div class="masthead-subtitle below">
-      <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>
+    <div class="masthead-subtitle entry-meta entry-meta-inline">
+      <?php restful_post_meta(); ?>
     </div>
   </div>
 </section>

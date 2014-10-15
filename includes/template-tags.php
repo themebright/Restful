@@ -4,6 +4,34 @@
  */
 
 /**
+ *
+ */
+function restful_post_meta() {
+
+  global $post;
+
+?>
+
+  <div class="entry-meta-item">
+    <i class="fa fa-calendar"></i>
+    <a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
+  </div>
+
+  <div class="entry-meta-item">
+    <i class="fa fa-user"></i>
+    <a href="<?php echo get_author_posts_url( $post->post_author ); ?>"><?php the_author_meta( 'display_name', $post->post_author ); ?></a>
+  </div>
+
+  <div class="entry-meta-item">
+    <i class="fa fa-folder"></i>
+    <?php the_category( ', ' ); ?>
+  </div>
+
+<?php
+
+}
+
+/**
  * Returns true if more than one page of posts exists.
  */
 function restful_show_posts_nav() {

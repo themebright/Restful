@@ -31,8 +31,8 @@ $has_sidebar = is_active_sidebar( 'main' );
               </h1>
             </header>
 
-            <div class="entry-meta">
-              <?php _e( 'Published', 'restful' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?>
+            <div class="entry-meta entry-meta-inline">
+              <?php restful_post_meta(); ?>
             </div>
 
             <div class="entry-content">
