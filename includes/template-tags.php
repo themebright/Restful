@@ -27,6 +27,11 @@ function restful_post_meta() {
     <?php the_category( ', ' ); ?>
   </div>
 
+  <div class="entry-meta-item">
+    <i class="fa fa-comment"></i>
+    <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+  </div>
+
 <?php
 
 }
