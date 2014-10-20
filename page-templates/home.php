@@ -44,7 +44,7 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
           <?php if ( $slide_url ) echo "<a href='$slide_url' class='bx-slide-link'>"; ?>
             <div class="container">
               <?php if ( $show_title && get_the_title() ) : ?>
-                <h2 class="bx-slide-title"><?php the_title(); ?></h2>
+                <h1 class="bx-slide-title"><?php the_title(); ?></h1>
               <?php endif; ?>
 
               <?php if ( $slide_text ) : ?>
