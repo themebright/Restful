@@ -10,7 +10,7 @@ $has_sidebar = is_active_sidebar( 'sermons' );
 
 <section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
   <div class="container">
-    <div class="masthead-subtitle"><?php echo $taxonomy->labels->singular_name; ?></div>
+    <div class="masthead-subtitle above"><?php echo $taxonomy->labels->singular_name; ?></div>
     <h1 class="masthead-title"><?php echo $queried_object->name; ?></h1>
   </div>
 </section>
