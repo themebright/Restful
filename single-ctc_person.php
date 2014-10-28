@@ -27,19 +27,19 @@ $has_sidebar = is_active_sidebar( 'people' );
             <?php if ( tbf_person_position() || tbf_person_groups() || tbf_person_phone() || tbf_person_email() || tbf_person_urls() ) : ?>
               <div class="entry-meta entry-meta-stacked person-meta">
                 <?php if ( tbf_person_position() ) : ?>
-                  <div class="entry-meta-item person-position"><i class="fa fa-user fa-fw"></i><?php echo tbf_person_position(); ?></div>
+                  <div class="entry-meta-item person-position"><i class="genericon genericon-user"></i><?php echo tbf_person_position(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_groups() ) : ?>
-                  <div class="entry-meta-item person-groups"><i class="fa fa-users fa-fw"></i><?php echo tbf_person_groups(); ?></div>
+                  <div class="entry-meta-item person-groups"><i class="genericon genericon-user"></i><?php echo tbf_person_groups(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_phone() ) : ?>
-                  <div class="entry-meta-item person-phone"><i class="fa fa-phone fa-fw"></i><?php echo tbf_person_phone(); ?></div>
+                  <div class="entry-meta-item person-phone"><i class="genericon genericon-phone"></i><?php echo tbf_person_phone(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_email() ) : ?>
-                  <div class="entry-meta-item person-email"><i class="fa fa-envelope fa-fw"></i><?php echo tbf_person_email(); ?></div>
+                  <div class="entry-meta-item person-email"><i class="genericon genericon-mail"></i><?php echo tbf_person_email(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_urls() ) : ?>

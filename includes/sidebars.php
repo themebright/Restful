@@ -114,6 +114,15 @@ function restful_register_sidebars() {
     'after_title'   => $default_widget_markup['after_title']
   ) );
 
+  register_sidebar( array(
+    'name'          => __( 'Footer 4', 'restful' ),
+    'id'            => 'footer-4',
+    'before_widget' => $default_widget_markup['before_widget'],
+    'after_widget'  => $default_widget_markup['after_widget'],
+    'before_title'  => $default_widget_markup['before_title'],
+    'after_title'   => $default_widget_markup['after_title']
+  ) );
+
   // Home sidebars
   register_sidebar( array(
     'name'          => __( 'Home 1', 'restful' ),

@@ -46,7 +46,7 @@ $has_sidebar = is_active_sidebar( 'locations' );
 
             <?php if ( tbf_location_address() ) : ?>
               <div class="entry-meta entry-meta-stacked location-meta">
-                <div class="entry-meta-item location-position"><i class="fa fa-map-marker fa-fw"></i><?php echo tbf_location_address(); ?></div>
+                <div class="entry-meta-item location-position"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
               </div>
             <?php endif; ?>
 

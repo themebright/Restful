@@ -46,7 +46,7 @@ $has_sidebar = is_active_sidebar( 'people' );
 
             <?php if ( tbf_person_position() ) : ?>
               <div class="entry-meta entry-meta-stacked person-meta">
-                <div class="entry-meta-item person-position"><i class="fa fa-user fa-fw"></i><?php echo tbf_person_position(); ?></div>
+                <div class="entry-meta-item person-position"><i class="genericon genericon-user"></i><?php echo tbf_person_position(); ?></div>
               </div>
             <?php endif; ?>
 

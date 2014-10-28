@@ -38,31 +38,31 @@ $has_sidebar = is_active_sidebar( 'sermons' );
 
             <?php if ( tbf_sermon_pdf() ) : ?>
               <div class="sermon-media sermon-media-pdf">
-                <a href="<?php echo tbf_sermon_pdf(); ?>" class="button sermon-download-pdf"><i class="fa fa-download"></i><?php _e( 'PDF Transcript', 'restful' ) ?></a>
+                <a href="<?php echo tbf_sermon_pdf(); ?>" class="button sermon-download-pdf"><i class="genericon genericon-download"></i><?php _e( 'PDF Transcript', 'restful' ) ?></a>
               </div>
             <?php endif; ?>
 
             <div class="entry-meta entry-meta-stacked sermon-meta">
-              <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry-meta-item sermon-date"><i class="genericon genericon-month"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_topics() ) : ?>
-                <div class="entry-meta-item sermon-topics"><i class="fa fa-list fa-fw"></i><?php echo tbf_sermon_topics(); ?></div>
+                <div class="entry-meta-item sermon-topics"><i class="genericon genericon-hierarchy"></i><?php echo tbf_sermon_topics(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_books() ) : ?>
-                <div class="entry-meta-item sermon-books"><i class="fa fa-book fa-fw"></i><?php echo tbf_sermon_books(); ?></div>
+                <div class="entry-meta-item sermon-books"><i class="genericon genericon-book"></i><?php echo tbf_sermon_books(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_series() ) : ?>
-                <div class="entry-meta-item sermon-series"><i class="fa fa-th fa-fw"></i><?php echo tbf_sermon_series(); ?></div>
+                <div class="entry-meta-item sermon-series"><i class="genericon genericon-hierarchy"></i><?php echo tbf_sermon_series(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry-meta-item sermon-speakers"><i class="fa fa-user fa-fw"></i><?php echo tbf_sermon_speakers(); ?></div>
+                <div class="entry-meta-item sermon-speakers"><i class="genericon genericon-user"></i><?php echo tbf_sermon_speakers(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_tags() ) : ?>
-                <div class="entry-meta-item sermon-tags"><i class="fa fa-tags fa-fw"></i><?php echo tbf_sermon_tags(); ?></div>
+                <div class="entry-meta-item sermon-tags"><i class="genericon genericon-tag"></i><?php echo tbf_sermon_tags(); ?></div>
               <?php endif; ?>
             </div>
 

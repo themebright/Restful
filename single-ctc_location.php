@@ -27,15 +27,15 @@ $has_sidebar = is_active_sidebar( 'locations' );
             <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
               <div class="entry-meta entry-meta-stacked location-meta">
                 <?php if ( tbf_location_address() ) : ?>
-                  <div class="entry-meta-item location-position"><i class="fa fa-map-marker fa-fw"></i><?php echo tbf_location_address(); ?></div>
+                  <div class="entry-meta-item location-position"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_location_phone() ) : ?>
-                  <div class="entry-meta-item location-phone"><i class="fa fa-phone fa-fw"></i><?php echo tbf_location_phone(); ?></div>
+                  <div class="entry-meta-item location-phone"><i class="genericon genericon-phone"></i><?php echo tbf_location_phone(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_location_times() ) : ?>
-                  <div class="entry-meta-item location-email"><i class="fa fa-clock-o fa-fw"></i><?php echo tbf_location_times(); ?></div>
+                  <div class="entry-meta-item location-email"><i class="genericon genericon-time"></i><?php echo tbf_location_times(); ?></div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

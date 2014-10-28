@@ -9,7 +9,8 @@
 function restful_register_nav_menus() {
 
   $args = array(
-    'primary' => __( 'Primary Menu', 'restful' )
+    'primary' => __( 'Primary Menu Location', 'restful' ),
+    'social'  => __( 'Social Menu Location', 'restful' )
   );
 
   register_nav_menus( $args );

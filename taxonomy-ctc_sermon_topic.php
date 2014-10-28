@@ -34,10 +34,10 @@ $has_sidebar = is_active_sidebar( 'sermons' );
             </header>
 
             <div class="entry-meta entry-meta-stacked sermon-meta">
-              <div class="entry-meta-item sermon-date"><i class="fa fa-calendar fa-fw"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry-meta-item sermon-date"><i class="genericon genericon-month"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry-meta-item sermon-speakers"><i class="fa fa-user fa-fw"></i><?php echo tbf_sermon_speakers(); ?></div>
+                <div class="entry-meta-item sermon-speakers"><i class="genericon genericon-user"></i><?php echo tbf_sermon_speakers(); ?></div>
               <?php endif; ?>
             </div>
 
