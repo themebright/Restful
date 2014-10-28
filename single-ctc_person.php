@@ -24,14 +24,10 @@ $has_sidebar = is_active_sidebar( 'people' );
               </div>
             <?php endif; ?>
 
-            <?php if ( tbf_person_position() || tbf_person_groups() || tbf_person_phone() || tbf_person_email() || tbf_person_urls() ) : ?>
+            <?php if ( tbf_person_position() || tbf_person_phone() || tbf_person_email() ) : ?>
               <div class="entry-meta entry-meta-stacked person-meta">
                 <?php if ( tbf_person_position() ) : ?>
                   <div class="entry-meta-item person-position"><i class="genericon genericon-user"></i><?php echo tbf_person_position(); ?></div>
-                <?php endif; ?>
-
-                <?php if ( tbf_person_groups() ) : ?>
-                  <div class="entry-meta-item person-groups"><i class="genericon genericon-user"></i><?php echo tbf_person_groups(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_phone() ) : ?>
@@ -40,10 +36,6 @@ $has_sidebar = is_active_sidebar( 'people' );
 
                 <?php if ( tbf_person_email() ) : ?>
                   <div class="entry-meta-item person-email"><i class="genericon genericon-mail"></i><?php echo tbf_person_email(); ?></div>
-                <?php endif; ?>
-
-                <?php if ( tbf_person_urls() ) : ?>
-                  <div class="entry-meta-item"><?php echo tbf_person_urls(); ?></div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

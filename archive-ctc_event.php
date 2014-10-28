@@ -53,7 +53,7 @@ $has_sidebar = is_active_sidebar( 'events' );
               </h2>
             </header>
 
-            <?php if ( tbf_event_date() || tbf_event_time() || tbf_event_venue() || tbf_event_address() ) : ?>
+            <?php if ( tbf_event_date() || tbf_event_time() || tbf_event_address() ) : ?>
               <div class="entry-meta entry-meta-stacked event-meta">
                 <?php if ( tbf_event_date() ) : ?>
                   <div class="entry-meta-item event-date"><i class="genericon genericon-month"></i><?php echo tbf_event_date(); ?></div>

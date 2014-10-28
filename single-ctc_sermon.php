@@ -45,24 +45,12 @@ $has_sidebar = is_active_sidebar( 'sermons' );
             <div class="entry-meta entry-meta-stacked sermon-meta">
               <div class="entry-meta-item sermon-date"><i class="genericon genericon-month"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
-              <?php if ( tbf_sermon_topics() ) : ?>
-                <div class="entry-meta-item sermon-topics"><i class="genericon genericon-hierarchy"></i><?php echo tbf_sermon_topics(); ?></div>
-              <?php endif; ?>
-
-              <?php if ( tbf_sermon_books() ) : ?>
-                <div class="entry-meta-item sermon-books"><i class="genericon genericon-book"></i><?php echo tbf_sermon_books(); ?></div>
-              <?php endif; ?>
-
               <?php if ( tbf_sermon_series() ) : ?>
                 <div class="entry-meta-item sermon-series"><i class="genericon genericon-hierarchy"></i><?php echo tbf_sermon_series(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_speakers() ) : ?>
                 <div class="entry-meta-item sermon-speakers"><i class="genericon genericon-user"></i><?php echo tbf_sermon_speakers(); ?></div>
-              <?php endif; ?>
-
-              <?php if ( tbf_sermon_tags() ) : ?>
-                <div class="entry-meta-item sermon-tags"><i class="genericon genericon-tag"></i><?php echo tbf_sermon_tags(); ?></div>
               <?php endif; ?>
             </div>
 

@@ -24,7 +24,7 @@ $has_sidebar = is_active_sidebar( 'events' );
               </div>
             <?php endif; ?>
 
-            <?php if ( tbf_event_date() || tbf_event_time() || tbf_event_venue() || tbf_event_address() ) : ?>
+            <?php if ( tbf_event_date() || tbf_event_time() || tbf_event_address() ) : ?>
               <div class="entry-meta entry-meta-stacked event-meta">
                 <?php if ( tbf_event_date() ) : ?>
                   <div class="entry-meta-item event-date"><i class="genericon genericon-month"></i><?php echo tbf_event_date(); ?></div>
@@ -32,10 +32,6 @@ $has_sidebar = is_active_sidebar( 'events' );
 
                 <?php if ( tbf_event_time() ) : ?>
                   <div class="entry-meta-item event-time"><i class="genericon genericon-time"></i><?php echo tbf_event_time(); ?></div>
-                <?php endif; ?>
-
-                <?php if ( tbf_event_venue() ) : ?>
-                  <div class="entry-meta-item event-venue"><i class="genericon genericon-location"></i><?php echo tbf_event_venue(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_event_address() ) : ?>
