@@ -26,3 +26,8 @@ function restful_remove_styles() {
 
 }
 add_action( 'wp_print_styles', 'restful_remove_styles' );
+
+/**
+ * Disables Jetpack's concatenated CSS so module styles can be deregistered on an indivdiual basis.
+ */
+add_filter( 'jetpack_implode_frontend_css', '__return_false' );
