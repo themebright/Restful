@@ -8,6 +8,7 @@
     "grunt-contrib-less": "^0.11.4",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-ftp-deploy": "^0.1.7",
+    "grunt-ftpush": "^0.3.3",
     "jit-grunt": "^0.8.0"
   }
 }
