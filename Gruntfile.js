@@ -44,25 +44,10 @@ module.exports = function( grunt ) {
         src: '*.css',
         dest: 'assets/css/'
       }
-    },
-
-    ftpush: {
-      demo: {
-        auth: {
-          host: 'ftp.themebright.co',
-          port: 21,
-          authKey: 'siteground-demo'
-        },
-        src: '.',
-        dest: '/restful',
-        exclusions: [ '.git', '.gitignore', '.gitmodules', 'node_modules', '.ftppass', '.DS_Store' ]
-      }
     }
 
   } );
 
   grunt.registerTask( 'default', [ 'watch' ] );
-
-  grunt.registerTask( 'deploy', [ 'ftpush:demo' ] );
 
 };
