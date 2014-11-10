@@ -43,7 +43,13 @@ $has_sidebar = is_active_sidebar( 'search' );
               <?php the_excerpt(); ?>
             </div>
           </article>
-        <?php endwhile; else: ?>
+        <?php endwhile; ?>
+          <?php if ( restful_show_posts_nav() ) : ?>
+            <nav class="pagination">
+              <?php echo paginate_links(); ?>
+            </nav>
+          <?php endif; ?>
+        <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
       </div>
