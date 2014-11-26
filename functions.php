@@ -27,3 +27,11 @@ require_once get_template_directory() . '/includes/styles.php';
 require_once get_template_directory() . '/includes/tbf.php';
 require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/theme-support.php';
+
+/**
+ * Include the updater scripts.
+ */
+if ( is_admin() ) {
+  require_once get_template_directory() . '/includes/updater/updater.php';
+  require_once get_template_directory() . '/includes/updater/updater-admin.php';
+}
