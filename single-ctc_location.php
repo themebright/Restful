@@ -19,7 +19,7 @@ $has_sidebar = is_active_sidebar( 'main' );
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <article <?php post_class( 'entry' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
-              <div class="entry__thumbnail"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+              <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
             <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
