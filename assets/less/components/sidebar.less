@@ -1,0 +1,31 @@
+//
+// SIDEBAR
+//
+
+
+.sidebar {
+  font-size: 14px;
+
+  .widget {
+    border: solid 1px @co-border;
+
+    ul,
+    ol {
+      margin-left: 1.5em;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+  }
+}
+
+@media @mq-sm-max {
+  .sidebar {
+    margin-top: 60px;
+  }
+}

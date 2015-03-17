@@ -25,10 +25,22 @@ function restful_add_theme_support() {
   add_theme_support( 'post-thumbnails' );
 
   add_theme_support( 'site-logo', array(
-    'size' => 'large'
+    'size' => 'medium'
   ) );
 
   add_theme_support( 'title-tag' );
 
 }
 add_action( 'after_setup_theme', 'restful_add_theme_support' );
+
+/**
+ * Removes site logo header text checkbox added by the Jetpack Site Logo module.
+ */
+function restful_remove_site_logo_header_text() {
+
+  global $wp_customize;
+
+  $wp_customize->remove_control( 'site_logo_header_text' );
+
+}
+add_action( 'customize_register', 'restful_remove_site_logo_header_text', 11 );

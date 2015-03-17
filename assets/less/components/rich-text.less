@@ -1,0 +1,95 @@
+//
+// RICH TEXT
+//
+
+
+.rich-text( @margin: 1.5em ) {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  address,
+  ul,
+  ol,
+  dl,
+  table,
+  hr {
+    margin-top: @margin;
+  }
+
+  blockquote {
+    margin-left: @margin;
+  }
+
+  ul,
+  ol {
+    margin-left: @margin;
+
+    ul,
+    ol {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  dt {
+    font-weight: @fw-bold;
+  }
+
+  dd + dt {
+    margin-top: @margin;
+  }
+
+  pre {
+    box-shadow: inset 0 0 0 1px @co-border;
+    padding: 1.5em;
+    font-size: 14px;
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+
+    thead {
+      background: @co-border;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .1em;
+      color: @co-text-subtle;
+    }
+
+    tr:nth-child(even) {
+      background: @co-border;
+    }
+
+    th,
+    td {
+      padding: .75em;
+      vertical-align: top;
+    }
+
+    th {
+      font-weight: @fw-normal;
+    }
+
+    a {
+      color: @co-text-strong;
+    }
+  }
+}

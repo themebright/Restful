@@ -16,18 +16,3 @@ function restful_add_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'restful_add_styles' );
-
-/**
- * Removes previously enqueued stylesheets usually added by plugins.
- */
-function restful_remove_styles() {
-
-  wp_deregister_style( 'grunion.css' );
-
-}
-add_action( 'wp_print_styles', 'restful_remove_styles' );
-
-/**
- * Disables Jetpack's concatenated CSS so module styles can be deregistered on an indivdiual basis.
- */
-add_filter( 'jetpack_implode_frontend_css', '__return_false' );

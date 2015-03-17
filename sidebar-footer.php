@@ -1,41 +1,27 @@
-<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || has_nav_menu( 'social' ) ) : ?>
+<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
 
-<section class="section section-sidebar-footer">
+<section class="footer-widgets section">
   <div class="container">
     <div class="row">
       <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-        <div class="widget-area col col-xs-12 col-md-3">
+        <div class="widget-area col col--xs--12 col--md--3">
           <?php dynamic_sidebar( 'footer-1' ); ?>
         </div>
       <?php endif; ?>
 
       <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
-        <div class="widget-area col col-xs-12 col-md-3">
+        <div class="widget-area col col--xs--12 col--md--3">
           <?php dynamic_sidebar( 'footer-2' ); ?>
         </div>
       <?php endif; ?>
 
       <?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
-        <div class="widget-area col col-xs-12 col-md-3">
+        <div class="widget-area col col--xs--12 col--md--3">
           <?php dynamic_sidebar( 'footer-3' ); ?>
         </div>
       <?php endif; ?>
 
-      <?php if ( has_nav_menu( 'social' ) ) : ?>
-        <div class="widget-area col col-xs-12 col-md-3">
-          <?php
-
-          wp_nav_menu( array(
-            'theme_location' => 'social',
-            'container'      => 'false',
-            'menu_class'     => 'social-menu',
-            'menu_id'        => 'social-menu',
-            'depth'          => '1'
-          ) );
-
-          ?>
-        </div>
-      <?php endif; ?>
+      <div class="widget-area col col--xs--12 col--md--3">{{ social }}</div>
     </div>
   </div>
 </section>

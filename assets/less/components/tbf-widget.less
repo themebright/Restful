@@ -26,7 +26,7 @@
 .tbf-widget-entry {
   .cf;
 
-  + .tbf-widget-entry {
+  & + & {
     margin-top: 30px;
     padding-top: 30px;
     box-shadow: inset 0 1px @co-border;
@@ -34,7 +34,7 @@
 }
 
 .tbf-widget-entry-content {
-  .styled-text( .5em );
+  .rich-text( .5em );
 }
 
 
@@ -52,7 +52,7 @@
     li {
       display: inline;
 
-      + li:before {
+      & + &:before {
         content: '·';
         margin: 0 .5em;
       }

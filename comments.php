@@ -3,13 +3,13 @@
 if ( post_password_required() ) return;
 
 if ( comments_open() ) : ?>
-  <div class="comments-wrapper">
+  <div class="comments">
 
     <?php if ( have_comments() ) : ?>
-      <div class="replies-wrapper">
+      <div class="comments__replies">
         <h3><?php comments_number(); ?></h3>
 
-        <ol class="comments-list">
+        <ol class="comments__replies-list">
           <?php
 
           $args = array(

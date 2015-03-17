@@ -7,16 +7,16 @@ $has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
-<section class="section-masthead <?php if ( ! $has_sidebar ) echo 'masthead-centered' ?>">
+<section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
   <div class="container">
-    <h1 class="masthead-title"><?php echo $queried_object->labels->name; ?></h1>
+    <h1 class="masthead__title"><?php echo $queried_object->labels->name; ?></h1>
   </div>
 </section>
 
-<section class="section section-main">
+<section class="section">
   <div class="container">
     <div class="row">
-      <div class="col col-xs-12 <?php echo ( $has_sidebar ? 'col-md-7' : 'col-md-8 col-md-push-2' ); ?>">
+      <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--md--8 col--md--push--2' ); ?>">
         <?php
 
         global $wp_query;
@@ -31,26 +31,22 @@ $has_sidebar = is_active_sidebar( 'main' );
         if ( have_posts() ) : while ( have_posts() ) : the_post();
 
         ?>
-          <article <?php post_class( 'entry entry-excerpt' ); ?>>
+          <article <?php post_class( 'entry entry--excerpt' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
-              <div class="entry-thumbnail">
-                <?php the_post_thumbnail( 'thumbnail' ); ?>
-              </div>
+              <div class="entry__thumbnail"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
             <?php endif; ?>
 
-            <header class="entry-header">
-              <h2 class="entry-title">
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              </h2>
+            <header class="entry__header">
+              <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
             <?php if ( tbf_location_address() ) : ?>
-              <div class="entry-meta entry-meta-stacked location-meta">
-                <div class="entry-meta-item location-position"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
+              <div class="entry__meta entry__meta--stacked">
+                <div class="entry__meta-item"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
               </div>
             <?php endif; ?>
 
-            <div class="entry-content">
+            <div class="entry__body">
               <?php the_excerpt(); ?>
             </div>
           </article>
