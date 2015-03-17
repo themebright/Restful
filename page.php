@@ -2,7 +2,7 @@
 
 get_header();
 
-$has_sidebar = is_active_sidebar( 'pages' );
+$has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
@@ -35,9 +35,11 @@ $has_sidebar = is_active_sidebar( 'pages' );
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'pages' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar(); ?>
     </div>
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();

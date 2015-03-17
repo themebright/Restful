@@ -2,7 +2,7 @@
 
 get_header();
 
-$has_sidebar = is_active_sidebar( 'people' );
+$has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
@@ -53,9 +53,11 @@ $has_sidebar = is_active_sidebar( 'people' );
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'people' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar(); ?>
     </div>
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();

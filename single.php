@@ -40,9 +40,11 @@ $has_sidebar = is_active_sidebar( 'main' );
         <?php endif; ?>
       </div>
 
-      <?php get_sidebar( 'main' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar(); ?>
     </div>
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();

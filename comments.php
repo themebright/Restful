@@ -1,8 +1,6 @@
 <?php
 
-if ( post_password_required() ) {
-  return;
-}
+if ( post_password_required() ) return;
 
 if ( comments_open() ) : ?>
   <div class="comments-wrapper">

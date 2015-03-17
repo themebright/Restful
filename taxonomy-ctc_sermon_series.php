@@ -4,7 +4,7 @@ get_header();
 
 $queried_object = get_queried_object();
 $taxonomy = get_taxonomy( $queried_object->taxonomy );
-$has_sidebar = is_active_sidebar( 'sermons' );
+$has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
@@ -56,9 +56,11 @@ $has_sidebar = is_active_sidebar( 'sermons' );
         <?php endif; ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'sermons' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar(); ?>
     </div>
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();

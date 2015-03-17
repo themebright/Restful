@@ -57,4 +57,6 @@ $has_sidebar = is_active_sidebar( 'main' );
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();

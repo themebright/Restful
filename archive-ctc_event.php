@@ -3,7 +3,7 @@
 get_header();
 
 $queried_object = get_queried_object();
-$has_sidebar = is_active_sidebar( 'events' );
+$has_sidebar = is_active_sidebar( 'main' );
 
 ?>
 
@@ -76,9 +76,11 @@ $has_sidebar = is_active_sidebar( 'events' );
         <?php endif; wp_reset_query(); ?>
       </div>
 
-      <?php if ( $has_sidebar ) get_sidebar( 'events' ); ?>
+      <?php if ( $has_sidebar ) get_sidebar(); ?>
     </div>
   </div>
 </section>
 
-<?php get_footer();
+<?php
+
+get_footer();
