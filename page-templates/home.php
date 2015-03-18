@@ -43,11 +43,15 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
         <div class="brightslider__slide" style="background-image: url(<?php echo $slide_image; ?>)">
           <?php if ( $slide_url ) echo "<a href='$slide_url' class='brightslider__slide-link'>"; ?>
             <div class="container">
-              <?php if ( $show_title ) the_title( '<h1 class="brightslider__slide-title">', '</h1>' ); ?>
+              <div class="row">
+                <div class="col col--xs--12 col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2">
+                  <?php if ( $show_title ) the_title( '<h1 class="brightslider__slide-title">', '</h1>' ); ?>
 
-              <?php if ( $slide_text ) : ?>
-                <div class="brightslider__slide-text"><?php echo $slide_text; ?></div>
-              <?php endif; ?>
+                  <?php if ( $slide_text ) : ?>
+                    <div class="brightslider__slide-text"><?php echo $slide_text; ?></div>
+                  <?php endif; ?>
+                </div>
+              </div>
             </div>
           <?php if ( $slide_url ) echo '</a>'; ?>
         </div>
@@ -60,7 +64,7 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
   <section class="welcome-message section section--extra-padding">
     <div class="container">
       <div class="row">
-        <div class="rich-text col col--xs--12 col--sm--10 col--sm--offset--1 col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2">
+        <div class="rich-text col col--xs--12 col--sm--10  col--sm--offset--1">
           <?php the_title( '<h1 class="entry__title">', '</h1>' ); ?>
           <?php the_content(); ?>
         </div>
