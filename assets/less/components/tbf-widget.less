@@ -5,17 +5,12 @@
 
 // TBF WIDGET
 
-.tbf-widget {
-  .tbf-widget-locations-list,
-  .tbf-widget-people-list,
-  .tbf-widget-events-list,
-  .tbf-widget-sermons-list {
-    list-style: none;
-    margin-left: 0;
-  }
+.tbf-widget__entries {
+  list-style: none;
+  margin-left: 0;
 }
 
-.tbf-widget-entry-title {
+.tbf-widget__entry-title {
   text-transform: none;
   letter-spacing: 0;
   font-family: @ff-sans;
@@ -23,7 +18,7 @@
   margin-bottom: .5em;
 }
 
-.tbf-widget-entry {
+.tbf-widget__entry {
   .cf;
 
   & + & {
@@ -33,65 +28,49 @@
   }
 }
 
-.tbf-widget-entry-content {
-  .rich-text( .5em );
+.tbf-widget__entry-body {
+  .rich-text( .75em );
 }
 
 
 // LOCATIONS WIDGET
 
-.tbf-widget-locations-entry-thumbnail {
+.tbf-widget--locations__entry-thumbnail {
   margin-bottom: 1em;
-}
-
-.tbf-widget-locations {
-  .location-times {
-    padding-left: 0;
-    margin-left: 0;
-
-    li {
-      display: inline;
-
-      & + &:before {
-        content: '·';
-        margin: 0 .5em;
-      }
-    }
-  }
 }
 
 
 // PEOPLE WIDGET
 
-.tbf-widget-people-entry-thumbnail {
+.tbf-widget--people__entry-thumbnail {
   float: right;
   width: 60px;
   height: 60px;
   margin-left: 30px;
 }
 
-.tbf-widget-person-position {
+.tbf-widget--person__position {
   color: @co-text-subtle;
 }
 
 
 // EVENTS WIDGET
 
-.tbf-widget-events-entry-thumbnail {
+.tbf-widget--events__entry-thumbnail {
   margin-bottom: 1em;
 }
 
-.tbf-widget-event-date + .tbf-widget-event-time {
+.tbf-widget--event__date + .tbf-widget--event__date {
   margin-top: 0;
 }
 
 
 // SERMONS WIDGET
 
-.tbf-widget-sermons-entry-thumbnail {
+.tbf-widget--sermons__entry-thumbnail {
   margin-bottom: 1em;
 }
 
-.tbf-widget-sermon-date {
+.tbf-widget--sermon__date {
   color: @co-text-subtle;
 }
