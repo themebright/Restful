@@ -1,6 +1,6 @@
 module.exports = function( grunt ) {
 
-  require( 'jit-grunt' )( grunt );
+  require( 'load-grunt-tasks' )( grunt );
 
   grunt.initConfig( {
 
@@ -15,11 +15,14 @@ module.exports = function( grunt ) {
       },
       less: {
         files: [ 'assets/less/**/*.less' ],
-        tasks: [ 'less', 'autoprefixer', 'cssmin' ]
+        tasks: [ 'less', 'autoprefixer' ]
       }
     },
 
     less: {
+      options: {
+        compress: true
+      },
       build: {
         files: {
           'assets/css/restful-light.css': 'assets/less/restful-light.less',
@@ -33,15 +36,6 @@ module.exports = function( grunt ) {
         expand: true,
         cwd: 'assets/css/',
         src: '*.css',
-        dest: 'assets/css'
-      }
-    },
-
-    cssmin: {
-      build: {
-        expand: true,
-        cwd: 'assets/css/',
-        src: '*.css',
         dest: 'assets/css/'
       }
     }
@@ -49,5 +43,6 @@ module.exports = function( grunt ) {
   } );
 
   grunt.registerTask( 'default', [ 'watch' ] );
+  grunt.registerTask( 'build',   [ 'less:build', 'autoprefixer:build' ] );
 
 };
