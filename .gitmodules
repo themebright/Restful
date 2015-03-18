@@ -4,6 +4,3 @@
 [submodule "customizer-library"]
 	path = customizer-library
 	url = git@github.com:devinsays/customizer-library
-[submodule "genericons"]
-	path = genericons
-	url = git@github.com:Automattic/Genericons.git
