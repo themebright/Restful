@@ -8,25 +8,33 @@ var Restful = {
 
       toggle: function() {
         jQuery( this.el ).toggleClass( 'is-open' );
-      },
+      }
 
     },
 
     slider: {
 
-    },
+      el: '.brightslider',
 
-  },
+      options: {
+        'mode'           : 'fade',
+        'controls'       : false,
+        'adaptiveHeight' : true
+      },
+
+      init: function() {
+        jQuery( this.el ).bxSlider( this.options );
+      }
+
+    }
+
+  }
 
 };
 
 jQuery( function( $ ) {
 
-  $( '#bright-slider' ).bxSlider({
-    'mode': 'fade',
-    'controls': false,
-    'adaptiveHeight': true
-  });
+  Restful.components.slider.init();
 
   $( '.header__toggle-menu' ).click( function() {
     Restful.components.headerMenu.toggle();

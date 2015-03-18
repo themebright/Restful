@@ -20,7 +20,7 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
 
 ?>
   <section class="section section-slider <?php if ( ! ( count( $slides ) > 1 ) ) echo 'one-slide'; ?>">
-    <div id="bright-slider">
+    <div class="brightslider">
       <?php
 
       foreach ( $slides as $post ) : setup_postdata( $post );
