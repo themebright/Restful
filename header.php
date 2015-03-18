@@ -18,7 +18,7 @@
         </div>
 
         <div class="header__access">
-          <span class="header__toggle-menu"><span>≡</span></span>
+          <span class="header__toggle-menu"><i class="fa fa-bars"></i></span>
 
           <div class="header__menu">
             <?php

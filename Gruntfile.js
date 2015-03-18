@@ -7,11 +7,11 @@ module.exports = function( grunt ) {
     pkg: grunt.file.readJSON( 'package.json' ),
 
     watch: {
+      options: {
+        livereload: true
+      },
       php: {
         files: [ '*.php' ],
-        options: {
-          livereload: true
-        }
       },
       less: {
         files: [ 'assets/less/**/*.less' ],
