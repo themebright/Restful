@@ -27,7 +27,6 @@ function restful_customizer_build_styles() {
 
     Customizer_Library_Styles()->add( array(
       'selectors' => array(
-        '.btn',
         '.button',
         'button',
         'input[type="button"]',

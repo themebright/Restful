@@ -3,28 +3,18 @@
 //
 
 
+.appearance( @value ) {
+  -webkit-appearance: @value;
+  -moz-appearance: @value;
+  appearance: @value;
+}
+
 .cf {
   &:after {
     display: table;
     clear: both;
     content: '';
   }
-}
-
-.clear {
-  clear: both;
-}
-
-.vertically-centered {
-  transform: translateY( -50% );
-  position: relative;
-  top: 50%;
-  display: block;
-}
-
-.ir {
-  display: block;
-  text-indent: -999em;
 }
 
 .inline-top {
@@ -37,13 +27,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.screen-reader {
-  position: absolute !important;
-  clip: rect( 1px, 1px, 1px, 1px );
-}
-
-.appearance( @value ) {
-  -webkit-appearance: @value;
-  -moz-appearance: @value;
-  appearance: @value;
+.full-width {
+  display: block;
+  width: 100%;
 }

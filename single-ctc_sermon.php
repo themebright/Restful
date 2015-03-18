@@ -41,7 +41,7 @@ $has_sidebar = is_active_sidebar( 'main' );
             <?php endif; ?>
 
             <div class="entry__meta entry__meta--stacked">
-              <div class="entry-meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_series() ) : ?>
                 <div class="entry__meta-item"><i class="fa fa-th-list"></i><?php echo tbf_sermon_series(); ?></div>
@@ -52,7 +52,7 @@ $has_sidebar = is_active_sidebar( 'main' );
               <?php endif; ?>
             </div>
 
-            <div class="entry-content">
+            <div class="entry__body rich-text">
               <?php the_content(); ?>
 
               <?php restful_link_pages(); ?>

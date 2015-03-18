@@ -4,6 +4,8 @@
 
 
 .widget {
+  font-size: 14px;
+
   a {
     color: @co-text-strong;
   }
@@ -19,77 +21,52 @@
 }
 
 
-// // WIDGET - SEARCH
+// WIDGET - SEARCH
 
-// .widget_search {
-//   padding: 0;
-//   border: none;
+.widget_search {
+  padding: 0;
+  border: none;
 
-//   .screen-reader-text,
-//   .search-submit {
-//     display: none;
-//   }
-// }
-
-
-// // WIDGET - TEXT
-
-// .widget_text .textwidget {
-//   .rich-text( .75em );
-// }
+  .search-submit {
+    display: none;
+  }
+}
 
 
-// // WIDGET - RSS
+// WIDGET - TEXT
 
-// .widget_rss {
-//   ul {
-//     list-style: none;
-//     margin-left: 0;
-//   }
-
-//   li {
-//     > a.rsswidget {
-//       .h4;
-//       .tbf-widget-entry-title;
-//     }
-
-//     & + & {
-//       margin-top: 30px;
-//       padding-top: 30px;
-//       border-top: solid 1px @co-border;
-//     }
-//   }
-
-//   .rsswidget img {
-//     display: none;
-//   }
-
-//   .rss-date,
-//   .rssSummary,
-//   cite {
-//     margin-top: .75em;
-//   }
-
-//   .rss-date,
-//   cite {
-//     display: block;
-//     color: @co-text-subtle;
-//   }
-// }
+.widget_text .textwidget {
+  .rich-text( .75em );
+}
 
 
-// // WIDGET - CALENDAR
+// WIDGET - RSS
 
-// .widget_calendar {
-//   table {
-//     text-align: center;
-//   }
+.widget_rss li + li {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: solid 1px @co-border;
+}
 
-//   caption {
-//     text-transform: none;
-//     letter-spacing: 0;
-//     font-family: @ff-sans;
-//     font-weight: @fw-bold;
-//     margin-bottom: .5em;
-//   }
-// }
+
+// WIDGET - CALENDAR
+
+.widget_calendar {
+  table {
+    text-align: center;
+  }
+
+  thead tr,
+  tr:nth-child( even ) {
+    background: @co-border;
+  }
+
+  th,
+  td {
+    padding: .25em .5em;
+  }
+
+  caption {
+    margin-bottom: .5em;
+  }
+}
