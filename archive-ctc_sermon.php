@@ -28,10 +28,10 @@ $has_sidebar = is_active_sidebar( 'main' );
             </header>
 
             <div class="entry__meta entry__meta--stacked">
-              <div class="entry__meta-item"><i class="genericon genericon-month"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry__meta-item"><i class="genericon genericon-user"></i><?php echo tbf_sermon_speakers(); ?></div>
+                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbf_sermon_speakers(); ?></div>
               <?php endif; ?>
             </div>
 

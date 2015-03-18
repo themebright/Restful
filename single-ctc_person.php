@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 get_header();
 
@@ -25,15 +25,15 @@ $has_sidebar = is_active_sidebar( 'main' );
             <?php if ( tbf_person_position() || tbf_person_phone() || tbf_person_email() ) : ?>
               <div class="entry__meta entry__meta--stacked">
                 <?php if ( tbf_person_position() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-user"></i><?php echo tbf_person_position(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbf_person_position(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_phone() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-phone"></i><?php echo tbf_person_phone(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-phone"></i><?php echo tbf_person_phone(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_person_email() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-mail"></i><?php echo tbf_person_email(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-envelope"></i><?php echo tbf_person_email(); ?></div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

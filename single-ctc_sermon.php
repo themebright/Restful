@@ -36,19 +36,19 @@ $has_sidebar = is_active_sidebar( 'main' );
 
             <?php if ( tbf_sermon_pdf() ) : ?>
               <div class="sermon-media sermon-media--pdf">
-                <a href="<?php echo tbf_sermon_pdf(); ?>" class="button"><i class="genericon genericon-download"></i><?php _e( 'PDF Transcript', 'restful' ) ?></a>
+                <a href="<?php echo tbf_sermon_pdf(); ?>" class="button"><i class="fa fa-download"></i><?php _e( 'PDF Transcript', 'restful' ) ?></a>
               </div>
             <?php endif; ?>
 
             <div class="entry__meta entry__meta--stacked">
-              <div class="entry-meta-item"><i class="genericon genericon-month"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry-meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
               <?php if ( tbf_sermon_series() ) : ?>
-                <div class="entry__meta-item"><i class="genericon genericon-hierarchy"></i><?php echo tbf_sermon_series(); ?></div>
+                <div class="entry__meta-item"><i class="fa fa-th-list"></i><?php echo tbf_sermon_series(); ?></div>
               <?php endif; ?>
 
               <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry__meta-item"><i class="genericon genericon-user"></i><?php echo tbf_sermon_speakers(); ?></div>
+                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbf_sermon_speakers(); ?></div>
               <?php endif; ?>
             </div>
 

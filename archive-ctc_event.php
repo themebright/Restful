@@ -52,11 +52,11 @@ $has_sidebar = is_active_sidebar( 'main' );
             <?php if ( tbf_event_date() || tbf_event_time() ) : ?>
               <div class="entry__meta entry__meta--stacked">
                 <?php if ( tbf_event_date() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-month"></i><?php echo tbf_event_date(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php echo tbf_event_date(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_event_time() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-time"></i><?php echo tbf_event_time(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-clock-o"></i><?php echo tbf_event_time(); ?></div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

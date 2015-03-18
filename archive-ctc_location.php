@@ -42,7 +42,7 @@ $has_sidebar = is_active_sidebar( 'main' );
 
             <?php if ( tbf_location_address() ) : ?>
               <div class="entry__meta entry__meta--stacked">
-                <div class="entry__meta-item"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
+                <div class="entry__meta-item"><i class="fa fa-map-marker"></i><?php echo tbf_location_address(); ?></div>
               </div>
             <?php endif; ?>
 

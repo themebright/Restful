@@ -13,22 +13,22 @@ function restful_post_meta() {
 ?>
 
   <div class="entry__meta-item">
-    <i class="genericon genericon-month"></i>
+    <i class="fa fa-calendar"></i>
     <a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
   </div>
 
   <div class="entry__meta-item">
-    <i class="genericon genericon-user"></i>
+    <i class="fa fa-user"></i>
     <a href="<?php echo get_author_posts_url( $post->post_author ); ?>"><?php the_author_meta( 'display_name', $post->post_author ); ?></a>
   </div>
 
   <div class="entry__meta-item">
-    <i class="genericon genericon-category"></i>
+    <i class="fa fa-folder"></i>
     <?php the_category( ', ' ); ?>
   </div>
 
   <div class="entry__meta-item">
-    <i class="genericon genericon-comment"></i>
+    <i class="fa fa-comment"></i>
     <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
   </div>
 

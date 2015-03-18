@@ -25,15 +25,15 @@ $has_sidebar = is_active_sidebar( 'main' );
             <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
               <div class="entry__meta entry__meta--stacked">
                 <?php if ( tbf_location_address() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-location"></i><?php echo tbf_location_address(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-map-marker"></i><?php echo tbf_location_address(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_location_phone() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-phone"></i><?php echo tbf_location_phone(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-phone"></i><?php echo tbf_location_phone(); ?></div>
                 <?php endif; ?>
 
                 <?php if ( tbf_location_times() ) : ?>
-                  <div class="entry__meta-item"><i class="genericon genericon-time"></i><?php echo tbf_location_times(); ?></div>
+                  <div class="entry__meta-item"><i class="fa fa-clock-o"></i><?php echo tbf_location_times(); ?></div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>
