@@ -1,0 +1,39 @@
+//
+// BXSLIDER
+//
+
+
+.bx-wrapper {
+  position: relative;
+}
+
+.bx-pager {
+  z-index: 50;
+  user-select: none;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  font-size: 0;
+  bottom: 30px;
+  left: 0;
+}
+
+.bx-pager-item {
+  display: inline-block;
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.bx-pager-link {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid 2px #fff;
+  border-radius: 50%;
+
+  &.active {
+    background: #fff;
+  }
+}

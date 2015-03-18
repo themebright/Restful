@@ -4,25 +4,7 @@
 
 
 .rich-text( @margin: 1.5em ) {
-  > *:first-child {
-    margin-top: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  address,
-  ul,
-  ol,
-  dl,
-  table,
-  hr {
+  > *:not( :first-child ) {
     margin-top: @margin;
   }
 
@@ -92,4 +74,8 @@
       color: @co-text-strong;
     }
   }
+}
+
+.rich-text {
+  .rich-text();
 }

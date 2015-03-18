@@ -1,0 +1,71 @@
+//
+// BRIGHTSLIDER
+//
+
+
+.brightslider.one-slide .bx-controls {
+  display: none;
+}
+
+.brightslider__slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &:before {
+    background: fade( #000, 50% );
+    background: linear-gradient( transparent, fade( #000, 50% ) );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+  }
+
+  > a > .container,
+  > .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    max-width: 720px;
+  }
+}
+
+.brightslider__slide-link {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.brightslider__slide-title {
+  position: relative;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.brightslider__slide-text {
+  position: relative;
+  color: #fff;
+}
+
+@media @mq-sm-min {
+  .brightslider__slide > a > .container,
+  .brightslider__slide > .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media @mq-md-min {
+  .brightslider__slide > a > .container,
+  .brightslider__slide > .container {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+
+  .brightslider__slide-text {
+    font-size: 20px;
+  }
+}

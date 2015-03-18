@@ -4,26 +4,26 @@
 
 get_header();
 
-// Check to see if the BrightSlider plugin is active
 if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
 
   $args = array(
-    'post_type'      => 'bs_slide',
-    'posts_per_page' => -1,
+    'posts_per_page' => 15,
     'orderby'        => 'menu_order',
-    'order'          => 'ASC'
+    'order'          => 'ASC',
+    'post_type'      => 'bs_slide',
+    'no_rows_found'  => true
   );
 
-  $slides = get_posts( $args );
+  $slides = new WP_Query( $args );
 
-  if ( $slides ) :
+  if ( $slides->have_posts() ) :
 
 ?>
-  <section class="section section-slider <?php if ( ! ( count( $slides ) > 1 ) ) echo 'one-slide'; ?>">
-    <div class="brightslider">
+  <section class="brightslider <?php if ( ! ( count( $slides->posts ) > 1 ) ) echo 'one-slide'; ?>">
+    <div class="brightslider__slides">
       <?php
 
-      foreach ( $slides as $post ) : setup_postdata( $post );
+      while ( $slides->have_posts() ) : $slides->the_post();
 
         $slide_id    = get_the_ID();
 
@@ -40,44 +40,36 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
         $slide_url   = $slide_url[0];
 
       ?>
-        <div class="bx-slide" style="background-image: url(<?php echo $slide_image; ?>)">
-          <?php if ( $slide_url ) echo "<a href='$slide_url' class='bx-slide-link'>"; ?>
+        <div class="brightslider__slide" style="background-image: url(<?php echo $slide_image; ?>)">
+          <?php if ( $slide_url ) echo "<a href='$slide_url' class='brightslider__slide-link'>"; ?>
             <div class="container">
-              <?php if ( $show_title && get_the_title() ) : ?>
-                <h1 class="bx-slide-title"><?php the_title(); ?></h1>
-              <?php endif; ?>
+              <?php if ( $show_title ) the_title( '<h1 class="brightslider__slide-title">', '</h1>' ); ?>
 
               <?php if ( $slide_text ) : ?>
-                <div class="bx-slide-text"><?php echo $slide_text; ?></div>
+                <div class="brightslider__slide-text"><?php echo $slide_text; ?></div>
               <?php endif; ?>
             </div>
           <?php if ( $slide_url ) echo '</a>'; ?>
         </div>
-      <?php
-
-      endforeach;
-      wp_reset_postdata();
-
-      ?>
+      <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </section>
 <?php endif; endif; ?>
 
-<?php if ( have_posts() ) : ?>
-  <section class="section section-intro">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <section class="welcome-message section section--extra-padding">
     <div class="container">
-      <?php while ( have_posts() ) : the_post(); ?>
-        <header class="entry-header">
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-        </header>
-
-        <div class="entry-content">
+      <div class="row">
+        <div class="rich-text col col--xs--12 col--sm--10 col--sm--offset--1 col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2">
+          <?php the_title( '<h1 class="entry__title">', '</h1>' ); ?>
           <?php the_content(); ?>
         </div>
-      <?php endwhile; ?>
+      </div>
     </div>
   </section>
-<?php endif;
+<?php endwhile; endif; ?>
+
+<?php
 
 get_sidebar( 'home' );
 

@@ -14,7 +14,7 @@ var Restful = {
 
     slider: {
 
-      el: '.brightslider',
+      el: '.brightslider__slides',
 
       options: {
         'mode'           : 'fade',
