@@ -1,4 +1,4 @@
-<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
+<?php if ( ! is_active_sidebar( 'footer-1' ) || ! is_active_sidebar( 'footer-2' ) || ! is_active_sidebar( 'footer-3' ) ) return; ?>
 
 <section class="footer-widgets section">
   <div class="container">
@@ -25,5 +25,3 @@
     </div>
   </div>
 </section>
-
-<?php endif;

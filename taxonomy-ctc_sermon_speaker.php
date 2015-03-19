@@ -3,8 +3,8 @@
 get_header();
 
 $queried_object = get_queried_object();
-$taxonomy = get_taxonomy( $queried_object->taxonomy );
-$has_sidebar = is_active_sidebar( 'main' );
+$taxonomy       = get_taxonomy( $queried_object->taxonomy );
+$has_sidebar    = is_active_sidebar( 'main' );
 
 ?>
 

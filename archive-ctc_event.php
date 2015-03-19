@@ -3,7 +3,7 @@
 get_header();
 
 $queried_object = get_queried_object();
-$has_sidebar = is_active_sidebar( 'main' );
+$has_sidebar    = is_active_sidebar( 'main' );
 
 ?>
 
