@@ -19,7 +19,8 @@ var Restful = {
       options: {
         'mode'           : 'fade',
         'controls'       : false,
-        'adaptiveHeight' : true
+        'adaptiveHeight' : true,
+        'auto'           : true
       },
 
       init: function() {
