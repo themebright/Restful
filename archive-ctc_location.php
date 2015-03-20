@@ -13,7 +13,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
   </div>
 </section>
 
-<section class="section">
+<section class="main section">
   <div class="container">
     <div class="row">
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
@@ -31,7 +31,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
         if ( have_posts() ) : while ( have_posts() ) : the_post();
 
         ?>
-          <article <?php post_class( 'entry entry--excerpt' ); ?>>
+          <article <?php post_class( 'entry entry--location entry--excerpt' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
             <?php endif; ?>
@@ -40,15 +40,30 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <?php if ( tbf_location_address() ) : ?>
+            <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
               <div class="entry__meta entry__meta--stacked">
-                <div class="entry__meta-item"><i class="fa fa-map-marker"></i><?php echo tbf_location_address(); ?></div>
+                <?php if ( tbf_location_address() ) : ?>
+                  <div class="entry__meta-item">
+                    <i class="fa fa-map-marker"></i>
+                    <?php echo tbf_location_address(); ?>
+                  </div>
+                <?php endif; ?>
+
+                <?php if ( tbf_location_phone() ) : ?>
+                  <div class="entry__meta-item">
+                    <i class="fa fa-phone"></i>
+                    <?php echo tbf_location_phone(); ?>
+                  </div>
+                <?php endif; ?>
+
+                <?php if ( tbf_location_times() ) : ?>
+                  <div class="entry__meta-item">
+                    <i class="fa fa-clock-o"></i>
+                    <?php echo tbf_location_times(); ?>
+                  </div>
+                <?php endif; ?>
               </div>
             <?php endif; ?>
-
-            <div class="entry__body rich-text">
-              <?php the_excerpt(); ?>
-            </div>
           </article>
         <?php endwhile; ?>
           <?php if ( restful_show_posts_nav() ) : ?>

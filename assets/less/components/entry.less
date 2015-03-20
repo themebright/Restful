@@ -19,11 +19,12 @@
 }
 
 .entry--excerpt .entry__thumbnail {
-  width: 90px;
   .alignright;
+  width: 72px;
 }
 
-.entry__thumbnail {
+.entry__thumbnail,
+.entry__media-item {
   margin-bottom: 30px;
 }
 
@@ -98,5 +99,11 @@
 
   input {
     margin-top: 1.5em;
+  }
+}
+
+@media @mq-md-min {
+  .entry + .entry {
+    margin-top: 90px;
   }
 }

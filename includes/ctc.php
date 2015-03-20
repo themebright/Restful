@@ -12,6 +12,7 @@ function restful_ctc_support() {
 
   add_theme_support( 'ctc-sermons', array(
     'taxonomies' => array(
+      'ctc_sermon_book',
       'ctc_sermon_series',
       'ctc_sermon_speaker'
     ),

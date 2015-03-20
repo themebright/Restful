@@ -15,7 +15,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
   </div>
 </section>
 
-<section class="section">
+<section class="main section">
   <div class="container">
     <div class="row">
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">

@@ -13,12 +13,12 @@ $has_sidebar    = is_active_sidebar( 'main' );
   </div>
 </section>
 
-<section class="section">
+<section class="main section">
   <div class="container">
     <div class="row">
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <article <?php post_class( 'entry entry--excerpt' ); ?>>
+          <article <?php post_class( 'entry entry--sermon entry--excerpt' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
             <?php endif; ?>
@@ -28,10 +28,19 @@ $has_sidebar    = is_active_sidebar( 'main' );
             </header>
 
             <div class="entry__meta entry__meta--stacked">
-              <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
+              <div class="entry__meta-item">
+                <i class="fa fa-calendar"></i>
+                <?php the_time( get_option( 'date_format' ) ); ?>
+              </div>
 
-              <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbf_sermon_speakers(); ?></div>
+              <?php $speakers = tbf_sermon_speakers(); if ( $speakers ) : ?>
+                <div class="entry__meta-item">
+                  <i class="fa fa-user"></i>
+
+                  <?php foreach ( $speakers as $speaker ) : ?>
+                    <a href="<?php echo esc_url( get_term_link( $speaker ) ); ?>"><?php echo $speaker->name; ?></a>
+                  <?php endforeach; ?>
+                </div>
               <?php endif; ?>
             </div>
 

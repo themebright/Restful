@@ -12,20 +12,18 @@ $has_sidebar = is_active_sidebar( 'main' );
   </div>
 </section>
 
-<section class="section">
+<section class="main section">
   <div class="container">
     <div class="row">
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <article <?php post_class( 'entry' ); ?>>
+          <article <?php post_class( 'entry entry--page' ); ?>>
             <?php if ( has_post_thumbnail() ) : ?>
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
             <div class="entry__body rich-text">
               <?php the_content(); ?>
-
-              <?php restful_link_pages(); ?>
             </div>
           </article>
         <?php endwhile; else: ?>

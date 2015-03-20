@@ -12,7 +12,7 @@ function restful_add_styles() {
   wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
   $skin = ( get_theme_mod( 'skin' ) ? get_theme_mod( 'skin' ) : 'light' );
-  wp_enqueue_style( 'restful', tbf_get_template_directory_uri() . "/assets/css/restful-$skin.css", false, TBF_THEME_VERSION );
+  wp_enqueue_style( 'restful', tbf_get_template_directory_uri() . "/assets/css/restful-$skin.css", array( 'tbf' ), TBF_THEME_VERSION );
 
 }
 add_action( 'wp_enqueue_scripts', 'restful_add_styles' );
