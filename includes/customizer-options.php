@@ -6,7 +6,7 @@
 function restful_customizer_options() {
 
   // Theme defaults
-  $co_accent = '#50e3c2';
+  $co_accent = '#00bcd4';
 
   // Stores all the controls that will be added
   $options = array();
