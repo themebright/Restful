@@ -145,6 +145,15 @@ function restful_customizer_build_styles() {
 
     Customizer_Library_Styles()->add( array(
       'selectors' => array(
+        '.entry.sticky'
+      ),
+      'declarations' => array(
+        'border-left-color' => $color
+      )
+    ) );
+
+    Customizer_Library_Styles()->add( array(
+      'selectors' => array(
         '.button',
         'button',
         'input[type="button"]',
