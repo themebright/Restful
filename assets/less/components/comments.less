@@ -3,91 +3,24 @@
 //
 
 
-// WRAPPER
-
-.comments-wrapper {
-  margin-top: 90px;
+.comments {
+  margin-top: 60px;
 }
 
+.comments__list {
+  border-bottom: solid 1px @co-border;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
 
-// REPLIES
+li.comment,
+li.pingback {
+  border-top: solid 1px @co-border;
+  padding-top: 30px;
 
-.replies-wrapper {
-  .comments-list {
-    border-bottom: solid 1px @co-border;
-    padding-bottom: 30px;
+  + li.comment,
+  + li.pingback {
     margin-top: 30px;
-  }
-
-  li.comment,
-  li.pingback {
-    border-top: solid 1px @co-border;
-    padding-top: 30px;
-
-    & + & {
-      margin-top: 30px;
-    }
-  }
-
-  li.comment .comment-body {
-    .row;
-  }
-
-  li.pingback {
-    font-size: 12px;
-    color: @co-text-subtle;
-
-    a {
-      color: @co-text-subtle;
-    }
-  }
-
-  .comment-meta {
-    .col;
-    .col--xs--12;
-    .col--sm--4;
-    color: @co-text-subtle;
-    font-size: 14px;
-
-    a {
-      color: @co-text-subtle;
-    }
-  }
-
-  .avatar {
-    width: 30px !important;
-    border-radius: 50%;
-    display: block;
-    margin-bottom: .75em;
-  }
-
-  .fn,
-  .fn a {
-    color: @co-text;
-  }
-
-  li.comment.bypostauthor .fn:after {
-    content: ' ★';
-    color: @co-accent;
-  }
-
-  .says {
-    display: none;
-  }
-
-  .comment-metadata {
-    font-size: 12px;
-  }
-
-  .edit-link {
-    display: block;
-  }
-
-  .comment-content {
-    .col;
-    .col--xs--12;
-    .col--sm--8;
-    .rich-text();
   }
 
   .reply {
@@ -106,16 +39,68 @@
   .children {
     margin: 30px 0 0 30px;
   }
+}
 
-  .comment-respond {
-    margin-top: 30px;
+li.comment {
+  &.bypostauthor .fn:after {
+    content: ' ★';
+    color: @co-accent;
   }
 
-  @media @mq-xs-max {
-    .comment-content {
-      margin-top: 30px;
-    }
+  .says {
+    display: none;
   }
+
+  .avatar {
+    width: 30px !important;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: .75em;
+  }
+
+  .comment-body {
+    .row;
+  }
+
+  .edit-link {
+    display: block;
+  }
+}
+
+li.pingback {
+  font-size: 12px;
+  color: @co-text-subtle;
+
+  a {
+    color: @co-text-subtle;
+  }
+}
+
+.comment-meta {
+  .col;
+  .col--xs--12;
+  .col--sm--4;
+  color: @co-text-subtle;
+  font-size: 14px;
+
+  a {
+    color: @co-text-subtle;
+  }
+}
+
+.comment-metadata {
+  font-size: 12px;
+}
+
+.comment-content {
+  .col;
+  .col--xs--12;
+  .col--sm--8;
+  .rich-text();
+}
+
+.comment-respond {
+  margin-top: 30px;
 }
 
 
@@ -150,5 +135,17 @@
     .email {
       margin-top: 30px;
     }
+  }
+}
+
+@media @mq-xs-max {
+  .comment-content {
+    margin-top: 30px;
+  }
+}
+
+@media @mq-md-min {
+  .comments {
+    margin-top: 90px;
   }
 }
