@@ -1,44 +1,9 @@
-var Restful = {
+jQuery( document ).ready( function( $ ) {
 
-  components: {
-
-    headerMenu: {
-
-      el: '.header__menu',
-
-      toggle: function() {
-        jQuery( this.el ).toggleClass( 'is-open' );
-      }
-
-    },
-
-    slider: {
-
-      el: '.brightslider__slides',
-
-      options: {
-        'mode'           : 'fade',
-        'controls'       : false,
-        'adaptiveHeight' : true,
-        'auto'           : true
-      },
-
-      init: function() {
-        jQuery( this.el ).bxSlider( this.options );
-      }
-
-    }
-
-  }
-
-};
-
-jQuery( function( $ ) {
-
-  Restful.components.slider.init();
+  $( '.entry' ).fitVids();
 
   $( '.header__toggle-menu' ).click( function() {
-    Restful.components.headerMenu.toggle();
+    $( '.header__menu' ).toggleClass( 'is-open' );
   } );
 
 } );

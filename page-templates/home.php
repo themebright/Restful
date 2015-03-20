@@ -18,7 +18,20 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
 
   if ( $slides->have_posts() ) :
 
+    wp_enqueue_script( 'bxslider' );
+
 ?>
+  <script>
+    jQuery( document ).ready( function( $ ) {
+      $( '.brightslider__slides' ).bxSlider( {
+        'mode'           : 'fade',
+        'controls'       : false,
+        'adaptiveHeight' : true,
+        'auto'           : true
+      } );
+    } );
+  </script>
+
   <section class="brightslider <?php if ( ! ( count( $slides->posts ) > 1 ) ) echo 'one-slide'; ?>">
     <div class="brightslider__slides">
       <?php
