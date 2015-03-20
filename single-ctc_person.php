@@ -41,15 +41,15 @@ $has_sidebar = is_active_sidebar( 'main' );
                 <?php if ( tbf_person_email() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-envelope"></i>
-                    <?php echo tbf_person_email(); ?>
+                    <a href="mailto:<?php echo tbf_person_email(); ?>"><?php echo tbf_person_email(); ?></a>
                   </div>
                 <?php endif; ?>
+              </div>
+            <?php endif; ?>
 
-                <?php if ( tbf_person_urls() ) : ?>
-                  <div class="entry__meta-item">
-                    {{ urls }}
-                  </div>
-                <?php endif; ?>
+            <?php if ( tbf_person_urls() ) : ?>
+              <div class="entry__social">
+                <?php echo restfuL_social_icons( tbf_person_urls() ); ?>
               </div>
             <?php endif; ?>
 
@@ -57,8 +57,6 @@ $has_sidebar = is_active_sidebar( 'main' );
               <?php the_content(); ?>
             </div>
           </article>
-
-          <?php comments_template(); ?>
         <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>

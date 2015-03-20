@@ -21,7 +21,11 @@
         </div>
       <?php endif; ?>
 
-      <div class="widget-area col col--xs--12 col--md--3">{{ social }}</div>
+      <?php if ( restful_site_social_urls() ) : ?>
+        <div class="widget-area col col--xs--12 col--md--3">
+          <?php echo restful_social_icons( restful_site_social_urls() ); ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

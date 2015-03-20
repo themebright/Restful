@@ -15,59 +15,35 @@ function restful_register_sidebars() {
     'after_title'   => '</span></h4>'
   );
 
-  register_sidebar( array(
-    'name'          => __( 'Main', 'restful' ),
-    'id'            => 'main',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Main', 'restful' ),
+    'id'   => 'main',
+  ), $markup ) );
 
-  register_sidebar( array(
-    'name'          => __( 'Home 1', 'restful' ),
-    'id'            => 'home-1',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Home 1', 'restful' ),
+    'id'   => 'home-1',
+  ), $markup ) );
 
-  register_sidebar( array(
-    'name'          => __( 'Home 2', 'restful' ),
-    'id'            => 'home-2',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Home 2', 'restful' ),
+    'id'   => 'home-2',
+  ), $markup ) );
 
-  register_sidebar( array(
-    'name'          => __( 'Footer 1', 'restful' ),
-    'id'            => 'footer-1',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Footer 1', 'restful' ),
+    'id'   => 'footer-1',
+  ), $markup ) );
 
-  register_sidebar( array(
-    'name'          => __( 'Footer 2', 'restful' ),
-    'id'            => 'footer-2',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Footer 2', 'restful' ),
+    'id'   => 'footer-2',
+  ), $markup ) );
 
-  register_sidebar( array(
-    'name'          => __( 'Footer 3', 'restful' ),
-    'id'            => 'footer-3',
-    'before_widget' => $markup['before_widget'],
-    'after_widget'  => $markup['after_widget'],
-    'before_title'  => $markup['before_title'],
-    'after_title'   => $markup['after_title']
-  ) );
+  register_sidebar( array_merge( array(
+    'name' => __( 'Footer 3', 'restful' ),
+    'id'   => 'footer-3',
+  ), $markup ) );
 
 }
 add_action( 'init', 'restful_register_sidebars' );

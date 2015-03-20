@@ -57,8 +57,6 @@ $has_sidebar = is_active_sidebar( 'main' );
               </div>
             <?php endif; ?>
           </article>
-
-          <?php comments_template(); ?>
         <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
