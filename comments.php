@@ -33,15 +33,15 @@ if ( post_password_required() ) return;
     <?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
       <div class="comments__closed alert alert--error"><?php _e( 'Comments are closed.', 'restful' ); ?></div>
     <?php endif; ?>
-
-    <?php
-
-    $args = array(
-      'comment_notes_after' => false
-    );
-
-    comment_form( $args );
-
-    ?>
   <?php endif; ?>
+
+  <?php
+
+  $args = array(
+    'comment_notes_after' => false
+  );
+
+  comment_form( $args );
+
+  ?>
 </div>
