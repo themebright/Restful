@@ -6,6 +6,8 @@ module.exports = function( grunt ) {
 
     pkg: grunt.file.readJSON( 'package.json' ),
 
+    // DEVELOPMENT-RELATED TASKS
+
     watch: {
       options: {
         livereload: true
@@ -38,11 +40,56 @@ module.exports = function( grunt ) {
         src: '*.css',
         dest: 'assets/css/'
       }
+    },
+
+
+    // RELEASE-RELATED TASKS
+
+    copy: {
+      release: {
+        files: [ {
+          expand: true,
+          src: [ '**', '!**/node_modules/**' ],
+          dest: '<%= pkg.name %>/'
+        } ]
+      }
+    },
+
+    compress: {
+      release: {
+        options: {
+          archive: '<%= pkg.name %>-<%= pkg.version %>.zip'
+        },
+        files: [ {
+          src: [ '<%= pkg.name %>/**' ]
+        } ]
+      }
+    },
+
+    aws: grunt.file.readJSON( 'aws.json' ),
+
+    s3: {
+      release: {
+        options: {
+          accessKeyId: '<%= aws.accessKeyId %>',
+          secretAccessKey: '<%= aws.secretAccessKey %>',
+          bucket: 'themebright-downloads',
+          overwrite: false
+        },
+        files: [ {
+          src: [ '<%= pkg.name %>-<%= pkg.version %>.zip' ]
+        } ]
+      }
+    },
+
+    clean: {
+      release: [ '<%= pkg.name %>/', '<%= pkg.name %>-<%= pkg.version %>.zip' ]
     }
 
   } );
 
   grunt.registerTask( 'default', [ 'watch' ] );
   grunt.registerTask( 'build',   [ 'less:build', 'autoprefixer:build' ] );
+  grunt.registerTask( 'release', [ 'copy:release', 'compress:release', 's3:release', 'clean:release' ] );
 
 };
