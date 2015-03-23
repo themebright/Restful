@@ -34,3 +34,47 @@ figure[id^="attachment_"] {
   font-size: 12px;
   color: @co-text-subtle;
 }
+
+.gallery {
+  .row;
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  .gallery-item {
+    .col;
+    .col--xs--12;
+    margin-top: 1.5em;
+  }
+
+  &.gallery-columns-2 .gallery-item {
+    .col--sm--6;
+
+    &:nth-child( 2n + 1 ) {
+      clear: left;
+    }
+  }
+
+  &.gallery-columns-3 .gallery-item {
+    .col--sm--4;
+
+    &:nth-child( 3n + 1 ) {
+      clear: left;
+    }
+  }
+
+  &.gallery-columns-4 .gallery-item,
+  &.gallery-columns-5 .gallery-item,
+  &.gallery-columns-6 .gallery-item,
+  &.gallery-columns-7 .gallery-item,
+  &.gallery-columns-8 .gallery-item,
+  &.gallery-columns-9 .gallery-item {
+    .col--sm--3;
+
+    &:nth-child( 4n + 1 ) {
+      clear: left;
+    }
+  }
+}
