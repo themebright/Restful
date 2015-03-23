@@ -7,11 +7,13 @@ $has_sidebar    = is_active_sidebar( 'main' );
 
 ?>
 
-<section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
-  <div class="container">
-    <h1 class="masthead__title"><?php echo $queried_object->labels->name; ?></h1>
-  </div>
-</section>
+<?php if ( $queried_object->labels->name ) : ?>
+  <section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
+    <div class="container">
+      <h1 class="masthead__title"><?php echo $queried_object->labels->name; ?></h1>
+    </div>
+  </section>
+<?php endif; ?>
 
 <section class="main section">
   <div class="container">
