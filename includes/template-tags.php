@@ -37,17 +37,6 @@ function restful_post_meta() {
 }
 
 /**
- * Returns true if more than one page of posts exists.
- */
-function restful_show_posts_nav() {
-
-  global $wp_query;
-
-  return ( $wp_query->max_num_pages > 1 );
-
-}
-
-/**
  * Returns an array with all the site social URLs as set in the WP theme customizer.
  */
 function restful_site_social_urls() {

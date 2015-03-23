@@ -49,11 +49,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
             </div>
           </article>
         <?php endwhile; ?>
-          <?php if ( restful_show_posts_nav() ) : ?>
-            <nav class="pagination">
-              <?php echo paginate_links(); ?>
-            </nav>
-          <?php endif; ?>
+          <?php the_posts_pagination(); ?>
         <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
         <?php endif; ?>
