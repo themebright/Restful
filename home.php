@@ -7,7 +7,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
 
 ?>
 
-<?php if ( get_option( 'page_for_posts' ) && $queried_object->post_title ) : ?>
+<?php if ( get_option( 'page_for_posts' ) && ! empty( $queried_object->post_title ) ) : ?>
   <section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
     <div class="container">
       <h1 class="masthead__title"><?php echo $queried_object->post_title; ?></h1>
