@@ -60,9 +60,9 @@ module.exports = function( grunt ) {
         options: {
           archive: '<%= pkg.name %>-<%= pkg.version %>.zip'
         },
-        files: [ {
-          src: [ '<%= pkg.name %>/**' ]
-        } ]
+        expand: true,
+        src: [ '<%= pkg.name %>/**' ],
+        dest: '/'
       }
     },
 
