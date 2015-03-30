@@ -1,4 +1,4 @@
-<?php if ( ! is_active_sidebar( 'home-1' ) || ! is_active_sidebar( 'home-2' ) ) return; ?>
+<?php if ( ! is_active_sidebar( 'home-1' ) && ! is_active_sidebar( 'home-2' ) ) return; ?>
 
 <section class="home-widgets section">
   <div class="container">
