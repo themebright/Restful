@@ -66,19 +66,9 @@ module.exports = function( grunt ) {
       }
     },
 
-    aws: grunt.file.readJSON( 'aws.json' ),
-
-    s3: {
+    shell: {
       release: {
-        options: {
-          accessKeyId: '<%= aws.accessKeyId %>',
-          secretAccessKey: '<%= aws.secretAccessKey %>',
-          bucket: 'themebright-downloads',
-          overwrite: false
-        },
-        files: [ {
-          src: [ '<%= pkg.name %>-<%= pkg.version %>.zip' ]
-        } ]
+        command: 'mv <%= pkg.name %>-<%= pkg.version %>.zip ~/Desktop/'
       }
     },
 
@@ -90,6 +80,6 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( 'default', [ 'watch' ] );
   grunt.registerTask( 'build',   [ 'less:build', 'autoprefixer:build' ] );
-  grunt.registerTask( 'release', [ 'copy:release', 'compress:release', 's3:release', 'clean:release' ] );
+  grunt.registerTask( 'release', [ 'copy:release', 'compress:release', 'shell:release', 'clean:release' ] );
 
 };
