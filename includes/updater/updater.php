@@ -15,13 +15,13 @@ $updater = new EDD_Theme_Updater_Admin(
 
 	// Config settings
 	$config = array(
-		'remote_api_url' => 'http://themebright.com', // Site where EDD is hosted
-		'item_name'      => TBF_THEME_NAME,           // Name of theme
-		'theme_slug'     => get_template(),           // Theme slug
-		'version'        => TBF_THEME_VERSION,        // The current version of this theme
-		'author'         => TBF_THEME_AUTHOR,         // The author of this theme
-		'download_id'    => '13',                     // Optional, used for generating a license renewal link
-		'renew_url'      => ''                        // Optional, allows for a custom license renewal link
+		'remote_api_url' => TBF_THEME_AUTHOR_URI, // Site where EDD is hosted
+		'item_name'      => TBF_THEME_NAME,       // Name of theme
+		'theme_slug'     => get_template(),       // Theme slug
+		'version'        => TBF_THEME_VERSION,    // The current version of this theme
+		'author'         => TBF_THEME_AUTHOR,     // The author of this theme
+		'download_id'    => '13',                 // Optional, used for generating a license renewal link
+		'renew_url'      => ''                    // Optional, allows for a custom license renewal link
 	),
 
 	// Strings
