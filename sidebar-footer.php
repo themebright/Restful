@@ -1,4 +1,4 @@
-<?php if ( ! is_active_sidebar( 'footer-1' ) || ! is_active_sidebar( 'footer-2' ) || ! is_active_sidebar( 'footer-3' ) ) return; ?>
+<?php if ( ! is_active_sidebar( 'footer-1' ) && ! is_active_sidebar( 'footer-2' ) && ! is_active_sidebar( 'footer-3' ) && ! restful_site_social_urls() ) return; ?>
 
 <section class="footer-widgets section">
   <div class="container">
