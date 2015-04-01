@@ -21,7 +21,7 @@ function restful_add_theme_support() {
 
   add_theme_support( 'ctc-events', array(
     'taxonomies' => array( 'ctc_event_category' ),
-    'fields'     => array( '_ctc_event_start_date', '_ctc_event_end_date', '_ctc_event_start_time', '_ctc_event_end_time', '_ctc_event_recurrence', '_ctc_event_recurrence_end_date', '_ctc_event_venue', '_ctc_event_address', '_ctc_event_show_directions_link', '_ctc_event_map_lat', '_ctc_event_map_lng', '_ctc_event_map_type', '_ctc_event_map_zoom' )
+    'fields'     => array( '_ctc_event_start_date', '_ctc_event_end_date', '_ctc_event_start_time', '_ctc_event_end_time', '_ctc_event_recurrence', '_ctc_event_recurrence_end_date', '_ctc_event_venue', '_ctc_event_address', '_ctc_event_map_lat', '_ctc_event_map_lng', '_ctc_event_map_type', '_ctc_event_map_zoom' )
   ) );
 
   add_theme_support( 'ctc-people', array(
@@ -30,7 +30,7 @@ function restful_add_theme_support() {
   ) );
 
   add_theme_support( 'ctc-locations', array(
-    'fields' => array( '_ctc_location_address', '_ctc_location_show_directions_link', '_ctc_location_map_lat', '_ctc_location_map_lng', '_ctc_location_map_type', '_ctc_location_map_zoom', '_ctc_location_phone', '_ctc_location_times' )
+    'fields' => array( '_ctc_location_address', '_ctc_location_map_lat', '_ctc_location_map_lng', '_ctc_location_map_type', '_ctc_location_map_zoom', '_ctc_location_phone', '_ctc_location_times' )
   ) );
 
   add_theme_support( 'html5', array(
