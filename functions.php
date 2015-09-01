@@ -14,6 +14,14 @@ require_once( get_template_directory() . '/framework/framework.php' );
 require_once( get_template_directory() . '/customizer-library/customizer-library.php' );
 
 /**
+ * Include TGM Plugin Activation.
+ */
+if ( is_admin() ) {
+  require_once( get_template_directory() . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+  require_once( get_template_directory() . '/includes/required-plugins.php' );
+}
+
+/**
  * Include theme functions.
  */
 require_once( get_template_directory() . '/includes/customizer.php' );
@@ -24,11 +32,3 @@ require_once( get_template_directory() . '/includes/sidebars.php' );
 require_once( get_template_directory() . '/includes/styles.php' );
 require_once( get_template_directory() . '/includes/template-tags.php' );
 require_once( get_template_directory() . '/includes/theme-support.php' );
-
-/**
- * Include the updater scripts.
- */
-if ( is_admin() ) {
-  require_once( get_template_directory() . '/includes/updater/updater.php' );
-  require_once( get_template_directory() . '/includes/updater/updater-admin.php' );
-}
