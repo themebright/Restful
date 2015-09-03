@@ -39,6 +39,15 @@ module.exports = function( grunt ) {
       }
     },
 
+    makepot: {
+      build: {
+        options: {
+          domainPath: 'languages/',
+          type: 'wp-theme'
+        }
+      }
+    },
+
 
     // RELEASE-RELATED TASKS
 
@@ -76,7 +85,7 @@ module.exports = function( grunt ) {
   } );
 
   grunt.registerTask( 'default', [ 'watch' ] );
-  grunt.registerTask( 'build',   [ 'less:build', 'autoprefixer:build' ] );
+  grunt.registerTask( 'build',   [ 'less:build', 'autoprefixer:build', 'makepot:build' ] );
   grunt.registerTask( 'release', [ 'copy:release', 'compress:release', 'shell:release', 'clean:release' ] );
 
 };
