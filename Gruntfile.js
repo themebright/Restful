@@ -22,9 +22,6 @@ module.exports = function( grunt ) {
     },
 
     less: {
-      options: {
-        compress: true
-      },
       build: {
         files: {
           'assets/css/restful-light.css': 'assets/less/restful-light.less',

@@ -9,7 +9,7 @@ $has_sidebar = is_active_sidebar( 'main' );
 <section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
   <div class="container">
     <?php the_title( '<h1 class="masthead__title">', '</h1>' ); ?>
-    <div class="masthead__subtitle masthead__subtitle--below entry__meta entry__meta--inline"><?php restful_post_meta(); ?></div>
+    <div class="masthead__subtitle masthead__subtitle--below entry__meta entry__meta--inline"><?php restful_post_meta_above(); ?></div>
   </div>
 </section>
 
@@ -26,6 +26,8 @@ $has_sidebar = is_active_sidebar( 'main' );
             <div class="entry__body rich-text">
               <?php the_content(); ?>
             </div>
+
+            <?php restful_post_meta_below(); ?>
           </article>
 
           <?php comments_template(); ?>

@@ -30,12 +30,14 @@ $has_sidebar    = is_active_sidebar( 'main' );
             </header>
 
             <div class="entry__meta entry__meta--inline">
-              <?php restful_post_meta(); ?>
+              <?php restful_post_meta_above(); ?>
             </div>
 
             <div class="entry__body rich-text">
               <?php the_content(); ?>
             </div>
+
+            <?php restful_post_meta_below(); ?>
           </article>
         <?php endwhile; ?>
           <?php the_posts_pagination(); ?>

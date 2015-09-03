@@ -24,11 +24,10 @@ if ( is_admin() ) {
 /**
  * Include theme functions.
  */
+require_once( get_template_directory() . '/includes/assets.php' );
 require_once( get_template_directory() . '/includes/customizer.php' );
 require_once( get_template_directory() . '/includes/filters.php' );
 require_once( get_template_directory() . '/includes/menus.php' );
-require_once( get_template_directory() . '/includes/scripts.php' );
 require_once( get_template_directory() . '/includes/sidebars.php' );
-require_once( get_template_directory() . '/includes/styles.php' );
 require_once( get_template_directory() . '/includes/template-tags.php' );
 require_once( get_template_directory() . '/includes/theme-support.php' );

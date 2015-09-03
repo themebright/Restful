@@ -4,9 +4,9 @@
  */
 
 /**
- * Clean way to display post meta in all the post templates.
+ * Post meta for above the post.
  */
-function restful_post_meta() {
+function restful_post_meta_above() {
 
   global $post;
 
@@ -23,13 +23,39 @@ function restful_post_meta() {
   </div>
 
   <div class="entry__meta-item">
-    <i class="fa fa-folder"></i>
-    <?php the_category( ', ' ); ?>
-  </div>
-
-  <div class="entry__meta-item">
     <i class="fa fa-comment"></i>
     <a href="<?php esc_url( comments_link() ); ?>"><?php comments_number(); ?></a>
+  </div>
+
+<?php
+
+}
+
+/**
+ * Post meta for below the post.
+ */
+function restful_post_meta_below() {
+
+  if ( ! has_category() && ! has_tag() ) {
+    return false;
+  }
+
+?>
+
+  <div class="entry__meta entry__meta--inline entry__meta--below">
+    <?php if ( has_category() ) : ?>
+      <div class="entry__meta-item">
+        <i class="fa fa-folder"></i>
+        <?php the_category( ', ' ); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ( has_tag() ) : ?>
+      <div class="entry__meta-item">
+        <i class="fa fa-tags"></i>
+        <?php the_tags( '' ); ?>
+      </div>
+    <?php endif; ?>
   </div>
 
 <?php
