@@ -4,6 +4,3 @@
 [submodule "customizer-library"]
 	path = customizer-library
 	url = git@github.com:devinsays/customizer-library
-[submodule "tgm-plugin-activation"]
-	path = tgm-plugin-activation
-	url = git@github.com:TGMPA/TGM-Plugin-Activation.git
