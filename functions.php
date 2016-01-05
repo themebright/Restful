@@ -9,11 +9,6 @@
 require_once get_template_directory() . '/framework/framework.php';
 
 /**
- * Include Customizer Library.
- */
-require_once get_template_directory() . '/customizer-library/customizer-library.php';
-
-/**
  * Include theme functions.
  */
 require_once get_template_directory() . '/includes/assets.php';
