@@ -4,185 +4,129 @@
  */
 
 /**
- * Registers the options for the theme customizer.
+ * Register Customizer settings.
  */
-function restful_customizer_options() {
+function restful_customizer_register( $wp_customize ) {
 
-  $options = array();
-  $sections = array();
+  /** Theme panel */
 
-  /**
-   * Appearance section.
-   */
-  $sections[] = array(
-    'id'       => 'appearance',
-    'title'    => __( 'Appearance', 'restful' ),
-    'priority' => '30'
-  );
+  $wp_customize->add_panel( 'restful', array(
+    'title' => 'Restful'
+  ) );
 
-  $options['skin'] = array(
-    'id'      => 'skin',
-    'label'   => __( 'Skin', 'restful' ),
-    'section' => 'appearance',
-    'type'    => 'radio',
+  /** Appearance Section */
+
+  $wp_customize->add_section( 'restful_appearance', array(
+    'title' => __( 'Appearance', 'restful' ),
+    'panel' => 'restful'
+  ) );
+
+  $wp_customize->add_setting( 'skin', array( 'default' => 'light' ) );
+  $wp_customize->add_control( 'skin', array(
+    'label'   => __( 'Color scheme', 'restful' ),
+    'section' => 'restful_appearance',
+    'type'    => 'select',
     'choices' => array(
-      'light' => __( 'Light', 'restful'),
-      'dark'  => __( 'Dark', 'restful')
-    ),
-    'default' => 'light'
-  );
+      'light' => __( 'Light', 'restful' ),
+      'dark'  => __( 'Dark', 'restful' )
+    )
+  ) );
 
-  $options['co-accent'] = array(
-    'id'      => 'co-accent',
-    'label'   => __( 'Primary Color', 'restful' ),
-    'section' => 'appearance',
-    'type'    => 'color',
-    'default' => '#00bcd4',
-  );
+  $wp_customize->add_setting( 'color_accent', array( 'default' => '#00bcd4' ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'color_accent', array(
+    'label'   => __( 'Accent color', 'restful' ),
+    'section' => 'restful_appearance'
+  ) ) );
 
-  /**
-   * Social URLS section.
-   */
-  $sections[] = array(
-    'id'    => 'social-urls',
-    'title' => __( 'Social URLs', 'steadfast' )
-  );
+  /** Social section */
 
-  $options['facebook'] = array(
-    'id'      => 'facebook',
+  $wp_customize->add_section( 'restful_social', array(
+    'title' => __( 'Social', 'restful' ),
+    'panel' => 'restful'
+  ) );
+
+  $wp_customize->add_setting( 'facebook' );
+  $wp_customize->add_control( 'facebook', array(
     'label'   => 'Facebook',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['flickr'] = array(
-    'id'      => 'flickr',
+  $wp_customize->add_setting( 'flickr' );
+  $wp_customize->add_control( 'flickr', array(
     'label'   => 'Flickr',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['googleplus'] = array(
-    'id'      => 'googleplus',
+  $wp_customize->add_setting( 'google' );
+  $wp_customize->add_control( 'google', array(
     'label'   => 'Google+',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['instagram'] = array(
-    'id'      => 'instagram',
+  $wp_customize->add_setting( 'instagram' );
+  $wp_customize->add_control( 'instagram', array(
     'label'   => 'Instagram',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['pinterest'] = array(
-    'id'      => 'pinterest',
+  $wp_customize->add_setting( 'pinterest' );
+  $wp_customize->add_control( 'pinterest', array(
     'label'   => 'Pinterest',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['tumblr'] = array(
-    'id'      => 'tumblr',
-    'label'   => 'Tumblr',
-    'section' => 'social-urls',
+  $wp_customize->add_setting( 'soundcloud' );
+  $wp_customize->add_control( 'soundcloud', array(
+    'label'   => 'SoundCloud',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['twitter'] = array(
-    'id'      => 'twitter',
+  $wp_customize->add_setting( 'twitter' );
+  $wp_customize->add_control( 'twitter', array(
     'label'   => 'Twitter',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['vimeo'] = array(
-    'id'      => 'vimeo',
+  $wp_customize->add_setting( 'vimeo' );
+  $wp_customize->add_control( 'vimeo', array(
     'label'   => 'Vimeo',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
+  ) );
 
-  $options['youtube'] = array(
-    'id'      => 'youtube',
+  $wp_customize->add_setting( 'youtube' );
+  $wp_customize->add_control( 'youtube', array(
     'label'   => 'YouTube',
-    'section' => 'social-urls',
+    'section' => 'restful_social',
     'type'    => 'url'
-  );
-
-  /**
-   * Add options to Customizer Library.
-   */
-  $options['sections'] = $sections;
-  $customizer_library = Customizer_Library::Instance();
-  $customizer_library->add_options( $options );
+  ) );
 
 }
-add_action( 'init', 'restful_customizer_options' );
+add_action( 'customize_register', 'restful_customizer_register' );
 
 /**
- * Implements the styles as per the theme customizer settings.
+ * Build necessary styles to implement customizer options.
  */
-function restful_customizer_build_styles() {
+function restful_customizer_styles() {
 
-  // Accent color
-  $setting = 'co-accent';
-  $mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+  ?>
 
-  if ( $mod !== customizer_library_get_default( $setting ) ) {
+  <style id="restful-custom-css">
+    <?php if ( get_theme_mod( 'color_accent' ) ) : $color = esc_html( get_theme_mod( 'color_accent' ) ); ?>
+      a { color: <?php echo $color; ?>; }
+      .entry.sticky { border-color: <?php echo $color; ?>; }
+      .button, button, input[type="button"], input[type="submit"] { background: <?php echo $color; ?>; }
+    <?php endif; ?>
+  </style>
 
-    $color = sanitize_hex_color( $mod );
-
-    Customizer_Library_Styles()->add( array(
-      'selectors' => array(
-        'a'
-      ),
-      'declarations' => array(
-        'color' => $color
-      )
-    ) );
-
-    Customizer_Library_Styles()->add( array(
-      'selectors' => array(
-        '.entry.sticky'
-      ),
-      'declarations' => array(
-        'border-left-color' => $color
-      )
-    ) );
-
-    Customizer_Library_Styles()->add( array(
-      'selectors' => array(
-        '.button',
-        'button',
-        'input[type="button"]',
-        'input[type="submit"]'
-      ),
-      'declarations' => array(
-        'background' => $color
-      )
-    ) );
-
-  }
+  <?php
 
 }
-add_action( 'customizer_library_styles', 'restful_customizer_build_styles' );
-
-/**
- * Outputs the styles as per the theme customizer settings.
- */
-function restful_customizer_output_styles() {
-
-  do_action( 'customizer_library_styles' );
-
-  // Store the rules
-  $css = Customizer_Library_Styles()->build();
-
-  // Echo the rules
-  if ( $css ) {
-    echo "<style id='restful-custom-css'>$css</style>";
-  }
-
-}
-add_action( 'wp_head', 'restful_customizer_output_styles', 11 );
+add_action( 'wp_head', 'restful_customizer_styles' );

@@ -69,7 +69,7 @@ function restful_site_social_urls() {
 
   $has_urls = false;
 
-  $url_mods = array( 'facebook', 'flickr', 'googleplus', 'instagram', 'pinterest', 'tumblr', 'twitter', 'vimeo', 'youtube' );
+  $url_mods = array( 'facebook', 'flickr', 'google', 'instagram', 'pinterest', 'soundcloud', 'twitter', 'vimeo', 'youtube' );
 
   foreach ( $url_mods as $url_mod ) {
     if ( get_theme_mod( $url_mod ) ) $has_urls = true;
@@ -81,10 +81,10 @@ function restful_site_social_urls() {
 
     if ( get_theme_mod( 'facebook' ) )   $urls[] = get_theme_mod( 'facebook' );
     if ( get_theme_mod( 'flickr' ) )     $urls[] = get_theme_mod( 'flickr' );
-    if ( get_theme_mod( 'googleplus' ) ) $urls[] = get_theme_mod( 'googleplus' );
+    if ( get_theme_mod( 'google' ) )     $urls[] = get_theme_mod( 'google' );
     if ( get_theme_mod( 'instagram' ) )  $urls[] = get_theme_mod( 'instagram' );
     if ( get_theme_mod( 'pinterest' ) )  $urls[] = get_theme_mod( 'pinterest' );
-    if ( get_theme_mod( 'tumblr' ) )     $urls[] = get_theme_mod( 'tumblr' );
+    if ( get_theme_mod( 'soundcloud' ) ) $urls[] = get_theme_mod( 'soundcloud' );
     if ( get_theme_mod( 'twitter' ) )    $urls[] = get_theme_mod( 'twitter' );
     if ( get_theme_mod( 'vimeo' ) )      $urls[] = get_theme_mod( 'vimeo' );
     if ( get_theme_mod( 'youtube' ) )    $urls[] = get_theme_mod( 'youtube' );
@@ -100,7 +100,7 @@ function restful_site_social_urls() {
 /**
  * Converts an array of social URLs to a social component with Font Awesome icons.
  */
-function restfuL_social_icons( $urls ) {
+function restful_social_icons( $urls ) {
 
   if ( ! empty( $urls ) ) {
 
@@ -126,11 +126,11 @@ function restfuL_social_icons( $urls ) {
       }
 
       elseif ( strpos( $url, '//plus.google.com' ) !== false ) {
-        $output .= "<a href='$url' class='social__item social__item--google-plus'><i class='fa fa-google-plus'></i></a>";
+        $output .= "<a href='$url' class='social__item social__item--google'><i class='fa fa-google-plus'></i></a>";
       }
 
-      elseif ( strpos( $url, '//tumblr.com' ) !== false ) {
-        $output .= "<a href='$url' class='social__item social__item--tumblr'><i class='fa fa-tumblr'></i></a>";
+      elseif ( strpos( $url, '//soundcloud.com' ) !== false ) {
+        $output .= "<a href='$url' class='social__item social__item--soundcloud'><i class='fa fa-soundcloud'></i></a>";
       }
 
       elseif ( strpos( $url, '//twitter.com' ) !== false ) {

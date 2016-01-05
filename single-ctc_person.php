@@ -49,7 +49,7 @@ $has_sidebar = is_active_sidebar( 'main' );
 
             <?php if ( tbf_person_urls() ) : ?>
               <div class="entry__social">
-                <?php echo restfuL_social_icons( tbf_person_urls() ); ?>
+                <?php echo restful_social_icons( tbf_person_urls() ); ?>
               </div>
             <?php endif; ?>
 
