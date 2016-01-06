@@ -45,63 +45,63 @@ function restful_customizer_register( $wp_customize ) {
     'panel' => 'restful'
   ) );
 
-  $wp_customize->add_setting( 'facebook', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'facebook', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'facebook', array(
     'label'   => 'Facebook',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'flickr', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'flickr', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'flickr', array(
     'label'   => 'Flickr',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'google', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'google', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'google', array(
     'label'   => 'Google+',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'instagram', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'instagram', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'instagram', array(
     'label'   => 'Instagram',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'pinterest', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'pinterest', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'pinterest', array(
     'label'   => 'Pinterest',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'soundcloud', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'soundcloud', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'soundcloud', array(
     'label'   => 'SoundCloud',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'twitter', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'twitter', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'twitter', array(
     'label'   => 'Twitter',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'vimeo', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'vimeo', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'vimeo', array(
     'label'   => 'Vimeo',
     'section' => 'restful_social',
     'type'    => 'url'
   ) );
 
-  $wp_customize->add_setting( 'youtube', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+  $wp_customize->add_setting( 'youtube', array( 'sanitize_callback' => 'esc_url_raw' ) );
   $wp_customize->add_control( 'youtube', array(
     'label'   => 'YouTube',
     'section' => 'restful_social',
