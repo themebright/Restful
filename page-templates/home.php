@@ -52,8 +52,10 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
         $slide_url   = get_post_meta( $slide_id, '_bs_slide_url' );
         $slide_url   = $slide_url[0];
 
+        $image_only  = ! $slide_text && ! $slide_text;
+
       ?>
-        <div class="brightslider__slide" style="background-image: url(<?php echo $slide_image; ?>)">
+        <div class="brightslider__slide <?php if ( $image_only ) echo 'brightslider__slide--image-only' ?>" style="background-image: url(<?php echo $slide_image; ?>)">
           <?php if ( $slide_url ) echo "<a href='$slide_url' class='brightslider__slide-link'>"; ?>
             <div class="container">
               <div class="row">
