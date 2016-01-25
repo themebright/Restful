@@ -63,3 +63,22 @@ function restful_notice_recommended_plugins() {
 
 }
 add_action( 'admin_notices', 'restful_notice_recommended_plugins' );
+
+/**
+ * Modify slider fields.
+ */
+function restful_filter_slider_fields( $args ) {
+
+  if ( defined( 'BRIGHTSLIDER_VERSION' ) && BRIGHTSLIDER_VERSION >= '1.1.0' ) {
+    $args['fields']['_restful_bs_show_title'] = array(
+      'name'           => __( 'Show title?', 'restful' ),
+      'type'           => 'checkbox',
+      'checkbox_label' => __( 'Display the title above the slide text.', 'restful' ),
+      'default'        => true
+    );
+  }
+
+  return $args;
+
+}
+add_filter( 'brightslider_add_meta_box_slide_settings', 'restful_filter_slider_fields' );
