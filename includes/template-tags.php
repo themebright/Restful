@@ -109,39 +109,39 @@ function restful_social_icons( $urls ) {
 
     foreach ( $urls as $url ) {
 
-      if ( strpos( $url, '//facebook.com' ) !== false ) {
+      if ( strpos( $url, 'facebook.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--facebook" target="_blank"><i class="fa fa-facebook"></i></a>';
       }
 
-      elseif ( strpos( $url, '//flickr.com' ) !== false ) {
+      elseif ( strpos( $url, 'flickr.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--flickr" target="_blank"><i class="fa fa-flickr"></i></a>';
       }
 
-      elseif ( strpos( $url, '//instagram.com' ) !== false ) {
+      elseif ( strpos( $url, 'instagram.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--instagram" target="_blank"><i class="fa fa-instagram"></i></a>';
       }
 
-      elseif ( strpos( $url, '//pinterest.com' ) !== false ) {
+      elseif ( strpos( $url, 'pinterest.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>';
       }
 
-      elseif ( strpos( $url, '//plus.google.com' ) !== false ) {
+      elseif ( strpos( $url, 'plus.google.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--google" target="_blank"><i class="fa fa-google-plus"></i></a>';
       }
 
-      elseif ( strpos( $url, '//soundcloud.com' ) !== false ) {
+      elseif ( strpos( $url, 'soundcloud.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a>';
       }
 
-      elseif ( strpos( $url, '//twitter.com' ) !== false ) {
+      elseif ( strpos( $url, 'twitter.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--twitter" target="_blank"><i class="fa fa-twitter"></i></a>';
       }
 
-      elseif ( strpos( $url, '//vimeo.com' ) !== false ) {
+      elseif ( strpos( $url, 'vimeo.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--vimeo" target="_blank"><i class="fa fa-vimeo-square"></i></a>';
       }
 
-      elseif ( strpos( $url, '//youtube.com' ) !== false ) {
+      elseif ( strpos( $url, 'youtube.com' ) !== false ) {
         $output .= '<a href="' . esc_url( $url ) . '" class="social__item social__item--youtube" target="_blank"><i class="fa fa-youtube"></i></a>';
       }
 
