@@ -52,10 +52,10 @@ if ( function_exists( 'brightslider_register_post_type_slide' ) ) :
         $rbs_show    = get_post_meta( $slide_id, '_restful_bs_show_title' );
         $bs_show     = get_post_meta( $slide_id, '_bs_show_title' ); // pre BS 1.1.0 compatibilty
 
-        if ( isset( $rbs[0] ) ) {
-          $show_title = $rbs[0];
-        } elseif ( isset( $bs[0] ) ) {
-          $show_title = $bs[0];
+        if ( isset( $rbs_show[0] ) ) {
+          $show_title = $rbs_show[0];
+        } elseif ( isset( $bs_show[0] ) ) {
+          $show_title = $bs_show[0];
         } else {
           $show_title = true;
         }
