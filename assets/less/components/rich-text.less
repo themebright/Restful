@@ -4,7 +4,25 @@
 
 
 .rich-text( @margin: 1.5em ) {
-  > *:not( :first-child ) {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  address,
+  pre,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  table {
     margin-top: @margin;
   }
 
@@ -75,6 +93,7 @@
   }
 }
 
-.rich-text {
+.rich-text,
+.entry-content {
   .rich-text();
 }

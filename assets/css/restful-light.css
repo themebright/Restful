@@ -146,8 +146,7 @@ table {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container {
   position: relative;
@@ -804,8 +803,7 @@ body {
           text-size-adjust: none;
 }
 a {
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
   color: #26c6da;
   text-decoration: none;
 }
@@ -981,8 +979,7 @@ input[type="submit"] {
   color: #ffffff;
   text-decoration: none !important;
   text-align: center;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1012,8 +1009,7 @@ textarea {
   background: #ffffff;
   border: solid 1px #dbe2e5;
   border-radius: 0;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -1159,7 +1155,6 @@ body {
 }
 .brightslider__slide:before {
   background: rgba(0, 0, 0, 0.5);
-  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.5));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
   position: absolute;
   top: 0;
@@ -1365,7 +1360,24 @@ li.pingback a {
     width: 66.66666666666666%;
   }
 }
-.comment-content > *:not( :first-child ) {
+.comment-content > *:first-child {
+  margin-top: 0;
+}
+.comment-content > *,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6,
+.comment-content p,
+.comment-content address,
+.comment-content pre,
+.comment-content blockquote,
+.comment-content ul,
+.comment-content ol,
+.comment-content dl,
+.comment-content table {
   margin-top: 1.5em;
 }
 .comment-content blockquote {
@@ -1422,7 +1434,24 @@ li.pingback a {
 .comment-content table a {
   color: #263238;
 }
-.comment-content > *:not( :first-child ) {
+.comment-content > *:first-child {
+  margin-top: 0;
+}
+.comment-content > *,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6,
+.comment-content p,
+.comment-content address,
+.comment-content pre,
+.comment-content blockquote,
+.comment-content ul,
+.comment-content ol,
+.comment-content dl,
+.comment-content table {
   margin-top: 1.5em;
 }
 .comment-content blockquote {
@@ -1804,8 +1833,7 @@ li.pingback a {
     top: 90px;
     left: 50%;
     margin-left: -105px;
-    -webkit-transition: 0.4s;
-            transition: 0.4s;
+    transition: 0.4s;
     text-align: center;
     background: #546e7a;
     text-transform: uppercase;
@@ -1910,61 +1938,113 @@ li.pingback a {
 .entry + .pagination {
   margin-top: 90px;
 }
-.rich-text > *:not( :first-child ) {
+.rich-text > *:first-child,
+.entry-content > *:first-child {
+  margin-top: 0;
+}
+.rich-text > *,
+.entry-content > *,
+.rich-text h1,
+.entry-content h1,
+.rich-text h2,
+.entry-content h2,
+.rich-text h3,
+.entry-content h3,
+.rich-text h4,
+.entry-content h4,
+.rich-text h5,
+.entry-content h5,
+.rich-text h6,
+.entry-content h6,
+.rich-text p,
+.entry-content p,
+.rich-text address,
+.entry-content address,
+.rich-text pre,
+.entry-content pre,
+.rich-text blockquote,
+.entry-content blockquote,
+.rich-text ul,
+.entry-content ul,
+.rich-text ol,
+.entry-content ol,
+.rich-text dl,
+.entry-content dl,
+.rich-text table,
+.entry-content table {
   margin-top: 1.5em;
 }
-.rich-text blockquote {
+.rich-text blockquote,
+.entry-content blockquote {
   margin-left: 1.5em;
 }
 .rich-text ul,
-.rich-text ol {
+.entry-content ul,
+.rich-text ol,
+.entry-content ol {
   margin-left: 1.5em;
 }
 .rich-text ul ul,
+.entry-content ul ul,
 .rich-text ol ul,
+.entry-content ol ul,
 .rich-text ul ol,
-.rich-text ol ol {
+.entry-content ul ol,
+.rich-text ol ol,
+.entry-content ol ol {
   margin-top: 0;
 }
-.rich-text ul {
+.rich-text ul,
+.entry-content ul {
   list-style: disc;
 }
-.rich-text ol {
+.rich-text ol,
+.entry-content ol {
   list-style: decimal;
 }
-.rich-text dt {
+.rich-text dt,
+.entry-content dt {
   font-weight: bold;
 }
-.rich-text dd + dt {
+.rich-text dd + dt,
+.entry-content dd + dt {
   margin-top: 1.5em;
 }
-.rich-text pre {
+.rich-text pre,
+.entry-content pre {
   border: solid 1px #dbe2e5;
   padding: 1.5em;
   font-size: 14px;
 }
-.rich-text table {
+.rich-text table,
+.entry-content table {
   text-align: left;
 }
-.rich-text table thead {
+.rich-text table thead,
+.entry-content table thead {
   background: #dbe2e5;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: .1em;
   color: #90a4ae;
 }
-.rich-text table tr:nth-child( even ) {
+.rich-text table tr:nth-child( even ),
+.entry-content table tr:nth-child( even ) {
   background: #dbe2e5;
 }
 .rich-text table th,
-.rich-text table td {
+.entry-content table th,
+.rich-text table td,
+.entry-content table td {
   padding: .75em;
   vertical-align: top;
 }
-.rich-text table th {
+.rich-text table th,
+.entry-content table th {
   font-weight: normal;
 }
-.rich-text table a {
+.rich-text table a,
+.entry-content table a {
   color: #263238;
 }
 .screen-reader-text {
@@ -2030,7 +2110,24 @@ li.pingback a {
   padding-top: 30px;
   border-top: solid 1px #dbe2e5;
 }
-.tbf-widget__entry-body > *:not( :first-child ) {
+.tbf-widget__entry-body > *:first-child {
+  margin-top: 0;
+}
+.tbf-widget__entry-body > *,
+.tbf-widget__entry-body h1,
+.tbf-widget__entry-body h2,
+.tbf-widget__entry-body h3,
+.tbf-widget__entry-body h4,
+.tbf-widget__entry-body h5,
+.tbf-widget__entry-body h6,
+.tbf-widget__entry-body p,
+.tbf-widget__entry-body address,
+.tbf-widget__entry-body pre,
+.tbf-widget__entry-body blockquote,
+.tbf-widget__entry-body ul,
+.tbf-widget__entry-body ol,
+.tbf-widget__entry-body dl,
+.tbf-widget__entry-body table {
   margin-top: 0.75em;
 }
 .tbf-widget__entry-body blockquote {
@@ -2139,7 +2236,24 @@ li.pingback a {
 .widget_search .search-submit {
   display: none;
 }
-.widget_text .textwidget > *:not( :first-child ) {
+.widget_text .textwidget > *:first-child {
+  margin-top: 0;
+}
+.widget_text .textwidget > *,
+.widget_text .textwidget h1,
+.widget_text .textwidget h2,
+.widget_text .textwidget h3,
+.widget_text .textwidget h4,
+.widget_text .textwidget h5,
+.widget_text .textwidget h6,
+.widget_text .textwidget p,
+.widget_text .textwidget address,
+.widget_text .textwidget pre,
+.widget_text .textwidget blockquote,
+.widget_text .textwidget ul,
+.widget_text .textwidget ol,
+.widget_text .textwidget dl,
+.widget_text .textwidget table {
   margin-top: 0.75em;
 }
 .widget_text .textwidget blockquote {
