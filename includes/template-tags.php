@@ -22,15 +22,16 @@ function restful_post_meta_above() {
     <a href="<?php echo esc_url( get_author_posts_url( $post->post_author ) ); ?>"><?php the_author_meta( 'display_name', $post->post_author ); ?></a>
   </div>
 
-  <div class="entry__meta-item">
-    <i class="fa fa-comment"></i>
-    <a href="<?php esc_url( comments_link() ); ?>"><?php comments_number(); ?></a>
-  </div>
+  <?php if ( comments_open() || have_comments() ) : ?>
+    <div class="entry__meta-item">
+      <i class="fa fa-comment"></i>
+      <a href="<?php esc_url( comments_link() ); ?>"><?php comments_number(); ?></a>
+    </div>
+  <?php endif; ?>
 
-<?php
+ <?php
 
 }
-
 /**
  * Post meta for below the post.
  */
