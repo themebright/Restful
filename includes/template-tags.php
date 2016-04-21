@@ -29,7 +29,7 @@ function restful_post_meta_above() {
     </div>
   <?php endif; ?>
 
- <?php
+<?php
 
 }
 /**
