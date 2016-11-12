@@ -22,34 +22,34 @@ $has_sidebar = is_active_sidebar( 'main' );
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
-            <?php if ( tbf_person_position() || tbf_person_phone() || tbf_person_email() ) : ?>
+            <?php if ( tbcf_person_position() || tbcf_person_phone() || tbcf_person_email() ) : ?>
               <div class="entry__meta entry__meta--stacked">
-                <?php if ( tbf_person_position() ) : ?>
+                <?php if ( tbcf_person_position() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-user"></i>
-                    <?php echo tbf_person_position(); ?>
+                    <?php echo tbcf_person_position(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_person_phone() ) : ?>
+                <?php if ( tbcf_person_phone() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-phone"></i>
-                    <?php echo tbf_person_phone(); ?>
+                    <?php echo tbcf_person_phone(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_person_email() ) : ?>
+                <?php if ( tbcf_person_email() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:<?php echo tbf_person_email(); ?>"><?php echo tbf_person_email(); ?></a>
+                    <a href="mailto:<?php echo tbcf_person_email(); ?>"><?php echo tbcf_person_email(); ?></a>
                   </div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>
 
-            <?php if ( tbf_person_urls() ) : ?>
+            <?php if ( tbcf_person_urls() ) : ?>
               <div class="entry__social">
-                <?php echo restful_social_icons( tbf_person_urls() ); ?>
+                <?php echo restful_social_icons( tbcf_person_urls() ); ?>
               </div>
             <?php endif; ?>
 

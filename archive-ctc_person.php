@@ -19,16 +19,9 @@ $has_sidebar    = is_active_sidebar( 'main' );
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
         <?php
 
-        global $wp_query;
+        $people = tbcf_query_people();
 
-        $args = array_merge( $wp_query->query_vars, array(
-          'order'   => 'ASC',
-          'orderby' => 'menu_order'
-        ) );
-
-        query_posts( $args );
-
-        if ( have_posts() ) : while ( have_posts() ) : the_post();
+        if ( $people->have_posts() ) : while ( $people->have_posts() ) : $people->the_post();
 
         ?>
           <article <?php post_class( 'entry entry--person entry--excerpt' ); ?>>
@@ -40,11 +33,11 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <?php if ( tbf_person_position() ) : ?>
+            <?php if ( tbcf_person_position() ) : ?>
               <div class="entry__meta entry__meta--stacked">
                 <div class="entry__meta-item">
                   <i class="fa fa-user"></i>
-                  <?php echo tbf_person_position(); ?>
+                  <?php echo tbcf_person_position(); ?>
                 </div>
               </div>
             <?php endif; ?>
@@ -57,7 +50,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
           <?php the_posts_pagination(); ?>
         <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
-        <?php endif; wp_reset_query(); ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
 
       <?php if ( $has_sidebar ) get_sidebar(); ?>

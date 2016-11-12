@@ -19,16 +19,9 @@ $has_sidebar    = is_active_sidebar( 'main' );
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
         <?php
 
-        global $wp_query;
+        $locations = tbcf_query_locations();
 
-        $args = array_merge( $wp_query->query_vars, array(
-          'order'   => 'ASC',
-          'orderby' => 'menu_order'
-        ) );
-
-        query_posts( $args );
-
-        if ( have_posts() ) : while ( have_posts() ) : the_post();
+        if ( $locations->have_posts() ) : while ( $locations->have_posts() ) : $locations->the_post();
 
         ?>
           <article <?php post_class( 'entry entry--location entry--excerpt' ); ?>>
@@ -40,36 +33,34 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
+            <?php if ( tbcf_location_address() || tbcf_location_phone() || tbcf_location_times() ) : ?>
               <div class="entry__meta entry__meta--stacked">
-                <?php if ( tbf_location_address() ) : ?>
+                <?php if ( tbcf_location_address() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-map-marker"></i>
-                    <?php echo tbf_location_address(); ?>
+                    <?php echo tbcf_location_address(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_location_phone() ) : ?>
+                <?php if ( tbcf_location_phone() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-phone"></i>
-                    <?php echo tbf_location_phone(); ?>
+                    <?php echo tbcf_location_phone(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_location_times() ) : ?>
+                <?php if ( tbcf_location_times() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-clock-o"></i>
-                    <?php echo tbf_location_times(); ?>
+                    <?php echo tbcf_location_times(); ?>
                   </div>
                 <?php endif; ?>
               </div>
             <?php endif; ?>
           </article>
-        <?php endwhile; ?>
-          <?php the_posts_pagination(); ?>
-        <?php else: ?>
+        <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
-        <?php endif; wp_reset_query(); ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
 
       <?php if ( $has_sidebar ) get_sidebar(); ?>

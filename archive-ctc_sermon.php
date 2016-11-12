@@ -33,7 +33,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
                 <?php the_time( get_option( 'date_format' ) ); ?>
               </div>
 
-              <?php $speakers = tbf_sermon_speakers(); if ( $speakers ) : ?>
+              <?php $speakers = tbcf_sermon_speakers(); if ( $speakers ) : ?>
                 <div class="entry__meta-item">
                   <i class="fa fa-user"></i>
 

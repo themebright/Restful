@@ -32,8 +32,8 @@ $has_sidebar    = is_active_sidebar( 'main' );
             <div class="entry__meta entry__meta--stacked">
               <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
 
-              <?php if ( tbf_sermon_speakers() ) : ?>
-                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbf_sermon_speakers(); ?></div>
+              <?php if ( tbcf_sermon_speakers() ) : ?>
+                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbcf_sermon_speakers(); ?></div>
               <?php endif; ?>
             </div>
 

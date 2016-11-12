@@ -4,9 +4,9 @@
  */
 
 /**
- * Include ThemeBright framework.
+ * Include ThemeBright Church Framework.
  */
-require_once get_template_directory() . '/framework/framework.php';
+require_once get_template_directory() . '/tbcf/framework.php';
 
 /**
  * Include theme functions.
@@ -24,5 +24,6 @@ require_once get_template_directory() . '/includes/theme-support.php';
  * Include theme admin functions.
  */
 if ( is_admin() ) {
+	require_once get_template_directory() . '/includes/upgrade.php';
   require_once get_template_directory() . '/includes/admin.php';
 }

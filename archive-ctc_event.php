@@ -19,25 +19,9 @@ $has_sidebar    = is_active_sidebar( 'main' );
       <div class="col col--xs--12 <?php echo ( $has_sidebar ? 'col--md--7' : 'col--sm--10 col--sm--offset--1 col--md--8 col--md--offset--2' ); ?>">
         <?php
 
-        global $wp_query;
+        $events = tbcf_query_events();
 
-        $args = array_merge( $wp_query->query_vars, array(
-          'order'      => 'ASC',
-          'orderby'    => 'meta_value',
-          'meta_key'   => '_ctc_event_start_date',
-          'meta_query' => array(
-            array(
-              'key'     => '_ctc_event_end_date',
-              'value'   => date_i18n( 'Y-m-d' ),
-              'compare' => '>=',
-              'type'    => 'DATE'
-            )
-          )
-        ) );
-
-        query_posts( $args );
-
-        if ( have_posts() ) : while ( have_posts() ) : the_post();
+        if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post();
 
         ?>
           <article <?php post_class( 'entry entry--event entry--excerpt' ); ?>>
@@ -49,10 +33,10 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <?php if ( tbf_event_date() || tbf_event_time() ) : ?>
+            <?php if ( tbcf_event_date() || tbcf_event_time() ) : ?>
 
               <div class="entry__meta entry__meta--stacked">
-                <?php $date = tbf_event_date(); if ( $date ) : ?>
+                <?php $date = tbcf_event_date(); if ( $date ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-calendar"></i>
                     <?php echo $date['start']; ?>
@@ -64,7 +48,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
                   </div>
                 <?php endif; ?>
 
-                <?php $time = tbf_event_time(); if ( $time ) : ?>
+                <?php $time = tbcf_event_time(); if ( $time ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-clock-o"></i>
                     <?php echo $time['start']; ?>
@@ -86,7 +70,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
           <?php the_posts_pagination(); ?>
         <?php else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>
-        <?php endif; wp_reset_query(); ?>
+        <?php endif; wp_reset_postdata(); ?>
       </div>
 
       <?php if ( $has_sidebar ) get_sidebar(); ?>

@@ -22,26 +22,26 @@ $has_sidebar = is_active_sidebar( 'main' );
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
-            <?php if ( tbf_location_address() || tbf_location_phone() || tbf_location_times() ) : ?>
+            <?php if ( tbcf_location_address() || tbcf_location_phone() || tbcf_location_times() ) : ?>
               <div class="entry__meta entry__meta--stacked">
-                <?php if ( tbf_location_address() ) : ?>
+                <?php if ( tbcf_location_address() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-map-marker"></i>
-                    <?php echo tbf_location_address(); ?>
+                    <?php echo tbcf_location_address(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_location_phone() ) : ?>
+                <?php if ( tbcf_location_phone() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-phone"></i>
-                    <?php echo tbf_location_phone(); ?>
+                    <?php echo tbcf_location_phone(); ?>
                   </div>
                 <?php endif; ?>
 
-                <?php if ( tbf_location_times() ) : ?>
+                <?php if ( tbcf_location_times() ) : ?>
                   <div class="entry__meta-item">
                     <i class="fa fa-clock-o"></i>
-                    <?php echo tbf_location_times(); ?>
+                    <?php echo tbcf_location_times(); ?>
                   </div>
                 <?php endif; ?>
               </div>
@@ -51,9 +51,9 @@ $has_sidebar = is_active_sidebar( 'main' );
               <?php the_content(); ?>
             </div>
 
-            <?php if ( tbf_location_map() ) : ?>
+            <?php if ( tbcf_location_map() ) : ?>
               <div class="entry__map">
-                <?php echo tbf_location_map(); ?>
+                <?php echo tbcf_location_map(); ?>
               </div>
             <?php endif; ?>
           </article>
