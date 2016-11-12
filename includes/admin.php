@@ -53,7 +53,7 @@ function restful_notice_recommended_plugins() {
 
     ?>
 
-    <div class="notice error">
+    <div class="notice notice-warning is-dismissible">
       <p><?php _e( 'Restful recommends the following plugin(s):', 'restful' ); ?> <?php echo $plugins_str; ?></p>
     </div>
 
@@ -69,7 +69,7 @@ add_action( 'admin_notices', 'restful_notice_recommended_plugins' );
  */
 function restful_filter_slider_fields( $args ) {
 
-  if ( defined( 'BRIGHTSLIDER_VERSION' ) && BRIGHTSLIDER_VERSION >= '1.1.0' ) {
+  if ( defined( 'BRIGHTSLIDER_VERSION' ) && version_compare( BRIGHTSLIDER_VERSION, '1.1.0', '>=' ) ) {
     $args['fields']['_restful_bs_show_title'] = array(
       'name'           => __( 'Show title?', 'restful' ),
       'type'           => 'checkbox',
