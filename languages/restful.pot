@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Restful 1.1.10\n"
+"Project-Id-Version: Restful 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-21 18:41:47+00:00\n"
+"POT-Creation-Date: 2016-11-12 17:49:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "Sorry, the page or file you tried to access was not found."
 msgstr ""
 
-#: archive-ctc_event.php:88 archive-ctc_location.php:71
-#: archive-ctc_person.php:59 archive-ctc_sermon.php:54 archive.php:34
+#: archive-ctc_event.php:45 archive-ctc_location.php:39
+#: archive-ctc_person.php:45 archive-ctc_sermon.php:39 archive.php:34
 #: home.php:45 index.php:45 page-templates/full-width.php:30 page.php:32
-#: search.php:45 single-ctc_event.php:73 single-ctc_location.php:61
-#: single-ctc_person.php:61 single-ctc_sermon.php:90 single.php:35
+#: search.php:45 single-ctc_event.php:40 single-ctc_location.php:38
+#: single-ctc_person.php:38 single-ctc_sermon.php:55 single.php:35
 #: taxonomy-ctc_sermon_series.php:47 taxonomy-ctc_sermon_speaker.php:47
 msgid "Nothing found."
 msgstr ""
@@ -36,159 +36,6 @@ msgstr ""
 
 #: footer.php:7
 msgid "Theme designed by ThemeBright"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:11
-msgid "A customizable list of events."
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:15
-#: framework/includes/classes/widget-events.php:21
-msgid "Events"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:133
-msgid "No events found."
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:182
-#: framework/includes/classes/widget-locations.php:143
-#: framework/includes/classes/widget-people.php:156
-#: framework/includes/classes/widget-sermons.php:142
-msgid "Title:"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:189
-msgid "Number of events to show:"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:197
-#: framework/includes/classes/widget-locations.php:151
-#: framework/includes/classes/widget-people.php:193
-#: framework/includes/classes/widget-sermons.php:157
-msgid "Show thumbnail"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:204
-#: framework/includes/classes/widget-locations.php:158
-#: framework/includes/classes/widget-people.php:200
-#: framework/includes/classes/widget-sermons.php:164
-msgid "Show excerpt"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:211
-#: framework/includes/classes/widget-sermons.php:171
-msgid "Show date"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:218
-msgid "Show time"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:225
-msgid "Show venue"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:232
-#: framework/includes/classes/widget-locations.php:165
-msgid "Show address"
-msgstr ""
-
-#: framework/includes/classes/widget-events.php:239
-#: framework/includes/classes/widget-locations.php:186
-msgid "Show map"
-msgstr ""
-
-#: framework/includes/classes/widget-locations.php:11
-msgid "A customizable list of locations."
-msgstr ""
-
-#: framework/includes/classes/widget-locations.php:15
-#: framework/includes/classes/widget-locations.php:21
-msgid "Locations"
-msgstr ""
-
-#: framework/includes/classes/widget-locations.php:98
-msgid "No locations found."
-msgstr ""
-
-#: framework/includes/classes/widget-locations.php:172
-#: framework/includes/classes/widget-people.php:214
-msgid "Show phone"
-msgstr ""
-
-#: framework/includes/classes/widget-locations.php:179
-msgid "Show times"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:11
-msgid "A customizable list of people."
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:15
-#: framework/includes/classes/widget-people.php:21
-msgid "People"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:107
-msgid "No people found."
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:163
-msgid "Group to show:"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:165
-msgid "All Groups"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:185
-msgid "Number of people to show:"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:207
-msgid "Show position"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:221
-msgid "Show email"
-msgstr ""
-
-#: framework/includes/classes/widget-people.php:228
-msgid "Show URLs"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:11
-msgid "A customizable list of sermons."
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:15
-#: framework/includes/classes/widget-sermons.php:21
-msgid "Sermons"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:80
-msgid "Video"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:84
-msgid "Audio"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:88
-msgid "Transcript"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:99
-msgid "No sermons found."
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:149
-msgid "Number of sermons to show:"
-msgstr ""
-
-#: framework/includes/classes/widget-sermons.php:178
-msgid "Show media links"
 msgstr ""
 
 #: includes/admin.php:57
@@ -261,6 +108,159 @@ msgstr ""
 
 #: single-ctc_sermon.php:41
 msgid "PDF Transcript"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:11
+msgid "A customizable list of events."
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:15
+#: tbcf/includes/classes/widget-events.php:21
+msgid "Events"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:119
+msgid "No events found."
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:168
+#: tbcf/includes/classes/widget-locations.php:135
+#: tbcf/includes/classes/widget-people.php:151
+#: tbcf/includes/classes/widget-sermons.php:139
+msgid "Title:"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:175
+msgid "Number of events to show:"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:183
+#: tbcf/includes/classes/widget-locations.php:143
+#: tbcf/includes/classes/widget-people.php:188
+#: tbcf/includes/classes/widget-sermons.php:154
+msgid "Show thumbnail"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:190
+#: tbcf/includes/classes/widget-locations.php:150
+#: tbcf/includes/classes/widget-people.php:195
+#: tbcf/includes/classes/widget-sermons.php:161
+msgid "Show excerpt"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:197
+#: tbcf/includes/classes/widget-sermons.php:168
+msgid "Show date"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:204
+msgid "Show time"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:211
+msgid "Show venue"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:218
+#: tbcf/includes/classes/widget-locations.php:157
+msgid "Show address"
+msgstr ""
+
+#: tbcf/includes/classes/widget-events.php:225
+#: tbcf/includes/classes/widget-locations.php:178
+msgid "Show map"
+msgstr ""
+
+#: tbcf/includes/classes/widget-locations.php:11
+msgid "A customizable list of locations."
+msgstr ""
+
+#: tbcf/includes/classes/widget-locations.php:15
+#: tbcf/includes/classes/widget-locations.php:21
+msgid "Locations"
+msgstr ""
+
+#: tbcf/includes/classes/widget-locations.php:90
+msgid "No locations found."
+msgstr ""
+
+#: tbcf/includes/classes/widget-locations.php:164
+#: tbcf/includes/classes/widget-people.php:209
+msgid "Show phone"
+msgstr ""
+
+#: tbcf/includes/classes/widget-locations.php:171
+msgid "Show times"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:11
+msgid "A customizable list of people."
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:15
+#: tbcf/includes/classes/widget-people.php:21
+msgid "People"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:102
+msgid "No people found."
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:158
+msgid "Group to show:"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:160
+msgid "All Groups"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:180
+msgid "Number of people to show:"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:202
+msgid "Show position"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:216
+msgid "Show email"
+msgstr ""
+
+#: tbcf/includes/classes/widget-people.php:223
+msgid "Show URLs"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:11
+msgid "A customizable list of sermons."
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:15
+#: tbcf/includes/classes/widget-sermons.php:21
+msgid "Sermons"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:77
+msgid "Video"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:81
+msgid "Audio"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:85
+msgid "Transcript"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:96
+msgid "No sermons found."
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:146
+msgid "Number of sermons to show:"
+msgstr ""
+
+#: tbcf/includes/classes/widget-sermons.php:175
+msgid "Show media links"
 msgstr ""
 
 #. Theme Name of the plugin/theme

@@ -22,40 +22,7 @@ $has_sidebar = is_active_sidebar( 'main' );
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
-            <?php if ( tbcf_event_date() || tbcf_event_time() || tbcf_event_address() ) : ?>
-              <div class="entry__meta entry__meta--stacked">
-                <?php $date = tbcf_event_date(); if ( $date ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-calendar"></i>
-                    <?php echo $date['start']; ?>
-
-                    <?php if ( array_key_exists( 'end', $date ) ) : ?>
-                      <span class="entry__meta-to-sep">&ndash;</span>
-                      <?php echo $date['end']; ?>
-                    <?php endif; ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php $time = tbcf_event_time(); if ( $time ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-clock-o"></i>
-                    <?php echo $time['start']; ?>
-
-                    <?php if ( array_key_exists( 'end', $time ) ) : ?>
-                      <span class="entry__meta-to-sep">&ndash;</span>
-                      <?php echo $time['end']; ?>
-                    <?php endif; ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if ( tbcf_event_address() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-map-marker"></i>
-                    <?php echo tbcf_event_address(); ?>
-                  </div>
-                <?php endif; ?>
-              </div>
-            <?php endif; ?>
+            <?php restful_event_meta(); ?>
 
             <div class="entry__body rich-text">
               <?php the_content(); ?>

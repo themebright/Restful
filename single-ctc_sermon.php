@@ -43,42 +43,7 @@ $has_sidebar = is_active_sidebar( 'main' );
               </div>
             <?php endif; ?>
 
-            <div class="entry__meta entry__meta--stacked">
-              <div class="entry__meta-item">
-                <i class="fa fa-calendar"></i>
-                <?php the_time( get_option( 'date_format' ) ); ?>
-              </div>
-
-              <?php $allseries = tbcf_sermon_series(); if ( $allseries ) : ?>
-                <div class="entry__meta-item">
-                  <i class="fa fa-th-list"></i>
-
-                  <?php foreach ( $allseries as $series ) : ?>
-                    <a href="<?php echo esc_url( get_term_link( $series ) ); ?>"><?php echo $series->name; ?></a>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-
-              <?php $books = tbcf_sermon_books(); if ( $books ) : ?>
-                <div class="entry__meta-item">
-                  <i class="fa fa-book"></i>
-
-                  <?php foreach ( $books as $book ) : ?>
-                    <a href="<?php echo esc_url( get_term_link( $book ) ); ?>"><?php echo $book->name; ?></a>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-
-              <?php $speakers = tbcf_sermon_speakers(); if ( $speakers ) : ?>
-                <div class="entry__meta-item">
-                  <i class="fa fa-user"></i>
-
-                  <?php foreach ( $speakers as $speaker ) : ?>
-                    <a href="<?php echo esc_url( get_term_link( $speaker ) ); ?>"><?php echo $speaker->name; ?></a>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-            </div>
+            <?php restful_sermon_meta(); ?>
 
             <div class="entry__body rich-text">
               <?php the_content(); ?>

@@ -33,30 +33,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <?php if ( tbcf_location_address() || tbcf_location_phone() || tbcf_location_times() ) : ?>
-              <div class="entry__meta entry__meta--stacked">
-                <?php if ( tbcf_location_address() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-map-marker"></i>
-                    <?php echo tbcf_location_address(); ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if ( tbcf_location_phone() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-phone"></i>
-                    <?php echo tbcf_location_phone(); ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if ( tbcf_location_times() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-clock-o"></i>
-                    <?php echo tbcf_location_times(); ?>
-                  </div>
-                <?php endif; ?>
-              </div>
-            <?php endif; ?>
+            <?php restful_location_meta(); ?>
           </article>
         <?php endwhile; else: ?>
           <?php _e( 'Nothing found.', 'restful' ); ?>

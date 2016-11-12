@@ -803,7 +803,8 @@ body {
           text-size-adjust: none;
 }
 a {
-  transition: 0.2s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
   color: #26c6da;
   text-decoration: none;
 }
@@ -976,10 +977,11 @@ input[type="submit"] {
   border-radius: 0;
   font-size: 16px;
   background: #26c6da;
-  color: #ffffff;
+  color: white;
   text-decoration: none !important;
   text-align: center;
-  transition: 0.2s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -991,6 +993,13 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
   opacity: .9;
+}
+.button .fa,
+button .fa,
+input[type="button"] .fa,
+input[type="submit"] .fa {
+  position: relative;
+  top: 4px;
 }
 input[type="email"],
 input[type="number"],
@@ -1006,10 +1015,11 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   padding: .75em;
-  background: #ffffff;
+  background: white;
   border: solid 1px #dbe2e5;
   border-radius: 0;
-  transition: 0.2s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -1110,7 +1120,7 @@ table {
   width: 100%;
 }
 body {
-  background: #ffffff;
+  background: white;
 }
 .section {
   padding: 30px 0;
@@ -1155,6 +1165,7 @@ body {
 }
 .brightslider__slide:before {
   background: rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.5));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
   position: absolute;
   top: 0;
@@ -1833,7 +1844,8 @@ li.pingback a {
     top: 90px;
     left: 50%;
     margin-left: -105px;
-    transition: 0.4s;
+    -webkit-transition: 0.4s;
+            transition: 0.4s;
     text-align: center;
     background: #546e7a;
     text-transform: uppercase;
@@ -1854,7 +1866,7 @@ li.pingback a {
     display: block;
     padding: 1em;
     width: 210px;
-    color: #ffffff;
+    color: white;
   }
   .header__menu .sub-menu a:hover,
   .header__menu .children a:hover {

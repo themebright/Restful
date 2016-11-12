@@ -22,30 +22,7 @@ $has_sidebar = is_active_sidebar( 'main' );
               <div class="entry__thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <?php endif; ?>
 
-            <?php if ( tbcf_location_address() || tbcf_location_phone() || tbcf_location_times() ) : ?>
-              <div class="entry__meta entry__meta--stacked">
-                <?php if ( tbcf_location_address() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-map-marker"></i>
-                    <?php echo tbcf_location_address(); ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if ( tbcf_location_phone() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-phone"></i>
-                    <?php echo tbcf_location_phone(); ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if ( tbcf_location_times() ) : ?>
-                  <div class="entry__meta-item">
-                    <i class="fa fa-clock-o"></i>
-                    <?php echo tbcf_location_times(); ?>
-                  </div>
-                <?php endif; ?>
-              </div>
-            <?php endif; ?>
+            <?php restful_location_meta(); ?>
 
             <div class="entry__body rich-text">
               <?php the_content(); ?>
