@@ -2101,123 +2101,123 @@ li.pingback a {
 .social__item .fa {
   margin: 6px;
 }
-.tbf-widget__entries {
+.tbcf-widget__entries {
   list-style: none !important;
   margin-left: 0 !important;
 }
-.tbf-widget__entry-title {
+.tbcf-widget__entry-title {
   text-transform: none;
   letter-spacing: 0;
   font-family: Karla, sans-serif;
   font-weight: bold;
   margin-bottom: .5em;
 }
-.tbf-widget__entry:after {
+.tbcf-widget__entry:after {
   display: table;
   clear: both;
   content: '';
 }
-.tbf-widget__entry + .tbf-widget__entry {
+.tbcf-widget__entry + .tbcf-widget__entry {
   margin-top: 30px;
   padding-top: 30px;
   border-top: solid 1px #dbe2e5;
 }
-.tbf-widget__entry-body > *:first-child {
+.tbcf-widget__entry-body > *:first-child {
   margin-top: 0;
 }
-.tbf-widget__entry-body > *,
-.tbf-widget__entry-body h1,
-.tbf-widget__entry-body h2,
-.tbf-widget__entry-body h3,
-.tbf-widget__entry-body h4,
-.tbf-widget__entry-body h5,
-.tbf-widget__entry-body h6,
-.tbf-widget__entry-body p,
-.tbf-widget__entry-body address,
-.tbf-widget__entry-body pre,
-.tbf-widget__entry-body blockquote,
-.tbf-widget__entry-body ul,
-.tbf-widget__entry-body ol,
-.tbf-widget__entry-body dl,
-.tbf-widget__entry-body table {
+.tbcf-widget__entry-body > *,
+.tbcf-widget__entry-body h1,
+.tbcf-widget__entry-body h2,
+.tbcf-widget__entry-body h3,
+.tbcf-widget__entry-body h4,
+.tbcf-widget__entry-body h5,
+.tbcf-widget__entry-body h6,
+.tbcf-widget__entry-body p,
+.tbcf-widget__entry-body address,
+.tbcf-widget__entry-body pre,
+.tbcf-widget__entry-body blockquote,
+.tbcf-widget__entry-body ul,
+.tbcf-widget__entry-body ol,
+.tbcf-widget__entry-body dl,
+.tbcf-widget__entry-body table {
   margin-top: 0.75em;
 }
-.tbf-widget__entry-body blockquote {
+.tbcf-widget__entry-body blockquote {
   margin-left: 0.75em;
 }
-.tbf-widget__entry-body ul,
-.tbf-widget__entry-body ol {
+.tbcf-widget__entry-body ul,
+.tbcf-widget__entry-body ol {
   margin-left: 0.75em;
 }
-.tbf-widget__entry-body ul ul,
-.tbf-widget__entry-body ol ul,
-.tbf-widget__entry-body ul ol,
-.tbf-widget__entry-body ol ol {
+.tbcf-widget__entry-body ul ul,
+.tbcf-widget__entry-body ol ul,
+.tbcf-widget__entry-body ul ol,
+.tbcf-widget__entry-body ol ol {
   margin-top: 0;
 }
-.tbf-widget__entry-body ul {
+.tbcf-widget__entry-body ul {
   list-style: disc;
 }
-.tbf-widget__entry-body ol {
+.tbcf-widget__entry-body ol {
   list-style: decimal;
 }
-.tbf-widget__entry-body dt {
+.tbcf-widget__entry-body dt {
   font-weight: bold;
 }
-.tbf-widget__entry-body dd + dt {
+.tbcf-widget__entry-body dd + dt {
   margin-top: 0.75em;
 }
-.tbf-widget__entry-body pre {
+.tbcf-widget__entry-body pre {
   border: solid 1px #dbe2e5;
   padding: 1.5em;
   font-size: 14px;
 }
-.tbf-widget__entry-body table {
+.tbcf-widget__entry-body table {
   text-align: left;
 }
-.tbf-widget__entry-body table thead {
+.tbcf-widget__entry-body table thead {
   background: #dbe2e5;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: .1em;
   color: #90a4ae;
 }
-.tbf-widget__entry-body table tr:nth-child( even ) {
+.tbcf-widget__entry-body table tr:nth-child( even ) {
   background: #dbe2e5;
 }
-.tbf-widget__entry-body table th,
-.tbf-widget__entry-body table td {
+.tbcf-widget__entry-body table th,
+.tbcf-widget__entry-body table td {
   padding: .75em;
   vertical-align: top;
 }
-.tbf-widget__entry-body table th {
+.tbcf-widget__entry-body table th {
   font-weight: normal;
 }
-.tbf-widget__entry-body table a {
+.tbcf-widget__entry-body table a {
   color: #263238;
 }
-.tbf-widget--locations__entry-thumbnail {
+.tbcf-widget--locations__entry-thumbnail {
   margin-bottom: 1em;
 }
-.tbf-widget--people__entry-thumbnail {
+.tbcf-widget--people__entry-thumbnail {
   float: right;
   width: 60px;
   height: 60px;
   margin-left: 30px;
 }
-.tbf-widget--person__position {
+.tbcf-widget--person__position {
   color: #90a4ae;
 }
-.tbf-widget--events__entry-thumbnail {
+.tbcf-widget--events__entry-thumbnail {
   margin-bottom: 1em;
 }
-.tbf-widget--event__date + .tbf-widget--event__date {
+.tbcf-widget--event__date + .tbcf-widget--event__date {
   margin-top: 0;
 }
-.tbf-widget--sermons__entry-thumbnail {
+.tbcf-widget--sermons__entry-thumbnail {
   margin-bottom: 1em;
 }
-.tbf-widget--sermon__date {
+.tbcf-widget--sermon__date {
   color: #90a4ae;
 }
 .welcome-message {
