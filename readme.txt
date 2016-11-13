@@ -3,10 +3,10 @@
 Contributors: themebright
 Requires at least: WordPress 4.1
 Tested up to: WordPress 4.6.1
-Version: 1.2.0
+Version: 1.2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, silver, white, dark, light, one-column, two-columns, right-sidebar, responsive-layout, custom-colors, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
@@ -68,7 +68,7 @@ bxSlider 4.2.5, Copyright 2015 Steven Wanderski
 Licenses: MIT
 Source: https://github.com/davatron5000/FitVids.js/
 
-Font Awesome 4.5.0, Copyright 2015 Dave Gandy
+Font Awesome 4.7.0, Copyright 2015 Dave Gandy
 Licenses: SIL OFL 1.1 / MIT / CC BY 3.0
 Source: https://github.com/FortAwesome/Font-Awesome
 

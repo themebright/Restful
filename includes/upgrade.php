@@ -28,8 +28,8 @@ function restful_notice_upgrade_framework_namespace() {
     ?>
 
     <div class="notice notice-warning is-dismissible">
-      <h4 style="padding: 2px; margin: .5em 0 0;"><?php _e( 'Restful Database Successful' ); ?></h4>
-      <p><?php _e( "The database has been updated.", 'restful' ); ?></p>
+      <h4 style="padding: 2px; margin: .5em 0 0;"><?php _e( 'Restful Database Upgrade Successful', 'restful' ); ?></h4>
+      <p><?php _e( "The database has been upgraded.", 'restful' ); ?></p>
     </div>
 
     <?php

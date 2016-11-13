@@ -1,6 +1,6 @@
 {
   "name": "restful",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "devDependencies": {
     "grunt": "~1.0.1",
     "grunt-autoprefixer": "^3.0.4",
