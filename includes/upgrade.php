@@ -39,7 +39,7 @@ function restful_notice_upgrade_framework_namespace() {
     ?>
 
     <div class="notice notice-warning is-dismissible">
-      <h4 style="padding: 2px; margin: .5em 0 0;"><?php _e( 'Restful Database Upgrade Required' ); ?></h4>
+      <h4 style="padding: 2px; margin: .5em 0 0;"><?php _e( 'Restful Database Upgrade Required', 'restful' ); ?></h4>
       <p><?php _e( "Thanks for updating to the latest version of Restful! We've re-worked somethings under the hood, so you'll need to upgrade your database for Restful's custom widgets to continue to work. You may want to backup your database before proceeding.", 'restful' ); ?></p>
       <p><a href="?restful-upgrade-framework-namespace" class="button"><?php _e( 'Upgrade Now', 'restful' ); ?></a></p>
     </div>
