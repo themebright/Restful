@@ -1,6 +1,6 @@
 === Restful ===
 
-Contributors: themebright
+Contributors: themebright, GalenGidman
 Requires at least: WordPress 4.1
 Tested up to: WordPress 4.7
 Version: 1.2.3
