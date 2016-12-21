@@ -2,8 +2,8 @@
 
 Contributors: themebright
 Requires at least: WordPress 4.1
-Tested up to: WordPress 4.6.1
-Version: 1.2.2
+Tested up to: WordPress 4.7
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready

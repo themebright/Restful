@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Restful 1.2.2\n"
+"Project-Id-Version: Restful 1.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-11-13 17:16:43+00:00\n"
+"POT-Creation-Date: 2016-12-21 17:25:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: home.php:45 index.php:45 page-templates/full-width.php:30 page.php:32
 #: search.php:45 single-ctc_event.php:40 single-ctc_location.php:38
 #: single-ctc_person.php:38 single-ctc_sermon.php:55 single.php:35
-#: taxonomy-ctc_sermon_series.php:47 taxonomy-ctc_sermon_speaker.php:47
+#: taxonomy-ctc_sermon_series.php:41 taxonomy-ctc_sermon_speaker.php:41
 msgid "Nothing found."
 msgstr ""
 
