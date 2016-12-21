@@ -11,7 +11,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
 <section class="masthead <?php if ( ! $has_sidebar ) echo 'masthead--centered' ?> section">
   <div class="container">
     <div class="masthead__subtitle masthead__subtitle--above"><?php echo $taxonomy->labels->singular_name; ?></div>
-    <?php the_title( '<h1 class="masthead__title">', '</h1>' ); ?>
+    <h1 class="masthead__title"><?php echo $queried_object->name; ?></h1>
   </div>
 </section>
 
@@ -29,13 +29,7 @@ $has_sidebar    = is_active_sidebar( 'main' );
               <?php the_title( sprintf( '<h2 class="entry__title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
             </header>
 
-            <div class="entry__meta entry__meta--stacked">
-              <div class="entry__meta-item"><i class="fa fa-calendar"></i><?php the_time( get_option( 'date_format' ) ); ?></div>
-
-              <?php if ( tbcf_sermon_speakers() ) : ?>
-                <div class="entry__meta-item"><i class="fa fa-user"></i><?php echo tbcf_sermon_speakers(); ?></div>
-              <?php endif; ?>
-            </div>
+            <?php restful_sermon_meta(); ?>
 
             <div class="entry__body rich-text">
               <?php the_excerpt(); ?>
