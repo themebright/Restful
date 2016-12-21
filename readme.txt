@@ -25,19 +25,19 @@ When you install the theme, it will initially look like a blog. To make the them
 
 = Accessing Events =
 
-You can access an archive of all your upcoming events by vising this `http://yoursite.com/events/`, replacing `yoursite.com` with your acutal domain.
+You can access an archive of all your upcoming events by visiting this `http://yoursite.com/events/`, replacing `yoursite.com` with your acutal domain.
 
 = Accessing Locations =
 
-You can access an archive of all your locations by vising this `http://yoursite.com/locations/`, replacing `yoursite.com` with your acutal domain.
+You can access an archive of all your locations by visiting this `http://yoursite.com/locations/`, replacing `yoursite.com` with your acutal domain.
 
 = Accessing People =
 
-You can access an archive of all your people by vising this `http://yoursite.com/people/`, replacing `yoursite.com` with your acutal domain.
+You can access an archive of all your people by visiting this `http://yoursite.com/people/`, replacing `yoursite.com` with your acutal domain.
 
 = Accessing Sermons =
 
-You can access an archive of all your sermons by vising this `http://yoursite.com/sermons/`, replacing `yoursite.com` with your acutal domain.
+You can access an archive of all your sermons by visiting this `http://yoursite.com/sermons/`, replacing `yoursite.com` with your acutal domain.
 
 = Highlighted Menu Item =
 
